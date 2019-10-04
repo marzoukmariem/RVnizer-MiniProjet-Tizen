@@ -36,11 +36,11 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>heDd25XpNTdFEDJUFJ/xIxHm0dVpn6O1dRjiYG+YM3Q=</DigestValue>
+<DigestValue>LBuKfGGN9rYvjMoBqiugKBqWlVkm9QrkFCDLXwK/xuU=</DigestValue>
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+ZVRxfnh6Qc4CUfH8Oq7ui1dgzv0MmdKbLuMoUFdG8c=</DigestValue>
+<DigestValue>mAxhRU2xm8opIsRNKcXdo0vsdCzdaUlNKPZhOBgLW8E=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -48,7 +48,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>KcVozcAqLm4WEL67VDQSFu4XuxzzIeII0D5zKXdIuro=</DigestValue>
+<DigestValue>Tqvpam9mGWOySMVkSeDMFIAZt/aRq0ei3qp+yxeJDhA=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -289,6 +289,10 @@
 <Reference URI="images%2Fmarvel.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>6157J/cubSatiZv0mjsuRf8oW1kFDQrKZgUY1XpSRTU=</DigestValue>
+</Reference>
+<Reference URI="images%2Fmaryem.jpg">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>5QYBcKlrH/X2nLDLmtyPZG8wtihxa6ffOM01HltxsWQ=</DigestValue>
 </Reference>
 <Reference URI="images%2Fmd.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1239,9 +1243,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-XqZpr2STrHru7xvW0TVYVu2JQ6tJBqiAoiWq556p/dCJji5BDWyK/RCSDBY03TqsdCbdx4RNy3HS
-n2IWtWcVufNMivNdDCagZGYDQnRZU03l6Hw5u+yEkz88VFDSkvPfHBbfBInIq8F9TrCynGI6oUz3
-Yhqty6XKKtOlDGIhwkA=
+Rg0vG9fZMNMXjWZL7x2hUzFi3bwrER1NhLoc8khj1fMB0dV3N7iUdETBuppZziKr0sTJvu2JbOEt
+fOdBMc7WWT7qtjwmWYWV3ARFpT4zqkMwNTg33oxNJ+W/ZhRV7tnFNG/Re36cd5wicuLBfnnjPOe4
+FENy0O4DaKt64yKRCiw=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
