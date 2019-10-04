@@ -8,7 +8,7 @@
 </Reference>
 <Reference URI="AcceuilDocteur.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>xZvxfsJCQOBBEZUT6xhtMXrDmzoCePt67IM5EsyVmGk=</DigestValue>
+<DigestValue>7cyevJ+9erqAiMMHyjlLuhM1nw9lUcCvkkgoPWdIw58=</DigestValue>
 </Reference>
 <Reference URI="AcceuilPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -36,7 +36,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>LBuKfGGN9rYvjMoBqiugKBqWlVkm9QrkFCDLXwK/xuU=</DigestValue>
+<DigestValue>Lm8aHdHrr/TUdRm6CI1Efnd/xrwA9TQefEDpbfYKpps=</DigestValue>
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -404,7 +404,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>gAhPIgs+RAfVt4jol8aEbcuwovLSHDxeyiZmZBEoUPQ=</DigestValue>
+<DigestValue>9EbuQPOYL/Dp6j/mMJhmwLLr6cThB0pMMoQjCulPGLY=</DigestValue>
 </Reference>
 <Reference URI="js%2FSmoothScroll.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1239,9 +1239,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-JusXoqJdUqGi1Gekv3hVYaxA04oZCUm+9R9p7PL2uM1+cg8BWMmB3bleyjZ7EqOTiU3TblLHctcS
-D0wcFd4oPeYCL0qD4u4YdFvOf33PXR866i4QbE7Mkq3y5eyCpcRi2s962S3FTG+nw21KOiSl4/32
-uDI6pmKwSLT34zmObhE=
+ftMCuWb7jsAYbJ7ClMODDNNW/hLZEcGE6Qj4veUHeC+fY/kprsF8P/LXaQVC9k3J3lYfxyWowRvc
+FFnwvPOFJl/kG8QBaj5tcy7mgTYlCDj2ZDMnyT0RW7SVvc+Uf69bgX3Rr61m1htn2qmxy1ZqKXLV
+YURgR3oFWat8FkoRPC4=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
