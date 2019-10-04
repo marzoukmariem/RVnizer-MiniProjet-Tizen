@@ -1,0 +1,794 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+    <title>RVnizer</title>
+	<link rel="stylesheet" href="lib/tau/mobile/theme/default/tau.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="./js/config.js"></script>
+
+<script>
+
+function login(){
+	
+	var usr = document.getElementById('add-account-usr').value.trim();
+            data = document.getElementById('add-account-data')
+                .value.trim();
+	
+	console.log(usr);
+	
+	var obj;
+   
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        		console.log("Récuperation");
+    if (this.readyState === 4 ) {
+    	obj =  JSON.parse(xhttp.responseText);
+    	if (obj.length !== 0){
+    		alert('Bienvenue '+obj[0].Role_User);
+    		
+    	}
+    	
+    	else if (obj.length == 0) {
+    		alert("Vérifiez vos coordonnées.");
+    	}
+     }
+     };
+    xhttp.open("GET", "http://41.226.11.252:1180/medichelper/login2.php?login="+usr+"&password="+data);
+    xhttp.send();
+    
+  
+}
+
+
+
+
+/*
+	function SoapCall(){
+	
+	        var usr = document.getElementById('add-account-usr').value.trim(),
+            data = document.getElementById('add-account-data')
+                .value.trim(),
+	
+		var xhr = createXHR();
+		
+		xhr.open("POST", "http://41.226.11.252:1180/medichelper/login2.php", true)
+		
+		xhr.onreadystatechange = function()
+		{
+			if (xhr.readyState === 4 )
+			{
+				var xmlDoc = xhr.responseXML;
+				var d = xmlDoc.getElementsByTagName("double")[0].childNodes[0].nodeValue;
+				alert(d);
+			}
+			
+		};
+		xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+		var postData = "login="+usr+"&password="+data;
+		xhr.send(postData);
+	}
+	
+	function createXHR()
+	{
+		var xhr;
+		if (window.XMLHttpRequest)
+		{
+			xhr = new XMLHttpRequest();
+			alert("not IE!");
+		}
+		else if (window.ActivateXObject)
+		{
+		xhr = new ActiveXObject('Microsoft.XMLHTTP');
+		alert("it's an IE");
+		}
+		else
+		{
+		throw new Error("Could not create XMLHttpRequest Object.");
+		}
+	return xhr;
+	}
+*/
+</script>
+
+</head>
+
+<body>
+     <section class="ui-page" id="add-account-view">
+        <div class="ui-header">
+            <h1 class="ui-title">RVnizer</h1>
+            
+        </div>
+        <div class="ui-content">
+            <div class="textinput-box">
+                <label for="add-account-usr">Login:</label>
+                <input type="text" id="add-account-usr" data-clear-btn="true"/>
+                
+            </div>
+            <div class="textinput-box">
+                <label for="add-account-data">Password:</label>
+                <input type="text" id="add-account-data" data-clear-btn="true"/>
+            </div>
+            
+            <div class="passOubliee">
+            	<label class="ui-label">Vou n'avez pas de compte ?</label><br>
+            	<label class="ui-label">inscrivez-vous</label>
+        	</div>
+            
+       </div>
+       
+       
+           
+        
+       
+       <div class="ui-footer">
+           <button class="ui-btn" data-tau-name="Button" id="login-button" onclick="login()">Login</button>
+       </div>
+    </section>
+    
+        <script src="lib/tau/mobile/js/tau.js"></script>
+        <script src="js/app.ui.js"></script>
+    	<script src="js/app.model.js"></script>
+    	<script src="js/app.js"></script>
+</body>
+
+</html>
+-->
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <title>Sanatorium a Medical Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- default-css-files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
+    <!-- default-css-files -->
+    <!-- Online fonts -->
+    <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+    <!-- //Online fonts -->
+    <!-- style.css-file -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- //style.css-file -->
+
+
+    <!-- new script -->
+
+    <!-- new script end -->
+
+    <script>
+        function login(){
+        	
+        	var usr = document.getElementById('add-account-usr').value.trim();
+                    data = document.getElementById('add-account-data')
+                        .value.trim();
+        	
+        	console.log(usr);
+        	
+        	var obj;
+           
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                		console.log("Récuperation");
+            if (this.readyState === 4 ) {
+            	obj =  JSON.parse(xhttp.responseText);
+            	if (obj.length !== 0){
+            		alert('Bienvenue '+obj[0].Role_User);
+            		
+            	}
+            	
+            	else if (obj.length == 0) {
+            		alert("Vérifiez vos coordonnées.");
+            	}
+             }
+             };
+            xhttp.open("GET", "http://41.226.11.252:1180/medichelper/login2.php?login="+usr+"&password="+data);
+            xhttp.send();
+            
+          
+        }
+    </script>
+</head>
+<!-- Head -->
+
+<body>
+    <!--header-section-starts-here-->
+    <!--<header>
+		<div class="top-header" id="home">
+			<div class="container">
+				
+				<div class="col-md-4 col-sm-4 col-xs-4 top-right">
+					<a href="#" data-toggle="modal" data-target="#myModal1"><span></span> Sign In</a>
+					<a href="#" data-toggle="modal" data-target="#myModal2"><span></span> Sign Up</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</header>-->
+    <!--//header-section-end-here-->
+    <!-- popup for sign in form -->
+    <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="small-dialog1" class="mfp-hide book-form">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Sign In </h3>
+                    <form action="" method="post" onSubmit="return false;">
+                        <input type="email" name="Email" class="email" placeholder="Email" required="" id="add-account-usr" data-clear-btn="true" />
+                        <input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data" data-clear-btn="true" />
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="brand1" value="">
+                                <label for="brand1"><span></span>Remember me</label>
+                            </li>
+                        </ul>
+                        <a href="#">Forgot Password?</a>
+                        <br>
+                        <div class="clearfix"></div>
+                        <input type="submit" value="Sign In" id="login-button" onclick="login()">
+                    </form>
+                    <div class="w3ls-or">
+                        <p>Or</p>
+                    </div>
+                    <div class="top-middle w3ls-sma">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-vimeo"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup for sign in form -->
+    <!-- popup for sign up form -->
+    <div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="small-dialog2" class="mfp-hide book-form">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Sign Up</h3>
+                    <form action="#" method="post">
+                        <input type="text" name="Name" placeholder="Your Name" required="" />
+                        <input type="email" name="Email" class="email" placeholder="Email" required="" />
+                        <input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
+                        <input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+                        <input type="submit" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup for sign up form -->
+    <!--banner-section-starts-here-->
+    <section class="banner jarallax">
+        <div class="navigation">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header navbar-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="logo">
+                        <h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> RVnizer</a></h1>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
+                        <nav class="link-effect-3 w3ls-navma" id="link-effect-3">
+                            <ul class="nav1 navbar-nav nav nav-wil">
+                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments Overview</a>
+                                </li>
+                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment Requests</a>
+                                </li>
+                                <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Messages</a>
+                                </li>
+                                <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Account parameters</a>
+                                </li>
+                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </section>
+    <!--about-section-starts-here-->
+    <section class="about" id="appointment">
+        <div class="container">
+            <h2>Next appointment</h2>
+            <div class="about-grids">
+                <div class="col-md-3 col-sm-3 col-xs-3 abt-lt-grid text-center">
+                    <h4>Anouar Ben Othman</h4>
+                    <p>2019-01-31</p>
+                    <p>12h40</p>
+                    <p class="ma-p"><i class="fa fa-phone" aria-hidden="true"></i>+216 50026882</p>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
+                    <div class="w3ls-grid-head text-center">
+                        <h6>All appointments</h6>
+                        <h3>search per date</h3>
+                    </div>
+                    <div class="abt-form text-center">
+                        <form action="#" method="post">
+
+                            <div class="col-sm-4 col-xs-4 w3ls-lt-form">
+                                <div class="w3ls-pr">
+                                    <input type="date" name="date" required="required">
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <input type="submit" value="Search">
+                        </form>
+                        <div class="container">
+                            <div class="grid-wrap">
+                                <div class="col-md-3 agileinfo_portfolio_grid">
+                                    <div class="team-grid text-center">
+                                        <img src="images/t1.jpg" alt="image" class="img-responsive" />
+                                        <h5>williamson</h5>
+                                        <h6>2019-01-31</h6>
+                                        <h6>12h30</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 agileinfo_portfolio_grid">
+                                    <div class="team-grid text-center">
+                                        <img src="images/t2.jpg" alt="image" class="img-responsive" />
+                                        <h5>fisher</h5>
+                                        <h6>2019-01-31</h6>
+                                        <h6>12h30</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 agileinfo_portfolio_grid">
+                                    <div class="team-grid text-center">
+                                        <img src="images/t3.jpg" alt="image" class="img-responsive" />
+                                        <h5>jesse</h5>
+                                        <h6>2019-01-31</h6>
+                                        <h6>12h30</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 agileinfo_portfolio_grid">
+                                    <div class="team-grid text-center">
+                                        <img src="images/t5.jpg" alt="image" class="img-responsive" />
+                                        <h5>olivia</h5>
+                                        <h6>2019-01-31</h6>
+                                        <h6>12h30</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 agileinfo_portfolio_grid">
+                                    <div class="team-grid text-center">
+                                        <img src="images/t6.jpg" alt="image" class="img-responsive" />
+                                        <h5>patrick</h5>
+                                        <h6>2019-01-31</h6>
+                                        <h6>12h30</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 agileinfo_portfolio_grid">
+                                    <div class="team-grid text-center">
+                                        <img src="images/t7.jpg" alt="image" class="img-responsive" />
+                                        <h5>garrett</h5>
+                                        <h6>2019-01-31</h6>
+                                        <h6>12h30</h6>
+
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+    </section>
+    <!--//about-section-end-here-->
+
+    <section class="grid-gallery" id="grid-gallery">
+        <div class="container">
+            <h3 class="title text-center">Messages</h3>
+
+
+
+            <div class="container2">
+                <img src="images/t6.jpg" alt="Avatar">
+                <p>Hello. How are you today?</p>
+                <span class="time-right">11:00</span>
+            </div>
+
+            <div class="container2 darker">
+                <img src="images/t5.jpg" alt="Avatar" class="right">
+                <p>Hey! I'm fine. Thanks for asking!</p>
+                <span class="time-left">11:01</span>
+            </div>
+
+            <div class="container2">
+                <img src="images/t6.jpg" alt="Avatar">
+                <p>Sweet! So, what do you wanna do today?</p>
+                <span class="time-right">11:02</span>
+            </div>
+
+            <div class="container2 darker">
+                <img src="images/t5.jpg" alt="Avatar" class="right">
+                <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                <span class="time-left">11:05</span>
+            </div>
+
+            <div class="row comment-box-main p-3 rounded-bottom">
+                <div class="col-md-9 col-sm-9 col-9 pr-0 comment-box">
+                    <input type="text" class="form-control" placeholder="comment ...." />
+                </div>
+                <div class="col-md-3 col-sm-2 col-2 pl-0 text-center send-btn">
+                    <button class="btn btn-info">Send</button>
+                </div>
+            </div>
+
+
+            <section class="grid-wrap">
+                <div class="col-md-3 agileinfo_portfolio_grid">
+                    <a href="images/l1.jpg" class="lsb-preview" data-lsb-group="header">
+                        <div class="agileits_portfolio_grid">
+                            <img src="images/l1.jpg" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 agileinfo_portfolio_grid">
+                    <a href="images/l2.jpg" class="lsb-preview" data-lsb-group="header">
+                        <div class="agileits_portfolio_grid">
+                            <img src="images/l2.jpg" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </section>
+            <!-- // grid-wrap -->
+
+        </div>
+
+        <h3 class="title text-center">Contacts</h3>
+
+        <div class="container">
+
+
+
+
+            <div class="container3">
+                <img src="images/t6.jpg" alt="Avatar">
+                <h3>Mariem Marzouk</h3>
+
+            </div>
+
+
+            <div class="container3">
+                <img src="images/t6.jpg" alt="Avatar">
+                <h3>Anouar Ben Othman</h3>
+
+            </div>
+
+
+            <section class="grid-wrap">
+                <div class="col-md-3 agileinfo_portfolio_grid">
+                    <a href="images/l1.jpg" class="lsb-preview" data-lsb-group="header">
+                        <div class="agileits_portfolio_grid">
+                            <img src="images/l1.jpg" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 agileinfo_portfolio_grid">
+                    <a href="images/l2.jpg" class="lsb-preview" data-lsb-group="header">
+                        <div class="agileits_portfolio_grid">
+                            <img src="images/l2.jpg" alt=" " class="img-responsive" />
+                        </div>
+                    </a>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </section>
+            <!-- // grid-wrap -->
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">sanatorium</h4>
+                </div>
+                <div class="modal-body agileits">
+                    <div class="modal-img">
+                        <img src="images/md.jpg" alt="image">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque orci consectetur sapien feugiat fermentum. Phasellus convallis efficitur arcu, nec convallis odio egestas sit amet. Praesent erat sem, finibus vel ornare
+                        efficitur, mattis sed risus. Duis ornare sodales dui finibus molestie.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//Modal -->
+    <!--//footer-section-end-here-->
+
+    <!-- //laboratory-section -->
+    <!--testimonial-section-starts-here -->
+    <section class="testimonial jarallax">
+        <div class="container">
+            <h3>testimonial</h3>
+            <div class="testi-grid">
+                <div class="col-md-6 col-sm-6 col-xs-6 w3ls-text-grid">
+                    <h4>our staff believe our work and good humanity</h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 fslider-grid">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="testi-w3ls text-center">
+                                    <div class="testi-text">
+                                        <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris consectetur nisl hendrerit dapibus bibendum. Mauris in purus fringilla, bibendum dui vel, mattis arcu.
+                                        </p>
+                                    </div>
+                                    <div class="testi-img">
+                                        <img src="images/ts1.jpg" alt="images" />
+                                        <h5>Angle</h5>
+                                        <h6>subtitle</h6>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testi-w3ls text-center">
+                                    <div class="testi-text">
+                                        <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris consectetur nisl hendrerit dapibus bibendum. Mauris in purus fringilla, bibendum dui vel, mattis arcu.
+                                        </p>
+                                    </div>
+                                    <div class="testi-img">
+                                        <img src="images/ts2.jpg" alt="images" />
+                                        <h5>Jesse</h5>
+                                        <h6>subtitle</h6>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testi-w3ls text-center">
+                                    <div class=" testi-text">
+                                        <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris consectetur nisl hendrerit dapibus bibendum. Mauris in purus fringilla, bibendum dui vel, mattis arcu.
+                                        </p>
+                                    </div>
+                                    <div class="testi-img">
+                                        <img src="images/ts3.jpg" alt="images" />
+                                        <h5>Rosse lee</h5>
+                                        <h6>subtitle</h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--testimonial-section-end-here -->
+
+    <!--contact-section-end-here-->
+    <section class="contact-map" id="contact">
+        <div class="container">
+            <div class="w3ls-con-map-main-grids">
+                <div class="col-md-6">
+                    <div class="w3ls-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24561.4917541168!2d-74.26553697858265!3d39.69051118517855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c107b00044297b%3A0x9354ddfde6a7883b!2sManahawkin%2C+Stafford+Township%2C+NJ+08050%2C+USA!5e0!3m2!1sen!2sin!4v1486031546252"
+                        allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wthree-contact-left-grid">
+                        <div class="contact-head">
+                            <h4>contact us </h4>
+                            <div class="information">
+                                <ul class="agile-inf">
+                                    <li><i class="fa fa-home" aria-hidden="true"></i>11/665 postal street, park avenue,USA</li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>+040 6656 776 665</li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a class="w3ls-a" href="mailto:example@email.com"> mail@example.com</a>
+                                    </li>
+                                    <li><i class="fa fa-globe" aria-hidden="true"></i><a class="w3ls-a" href="mailto:example@email.com">www.example.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="contact-form-w3ls">
+                                <form action="#" method="post">
+                                    <div class="col-sm-6 col-xs-6 w3ls-ma">
+                                        <input type="text" placeholder="Name" required="required" />
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6 w3l-ma">
+                                        <input type="email" placeholder="E-mail" required="required" />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <textarea placeholder="Message" required="required"></textarea>
+                                    <input type="submit" value="send" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+    <!--//contact-section-end-here-->
+   
+    <!--//Modal -->
+    <!--//footer-section-end-here-->
+    <!-- Default-JavaScript-File -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- password-script -->
+    <script type="text/javascript">
+        window.onload = function () {
+        			document.getElementById("password1").onchange = validatePassword;
+        			document.getElementById("password2").onchange = validatePassword;
+        		}
+        
+        		function validatePassword() {
+        			var pass2 = document.getElementById("password2").value;
+        			var pass1 = document.getElementById("password1").value;
+        			if (pass1 != pass2)
+        				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+        			else
+        				document.getElementById("password2").setCustomValidity('');
+        			//empty string means no validation error
+        		}
+    </script>
+    <!-- //password-script -->
+
+
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        		$(function () {
+        			// Slideshow 4
+        			$("#slider4").responsiveSlides({
+        				auto: true,
+        				pager: true,
+        				nav: false,
+        				speed: 500,
+        				namespace: "callbacks",
+        				before: function () {
+        					$('.events').append("<li>before event fired.</li>");
+        				},
+        				after: function () {
+        					$('.events').append("<li>after event fired.</li>");
+        				}
+        			});
+        
+        		});
+    </script>
+    <!--banner Slider starts Here-->
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    <!-- //Default-JavaScript-File -->
+    <!-- gallery-pop-up -->
+    <script src="js/jquery.chocolat.js"></script>
+    <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
+    <!--light-box-files -->
+    <script type="text/javascript">
+        $(function () {
+        			$('.agileinfo_portfolio_grid a').Chocolat();
+        		});
+    </script>
+    <!-- //gallery-pop-up -->
+
+    <!-- FlexSlider -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(function () {});
+        		$(window).load(function () {
+        			$('.flexslider').flexslider({
+        				animation: "slide",
+        				start: function (slider) {
+        					$('body').removeClass('loading');
+        				}
+        			});
+        		});
+    </script>
+    <!-- FlexSlider -->
+    <!-- start-smoth-scrolling-nav -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+        			$(".scroll").click(function (event) {
+        				event.preventDefault();
+        				$('html,body').animate({
+        					scrollTop: $(this.hash).offset().top
+        				}, 1000);
+        			});
+        		});
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+        			var defaults = {
+        				containerID: 'toTop', // fading element id
+        				containerHoverID: 'toTopHover', // fading element hover id
+        				scrollSpeed: 100,
+        				easingType: 'linear'
+        			};
+        		});
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span>
+    </a>
+    <!-- //Slide-To-Top JavaScript -->
+    <!-- jarallax scrolling -->
+    <script src="js/jarallax.js"></script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        		$('.jarallax').jarallax({
+        			speed: 0.5,
+        			imgWidth: 1366,
+        			imgHeight: 768
+        		})
+    </script>
+    <!-- //jarallax scrolling -->
+    <!-- smooth scrolling -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+        			/*
+        				var defaults = {
+        				containerID: 'toTop', // fading element id
+        				containerHoverID: 'toTopHover', // fading element hover id
+        				scrollSpeed: 1200,
+        				easingType: 'linear' 
+        				};
+        			*/
+        			$().UItoTop({
+        				easingType: 'easeOutQuart'
+        			});
+        		});
+    </script>
+    <!-- //smooth scrolling -->
+    <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</body>
+
+</html>
+
