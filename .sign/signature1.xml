@@ -2,6 +2,10 @@
 <SignedInfo>
 <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
+<Reference URI=".gitattributes">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Gh2+F2vCM7SZ01pX23UT8pQcmauXWfF3gwyRSb6ZAFs=</DigestValue>
+</Reference>
 <Reference URI="AcceuilDocteur.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>xZvxfsJCQOBBEZUT6xhtMXrDmzoCePt67IM5EsyVmGk=</DigestValue>
@@ -12,7 +16,7 @@
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>6gIYbDM7n6tgP0fQdrKgVv81E5P01gWmcNhMYDjuFPE=</DigestValue>
+<DigestValue>42KjckmTG9Qt18+X10I3piA1ICtaestgBJLDiJtnDxM=</DigestValue>
 </Reference>
 <Reference URI="DocteurConfirmationRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,7 +36,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+ZVRxfnh6Qc4CUfH8Oq7ui1dgzv0MmdKbLuMoUFdG8c=</DigestValue>
+<DigestValue>heDd25XpNTdFEDJUFJ/xIxHm0dVpn6O1dRjiYG+YM3Q=</DigestValue>
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -44,7 +48,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>2gItAvJrO6o459azh/iTsnSagMKzvA9kjPx9bSQNl8I=</DigestValue>
+<DigestValue>KcVozcAqLm4WEL67VDQSFu4XuxzzIeII0D5zKXdIuro=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1235,9 +1239,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-HnibiejL6KdwNiu5QW6L24HoqLX8bXWjrJCOVHMTZMba4zN7eS1W5LpGgAup52lHLeWsPHMh2ltq
-uXIE9DHI8b8Z2Azs3YsPS7AU0dWJAVK97eQ/WEPXK92KR+GMtSZ25p1sjdNHTI8Ssd17blqm8xzi
-7hvBG9K4u/uBkMg0nXc=
+XqZpr2STrHru7xvW0TVYVu2JQ6tJBqiAoiWq556p/dCJji5BDWyK/RCSDBY03TqsdCbdx4RNy3HS
+n2IWtWcVufNMivNdDCagZGYDQnRZU03l6Hw5u+yEkz88VFDSkvPfHBbfBInIq8F9TrCynGI6oUz3
+Yhqty6XKKtOlDGIhwkA=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

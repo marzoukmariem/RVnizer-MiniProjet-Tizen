@@ -2,6 +2,10 @@
 <SignedInfo>
 <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
+<Reference URI=".gitattributes">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Gh2+F2vCM7SZ01pX23UT8pQcmauXWfF3gwyRSb6ZAFs=</DigestValue>
+</Reference>
 <Reference URI="AcceuilDocteur.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>xZvxfsJCQOBBEZUT6xhtMXrDmzoCePt67IM5EsyVmGk=</DigestValue>
@@ -12,7 +16,7 @@
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>6gIYbDM7n6tgP0fQdrKgVv81E5P01gWmcNhMYDjuFPE=</DigestValue>
+<DigestValue>42KjckmTG9Qt18+X10I3piA1ICtaestgBJLDiJtnDxM=</DigestValue>
 </Reference>
 <Reference URI="DocteurConfirmationRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,7 +36,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+ZVRxfnh6Qc4CUfH8Oq7ui1dgzv0MmdKbLuMoUFdG8c=</DigestValue>
+<DigestValue>heDd25XpNTdFEDJUFJ/xIxHm0dVpn6O1dRjiYG+YM3Q=</DigestValue>
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1231,9 +1235,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-EkqdTZw+SCKKphjnPTwmc5pT0zyLjcQWbvpUwAOwtqyq+Qz4ujXWNObMTVqJLGnALhxYG2lVoces
-KPmSYYXZ2xI1tIw/mGXnUaQ+X3bAbk81Z4mYUR4UKPlhOAQguNnQvs6xlTE1URrlpDgulYfOvjwb
-fw5Tn3Wq18Rjc9W0RGQ=
+Y/u3gK24O87aCvsCRRecd44gMfzmhSKeZljBmKT/qBunYChlKdyF1ekBH/Vzlr8jc5pLpktWd9+j
+0seQFd6uJBGEAek3kxRxa+p2s0Dbcm+5KSdgkzACFMX5eMjBYMh4t2EhVMBXO8pVCvKmMOARMGYy
+9R6gs1sVJFPqOvSMIeQ=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
