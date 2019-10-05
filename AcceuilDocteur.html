@@ -504,13 +504,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     
    
 <script>
+ var seesionvar = sessionStorage.getItem("Iduser");
+             console.log("*******************");
+             console.log("session : ");
+             console.log(seesionvar);
+             var id = sessionStorage.getItem("Idcabinet");
+          
+            
+             
  $.ajax({
-            url: "http://41.226.11.252:1180/medichelper/gettallredsmedecin.php?idCabinet=45",
+            url: 'http://41.226.11.252:1180/medichelper/gettallredsmedecin.php?idCabinet=' + id ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
              console.log(data);
+            
             var testJson = JSON.parse(data);
            console.log(testJson.length);
             for (var i = 0; i < testJson.length; i++) {

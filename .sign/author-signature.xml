@@ -8,7 +8,7 @@
 </Reference>
 <Reference URI="AcceuilDocteur.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>7cyevJ+9erqAiMMHyjlLuhM1nw9lUcCvkkgoPWdIw58=</DigestValue>
+<DigestValue>PK7PolQ317eDJTkFOCaaNbcjb692onRu76p2PhJcsds=</DigestValue>
 </Reference>
 <Reference URI="AcceuilPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -16,7 +16,7 @@
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>42KjckmTG9Qt18+X10I3piA1ICtaestgBJLDiJtnDxM=</DigestValue>
+<DigestValue>/ITbJKbeQTUAqKVdf1mXHV9gzp5T01kb1CN9Jcj9c/U=</DigestValue>
 </Reference>
 <Reference URI="DocteurConfirmationRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -404,7 +404,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+8i06ykKFIFUVCCsMOYJ2P9jikc93CwWINI5c3oHaHQ=</DigestValue>
+<DigestValue>Ap1KSVhOvsppCzAfTKnqfDtdCsswEjzbqgASKpbMSGM=</DigestValue>
 </Reference>
 <Reference URI="js%2FSmoothScroll.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1239,9 +1239,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-exhYeldHU4VHagg9rpEcOvTeFCQorh/iawOX3EX1GO7UpKL6vJ4HP+yrDNECvkBgJ8ZSLE3sQ+FJ
-bF5by5b7muZ16FPS312FMJroOyTGsYQw3e6IE+TivC+7Uisl1m3lkc43ZO/XbwAmgjE45I7i2GsJ
-K63icCfM8zIistQSLsY=
+X5RGIKkqY3QNSY1nqW/7/ZCuUUIfDVj3cM4X8vTGfU/RGw4tFKozQ54QqK+R35IxMZB/7TAZPRpW
+SI2qTrrIhF/725q2qeYAVbCzY+KbXnx1fC/2XjVlUskMiwjvAiYhluKPMYgcfcuJatYNK+n+/tlw
+jDTo3Gm74ZJZJY3c6Fw=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

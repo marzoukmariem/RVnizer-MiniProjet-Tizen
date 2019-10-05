@@ -296,89 +296,8 @@ function login(){
 	<div class="agile_secives jarallax" id="services">
 		<div class="container">
 			<h3>General Surgery</h3>
-			<div class="markets-grids">
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-medkit" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-						<a class="navber-brand" href="ReservezRendezVous.html">	<h5>Dr Mohamed</h5>
-							<p>General practitioners are responsible for providing comprehensive and continuous care to all patients.</p>
-						    <h5>24211538</h5>
-						    
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-medkit" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-						<a class="navber-brand" href="ReservezRendezVous.html">	<h5>Cabinet Dr Mohamed</h5>
-							<p>General practitioners are responsible for providing comprehensive and continuous care to all patients.</p>
-						    <h5>24211538</h5>
-						    
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-medkit" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-						<a class="navber-brand" href="ReservezRendezVous.html">	<h5>Dr Mohamed</h5>
-							<p>General practitioners are responsible for providing comprehensive and continuous care to all patients.</p>
-						    <h5>24211538</h5>
-						    
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-medkit" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-						<a class="navber-brand" href="ReservezRendezVous.html">	<h5>Cabinet Dr Mohamed</h5>
-							<p>General practitioners are responsible for providing comprehensive and continuous care to all patients.</p>
-						    <h5>24211538</h5>
-						    
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-medkit" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-						<a class="navber-brand" href="ReservezRendezVous.html">	<h5>Dr Mohamed</h5>
-							<p>General practitioners are responsible for providing comprehensive and continuous care to all patients.</p>
-						    <h5>24211538</h5>
-						    
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-medkit" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-						<a class="navber-brand" href="ReservezRendezVous.html">	<h5>Dr Mohamed</h5>
-							<p>General practitioners are responsible for providing comprehensive and continuous care to all patients.</p>
-						    <h5>24211538</h5>
-						    
-						</div>
-						<div class="clearfix"> </div>
+			<div class="markets-grids" id="cabinets">
+					<div class="clearfix"> </div>
 					</div>
 				</div>
 				
@@ -505,6 +424,43 @@ function login(){
 			});
 		});
 	</script>
+	
+	
+	<script>
+ $.ajax({
+            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt=Grand%20tunis&inf=chirurgie",
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            var testJson = JSON.parse(data);
+           console.log(testJson.length);
+            for (var i = 0; i < testJson.length; i++) {
+              var n = testJson[i].Nom_Cabinet ;
+              var des = testJson[i].Info_Cabinet
+              var num = testJson[i].NumTel_Cabinet
+            
+           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5>' + n + '</h5><p>'+ des +'</p> <h5>'+ num +'</h5></div><div class="clearfix"></div></div></div>';
+ 
+         
+          
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+
+ </script>   
+	
+	
 	<!-- //smooth scrolling -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>

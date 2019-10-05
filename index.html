@@ -184,6 +184,11 @@ function login(){
     if (this.readyState === 4 ) {
     	obj =  JSON.parse(xhttp.responseText);
     	if (obj.length !== 0){
+    	var iduser = obj[0].Id_User;
+    	var idcabinet = obj[0].FK_Cabinet_ID;
+    	 sessionStorage.setItem("Iduser",iduser);
+    	  sessionStorage.setItem("Idcabinet",idcabinet);
+    	 
     	if(obj[0].Role_User === 'patient')
     	{
     	 window.location = 'AcceuilPatient.html';
@@ -247,8 +252,7 @@ function login(){
 						<a href="#">Forgot Password?</a><br>
 						<div class="clearfix"></div>
 						<input type="submit" value="Sign In" id="login-button" onclick="login()">
-					
-					</form>
+										</form>
 					<div class="w3ls-or">
 						<p>Or</p>
 					</div>
