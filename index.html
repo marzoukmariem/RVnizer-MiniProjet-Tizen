@@ -204,6 +204,39 @@ function login(){
   
 }
 
+function getcabinet(){
+
+ $.ajax({
+            url: "http://41.226.11.252:1180/medichelper/gettallcabinet.php",
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            var testJson = JSON.parse(data);
+           
+            for (var i = 0; i < testJson.length; i++) {
+              var c = testJson[i].NumTel_Cabinet;
+           document.getElementById('cabinet').innerHTML = document.getElementById('cabinet').innerHTML + "<p><strong><font color=\"red\">" + c + ": </font></strong> <br/>"
+        + c; + "</p>";
+         
+           console.log(c);
+            
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+}
+
+
+
 
 
 
@@ -217,6 +250,10 @@ function login(){
 <!-- Head -->
 
 <body>
+
+
+<div id="cabinet"></div>
+
 	<!--header-section-starts-here-->
 	<header>
 		<div class="top-header" id="home">
@@ -250,7 +287,7 @@ function login(){
 						<a href="#">Forgot Password?</a><br>
 						<div class="clearfix"></div>
 						<input type="submit" value="Sign In" id="login-button" onclick="login()">
-						
+						<input type="submit" value="Sign In" id="login-button" onclick="getcabinet()">
 					</form>
 					<div class="w3ls-or">
 						<p>Or</p>

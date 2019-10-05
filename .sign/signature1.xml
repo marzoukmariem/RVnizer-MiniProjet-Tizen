@@ -48,7 +48,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>oW4fyo9KM4h23Q6VjeGsywDWYJ3IPlVLtqkVxLMB+Ow=</DigestValue>
+<DigestValue>M9+/J5Wnzd7K7rmQ25ifk/7QxBXmmSE9OBVwS0g18w0=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -408,7 +408,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>9EbuQPOYL/Dp6j/mMJhmwLLr6cThB0pMMoQjCulPGLY=</DigestValue>
+<DigestValue>+8i06ykKFIFUVCCsMOYJ2P9jikc93CwWINI5c3oHaHQ=</DigestValue>
 </Reference>
 <Reference URI="js%2FSmoothScroll.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1243,9 +1243,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-q6/+QUH9FXbRsudg8R5QPY3JryMyBNxkU9QRgnNnlkRqn4ZPd59LhwrXhcXrKe/ziDzSkNDhn25X
-QPsw/C5zH7BFOupwrgHDDlf7gE/MqHVo1IJrlUc6prBs8Bs/4gt+0cctsWkibeIw2a3GFGhwbW1V
-tA71D3QNM6LC6UpJgY4=
+lH9kWawYzS0/Hovn2SD/eKViL6yic+rv1qciVZrzLWQlp+S1oH2EkPuCnjsAWLXF33ONygUmWuqa
+DXFnESoeskIqwbc+1jXHBV4wn9ULGJQvIuxsLjqt6J5PL7xoTHYzq7e0b+MaYNRRVxXVa0TZnxex
+5M9r1IpCva1QXbXPiGk=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
