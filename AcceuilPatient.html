@@ -198,6 +198,12 @@ function login(){
     
   
 }
+
+function MyFunction(){
+	var select = document.getElementById("place-select").value ;
+	sessionStorage.setItem("place",select);
+	window.location = 'CabinetsParSpecialite.html';
+	}
 </script>	
 </head>
 <!-- Head -->
@@ -295,12 +301,23 @@ function login(){
 	<!-- /services -->
 	<div class="agile_secives jarallax" id="services">
 		<div class="container">
+		 <div class="input-field col s12">
+<select id="place-select">
+    <option value="">--Please choose a place--</option>
+    <option value="Grand tunis">Grand tunis</option>
+    <option value="Bizerte">Bizerte</option>
+    <option value="région Ouest">région Ouest</option>
+    <option value="Cap Bon">Cap Bon</option>
+    <option value="région est">région est</option>
+    <option value="région Sud">région Sud</option>
+</select></div>
+		
 		
  <h3></h3>
 
 
 <article>
- <a class="navber-brand" href="CabinetsParSpecialite.html"> <h2 style="color:white;">General Surgery</h2></a>
+ <a class="navber-brand"  href="#" onclick="MyFunction();return false;"> <h2 style="color:white;">Alternative Medicine</h2></a>
   <figure>
     <img src="https://www.telemedecine.tn/specialites/specialites-chirurgicales/images/chirurgie-generale.jpg"  width="350" height="130">
    
@@ -318,7 +335,7 @@ function login(){
 
 
 <article>
-  <h2 style="color:white;">Psychiatrist</h2>
+  <h2 style="color:white;">Dermatologist</h2>
   <figure>
     <img src="http://scd.rfi.fr/sites/filesrfi/imagecache/rfi_16x9_1024_578/sites/images.rfi.fr/files/aef_image/psychologue-ou-psychiatre-une-grande-difference-700x434_0.jpg"  width="350" height="130">
    
@@ -326,7 +343,7 @@ function login(){
  
 </article>
 <article>
-  <h2 style="color:white;">Ophthalmologist</h2>
+  <h2 style="color:white;">General Surgery</h2>
   <figure>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Eye_exam.jpg/350px-Eye_exam.jpg" width="350" height="130">
    
@@ -337,7 +354,7 @@ function login(){
 
 
 <article>
-  <h2 style="color:white;">Pediatrician</h2>
+  <h2 style="color:white;">Gynecologist</h2>
   <figure>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxd1XjTrrQ8A58rJceUMvtK8ltn-wh4rF9mjco8iozZplhWKF"  width="350" height="130"/>
   </figure>
@@ -347,7 +364,7 @@ function login(){
 
 
 <article>
-  <h2 style="color:white;">Dermatologist</h2>
+  <h2 style="color:white;">Neurosurgery</h2>
   <figure>
     <img src="http://sante.lefigaro.fr/sites/default/files/img/2012/02/28/dermatologue.jpg"  width="350" height="130">
    
@@ -355,7 +372,7 @@ function login(){
  
 </article>
 <article>
-  <h2 style="color:white;">Alternative Medicine</h2>
+  <h2 style="color:white;">Ophthalmologist</h2>
   <figure>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNIYyV0Z0UuliaFhwMdMCo-NLe3h14VJqZVqw3Y148duB6p0Tc"  width="350" height="130">
    
@@ -363,7 +380,7 @@ function login(){
  
 </article>
 <article>
-  <h2 style="color:white;">Neurosurgery</h2>
+  <h2 style="color:white;">Pediatrician</h2>
   <figure>
     <img src="https://www.primomedico.com/media/specialty/Aerzte-medizinische-Zentren-Neurologie.jpg.730x0_q85_crop_upscale.jpg"  width="350" height="130">
    
@@ -373,7 +390,7 @@ function login(){
 
 
 <article>
-  <h2 style="color:white;">Gynecologist</h2>
+  <h2 style="color:white;">Psychiatrist</h2>
   <figure>
     <img src="https://www.gynandco.fr/wp-content/uploads/2015/10/le-1er-rendez-vous-de-grossesse-chez-le-gynecologue-2015.jpg"  width="350" height="130">
    
@@ -388,16 +405,6 @@ function login(){
 
 
 
- <div class="input-field col s12">
-<select id="place-select">
-    <option value="">--Please choose a place--</option>
-    <option value="1">Grand tunis</option>
-    <option value="2">Bizerte</option>
-    <option value="3">région Ouest</option>
-    <option value="4">Cap Bon</option>
-    <option value="5">région est</option>
-    <option value="6">région Sud</option>
-</select></div>
 
 
 
@@ -406,6 +413,7 @@ function login(){
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<!-- password-script -->
 	<script type="text/javascript">
+	
 		window.onload = function () {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
@@ -521,6 +529,8 @@ function login(){
 	</script>
 	<!-- //smooth scrolling -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	
+	
 </body>
 
 </html>

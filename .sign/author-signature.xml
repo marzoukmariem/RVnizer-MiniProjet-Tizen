@@ -12,11 +12,11 @@
 </Reference>
 <Reference URI="AcceuilPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>5COdkHfEw1bfd74lKzI5jD7EUkvnRCRgm8jx2O+6rnQ=</DigestValue>
+<DigestValue>OW7V59pys6bCeviyuiG7ZMuoGlbXSYPsCchD+z1JIbI=</DigestValue>
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/ITbJKbeQTUAqKVdf1mXHV9gzp5T01kb1CN9Jcj9c/U=</DigestValue>
+<DigestValue>bAf4B7PlI89yhCw5Alb61BlyPUcruJO4jlKQZju7bvw=</DigestValue>
 </Reference>
 <Reference URI="DocteurConfirmationRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1239,9 +1239,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-X5RGIKkqY3QNSY1nqW/7/ZCuUUIfDVj3cM4X8vTGfU/RGw4tFKozQ54QqK+R35IxMZB/7TAZPRpW
-SI2qTrrIhF/725q2qeYAVbCzY+KbXnx1fC/2XjVlUskMiwjvAiYhluKPMYgcfcuJatYNK+n+/tlw
-jDTo3Gm74ZJZJY3c6Fw=
+NASvjUWgKx1VTEWqgNZWhpEQ5OLZJfnnlOyvuZrntXbiFRDbs8uKV/H74CMXDI8AdI3Sq/wCYWHo
+6B7YEzKGSz2z8XwKHGp+GGQyBz3dpD88q8AOHMarghpD558cymIYUZgzsj47UcosQ9rKSbhczQSH
+oRfDY7H1hZ6577/xGJc=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

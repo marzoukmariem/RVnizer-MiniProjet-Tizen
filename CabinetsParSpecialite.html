@@ -427,6 +427,13 @@ function login(){
 	
 	
 	<script>
+	 console.log('*******************');
+	 console.log('place');
+	 var place = sessionStorage.getItem("place");
+     console.log("*******************");
+             console.log(place);
+        
+	
  $.ajax({
             url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt=Grand%20tunis&inf=chirurgie",
             data: "", //ur data to be sent to server
