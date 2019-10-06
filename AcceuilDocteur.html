@@ -327,12 +327,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <section class="about" id="appointment">
         <div class="container">
             <h2>Next appointment</h2>
-            <div class="about-grids">
-                <div class="col-md-3 col-sm-3 col-xs-3 abt-lt-grid text-center">
-                    <h4>Anouar Ben Othman</h4>
-                    <p>2019-01-31</p>
-                    <p>12h40</p>
-                    <p class="ma-p"><i class="fa fa-phone" aria-hidden="true"></i>+216 50026882</p>
+            <div class="about-grids" >
+                <div class="col-md-3 col-sm-3 col-xs-3 abt-lt-grid text-center" id="nextAppointment">
+                    
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
                     <div class="w3ls-grid-head text-center">
@@ -340,15 +337,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h3>search per date</h3>
                     </div>
                     <div class="abt-form text-center">
-                        <form action="#" method="post">
+                        <form action="#" method="post" onSubmit="return false;">
 
                             <div class="col-sm-4 col-xs-4 w3ls-lt-form">
                                 <div class="w3ls-pr">
-                                    <input type="date" name="date" required="required">
+                                    <input type="date" name="date" required="required" placeholder="today" id="date">
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <input type="submit" value="Search">
+                            <input type="submit" value="Search" id="login-button" onclick="search()">
                         </form>
                         <div class="container">
                             <div class="grid-wrap" id="rdv">
@@ -509,11 +506,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              console.log("session : ");
              console.log(seesionvar);
              var id = sessionStorage.getItem("Idcabinet");
-          
-            
+         
+var today = new Date();
+
+
+var day = today.getDate()+"";
+    while (day.length < 2) day = "0" + day;
+    
+
+var month = (today.getMonth()+1)+"";
+    while (month.length < 2) month = "0" + month;
+    
+var date = today.getFullYear()+'-'+month+'-'+day;
+    
+console.log(date);
              
  $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/gettallredsmedecin.php?idCabinet=' + id ,
+            url: 'http://41.226.11.252:1180/medichelper/gettallredsmedecinRecherche.php?idCabinet=' + id+ '&searchInput=' + date ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
@@ -525,9 +534,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
               var c = testJson[i].Cin_Patient
-              var d = testJson[i].DateNaissance_User
+              var d = testJson[i].dateRendezvous
               var im = testJson[i].UrlImage_Patient
-           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d + '</h6></div></div>';
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div>';
          
            console.log(c);
             console.log('"http://41.226.11.252:1180/medichelper/images/' + im + '"');
@@ -545,6 +554,96 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
  </script>   
+ 
+ <script>
+ var seesionvar = sessionStorage.getItem("Iduser");
+             console.log("*******************");
+             console.log("session : ");
+             console.log(seesionvar);
+             var id = sessionStorage.getItem("Idcabinet");
+          
+
+
+
+
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/gettallredsmedecinTriParDate.php?idCabinet=' + id ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            
+            var testJson = JSON.parse(data);
+           console.log(testJson.length);
+            
+              var n = testJson[0].Nom_User + " " + testJson[0].Prenom_User;
+              var d = testJson[0].dateRendezvous
+              var im = testJson[0].UrlImage_Patient
+              var num = testJson[0].NumTel_User
+           document.getElementById('nextAppointment').innerHTML = document.getElementById('nextAppointment').innerHTML +'<h4>'+n+'</h4><p>'+d.substring(11, 16)+'</p><p>'+d.substring(0, 10)+'</p><p class="ma-p"><i class="fa fa-phone" aria-hidden="true"></i>+216 '+num+'</p>';
+         
+           
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+
+ </script>   
+ 
+ <script>
+ function search(){
+ 	var seesionvar = sessionStorage.getItem("Iduser");
+             console.log("*******************");
+             console.log("session : ");
+             console.log(seesionvar);
+             var id = sessionStorage.getItem("Idcabinet");
+         
+var date = document.getElementById('date').value.trim();
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/gettallredsmedecinRecherche.php?idCabinet=' + id+ '&searchInput=' + date ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             document.getElementById('rdv').innerHTML = ''
+            
+            var testJson = JSON.parse(data);
+           console.log(testJson.length);
+            for (var i = 0; i < testJson.length; i++) {
+              var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
+              var c = testJson[i].Cin_Patient
+              var d = testJson[i].dateRendezvous
+              var im = testJson[i].UrlImage_Patient
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d + '</h6></div></div>';
+         
+           console.log(c);
+            console.log('"http://41.226.11.252:1180/medichelper/images/' + im + '"');
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+ 	
+ 	}
+ </script>
+ 
+ 
 </body>
 </html>
 
