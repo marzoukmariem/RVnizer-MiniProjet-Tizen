@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="Tizen Mobile Web Basic Template" />
     <title>RVnizer</title>
@@ -149,6 +150,7 @@ function login(){
 <!-- Head -->
 
 <head>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<title>Sanatorium a Medical Category Bootstrap responsive Website Template | Home :: w3layouts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -432,10 +434,10 @@ function login(){
 	 var place = sessionStorage.getItem("place");
      console.log("*******************");
              console.log(place);
-        
+        var placesansespace = place.split(" ").join("%20");
 	
  $.ajax({
-            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt=Grand%20tunis&inf=chirurgie",
+            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&inf=chirurgie",
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
@@ -447,8 +449,9 @@ function login(){
               var n = testJson[i].Nom_Cabinet ;
               var des = testJson[i].Info_Cabinet
               var num = testJson[i].NumTel_Cabinet
+               var adresse = testJson[i].Emplacement_Cabinet;
             
-           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5>' + n + '</h5><p>'+ des +'</p> <h5>'+ num +'</h5></div><div class="clearfix"></div></div></div>';
+           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5>' + n + '</h5><p>'+ des +'</p> <h5>'+ num +'</h5><p>'+ adresse +'</p><p><i class="fas fa-code"></i></p></div><div class="clearfix"></div></div></div>';
  
          
           
