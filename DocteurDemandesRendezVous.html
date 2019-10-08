@@ -262,54 +262,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="agile_secives jarallax" id="services">
         <div class="container">
             <h3>requests</h3>
-            <div class="markets-grids">
-                <a href="DocteurConfirmationRendezVous.html">
-                    <div class="col-md-4 w3ls-markets-grid">
-                        <div class="agileits-icon-grid">
-                            <div class="icon-left">
-                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon-right">
-                                <h5>Anouar Ben Othman</h5>
-                                <h6>2019-01-31</h6>
-                                <h6>12h30</h6>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </a>
-                <a href="DocteurConfirmationRendezVous.html">
-                    <div class="col-md-4 w3ls-markets-grid">
-                        <div class="agileits-icon-grid">
-                            <div class="icon-left">
-                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon-right">
-                                <h5>Marzouk Mariem</h5>
-                                <h6>2019-01-31</h6>
-                                <h6>12h30</h6>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </a>
-                <a href="DocteurConfirmationRendezVous.html">
-                    <div class="col-md-4 w3ls-markets-grid">
-                        <div class="agileits-icon-grid">
-                            <div class="icon-left">
-                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="icon-right">
-
-                                <h5>Arij Ben Othman</h5>
-                                <h6>2019-01-31</h6>
-                                <h6>12h30</h6>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </a>
-                <div class="clearfix"></div>
+            <div class="markets-grids" id="AppointmentDemands">
+                
+                
             </div>
         </div>
     </div>
@@ -446,6 +401,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+    
+     <script>
+ var seesionvar = sessionStorage.getItem("Iduser");
+             console.log("*******************");
+             console.log("session : ");
+             console.log(seesionvar);
+             var id = sessionStorage.getItem("Idcabinet");
+          
+
+
+
+
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getallrendezvous.php?idCabinet=' + id ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            
+            var testJson = JSON.parse(data);
+           console.log(testJson.length);
+             for (var i = 0; i < testJson.length; i++) {
+              var n = testJson[i].Nom_User + " " + testJson[0].Prenom_User;
+              var d = testJson[i].dateRendezvous
+              var num = testJson[i].NumTel_User
+              var id = testJson[i].Id_Rendezvous
+           document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<a id="idname" onclick="getValue('+id+')"><div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-clock-o" aria-hidden="true"></i></div><div class="icon-right"><h5>'+n+'</h5><h6>'+d.substring(0, 10)+'</h6><h6>'+d.substring(11, 16)+'</h6></div><div class="clearfix"></div></div></div></a>';
+         }
+           document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="clearfix"></div>';
+         
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+
+ </script>   
+    
+     <script>
+     
+     function getValue(idval)
+{
+
+sessionStorage.setItem("IdRdv",idval);
+
+console.log(sessionStorage.getItem("IdRdv"));
+
+window.location = 'DocteurConfirmationRendezVous.html';
+
+}
+     
+      </script>
+    
 </body>
 
 </html>
