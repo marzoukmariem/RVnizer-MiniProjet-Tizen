@@ -408,11 +408,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              console.log("session : ");
              console.log(seesionvar);
              var id = sessionStorage.getItem("Idcabinet");
-          
-
-
-
-
              
  $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/getallrendezvous.php?idCabinet=' + id ,
@@ -423,7 +418,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              console.log(data);
             
             var testJson = JSON.parse(data);
-           console.log(testJson.length);
+ 
              for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[0].Prenom_User;
               var d = testJson[i].dateRendezvous
@@ -453,13 +448,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 sessionStorage.setItem("IdRdv",idval);
 
-console.log(sessionStorage.getItem("IdRdv"));
+console.log('idRdv: '+sessionStorage.getItem("IdRdv"));
 
 window.location = 'DocteurConfirmationRendezVous.html';
 
 }
      
       </script>
+      
     
 </body>
 
