@@ -417,7 +417,7 @@ function login(){
               var adresse = testJson[i].Emplacement_Cabinet;
               var idcabinet = testJson[i].Id_Cabinet; 
                nbform++;       
-           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5>' + n + '</h5><p>'+ des +'</p> <h5>'+ num +'</h5><p>'+ adresse +'</p><p><form action="" method="post" onSubmit="return false;" ><input type="text" id="idcab" ><input type="submit" value="Book" onclick="Rservez()"></form></p></div><div class="clearfix"></div></div></div>';
+           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5><a id="idname" onclick="getValue('+idcabinet+')">'+n+'</a></h5><p>'+ des +'</p> <h5>'+ num +'</h5><p>'+ adresse +'</p></div><div class="clearfix"></div></div></div>';
           console.log("idcabinet :");
           console.log(idcabinet);
            console.log("i :");
@@ -456,7 +456,21 @@ function login(){
 
 
  </script>   
-	
+	 <script>
+     
+     function getValue(idval)
+{
+
+sessionStorage.setItem("IdCabinetspes",idval);
+
+
+window.location = 'ReservezRendezVous.html';
+
+}
+     
+      </script>
+      
+    
 
 	<!-- //smooth scrolling -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
