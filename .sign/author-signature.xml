@@ -68,7 +68,7 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>kM+y16+UwvjLW7vDpeWiuc9d/mfyuhqU+scY5v40LPk=</DigestValue>
+<DigestValue>iCNw+lTthtNW6/DKuqcMOro69cPSlGYJbTxTTd91DZ8=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1296,7 +1296,7 @@
 </Reference>
 <Reference URI="ophtalmologist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>HmESdLlBffjNOzXnNsYBTNvli/eSzreKkWjPkf7jQcU=</DigestValue>
+<DigestValue>Em18NJRvH5871jsE0bbA7Ia0vSwWJwnqmhwKXVG1GhE=</DigestValue>
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1311,9 +1311,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-eFPHTA0mcYOIfj1CndQLDsA0L2TIkpGJs67cWqxMNh0dzQORue6kHuj5Z/SqdJnJIz82wuYHUeyO
-CCV+nGeeJE/Md74yMsZUoIGsr53O+VPnLtWyhOdf4MgXt99ohcZddQns0npj+SIFRZ6tkzlpwR9Y
-Pb6CNPap8elvEWody3M=
+fCkUnnJ9hSGVwZX+qT+Ota5cW8yPR+V6IuPo0yB8n3Hz7TpsCcNesAS333OzqjNX3QdMyznVjzE3
+Z5JS74nCPR6kqW2ncQubxodM+mgrx/J+SRAuBWdIDWKq/DlY5XgAmKAvQ/5KtUGPkc4JZpCqKoW3
+P0NYdUKnFve0DPEL9Sk=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
