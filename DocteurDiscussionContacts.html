@@ -172,38 +172,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!-- new script end -->
 
-    <script>
-        function login(){
-        	
-        	var usr = document.getElementById('add-account-usr').value.trim();
-                    data = document.getElementById('add-account-data')
-                        .value.trim();
-        	
-        	console.log(usr);
-        	
-        	var obj;
-           
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                		console.log("Récuperation");
-            if (this.readyState === 4 ) {
-            	obj =  JSON.parse(xhttp.responseText);
-            	if (obj.length !== 0){
-            		alert('Bienvenue '+obj[0].Role_User);
-            		
-            	}
-            	
-            	else if (obj.length == 0) {
-            		alert("Vérifiez vos coordonnées.");
-            	}
-             }
-             };
-            xhttp.open("GET", "http://41.226.11.252:1180/medichelper/login2.php?login="+usr+"&password="+data);
-            xhttp.send();
-            
-          
-        }
-    </script>
+   
 </head>
 <!-- Head -->
 
@@ -262,19 +231,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <section class="grid-gallery" id="grid-gallery">
         <h3 class="title text-center">Contacts</h3>
         <br>
-        <div class="container">
-        <a href="DocteurDiscussionAvecPatient.html">
-            <div class="container3">
-                <img src="images/t6.jpg" alt="Avatar">
-                <h3>Mariem Marzouk</h3>
-            </div>
-            </a>
-            <a href="DocteurDiscussionAvecPatient.html">
-            <div class="container3">
-                <img src="images/t6.jpg" alt="Avatar">
-                <h3>Anouar Ben Othman</h3>
-            </div>
-            </a>
+        <div class="container" id="contacts">
+        
         </div>
     </section>
 
@@ -407,6 +365,60 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+    
+     <script>
+      
+ 	var id = sessionStorage.getItem("Iduser");
+             
+         
+
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getallpatientsHavingMessages.php?Userid=' + id ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             
+            var testJson = JSON.parse(data);
+           console.log(testJson.length);
+            for (var i = 0; i < testJson.length; i++) {
+              var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
+              var id = testJson[i].Id_User
+              var im = testJson[i].UrlImage_Patient
+           document.getElementById('contacts').innerHTML = document.getElementById('contacts').innerHTML +'<a id="idPatient" href="DocteurDiscussionAvecPatient.html" onclick="getValue('+id+')"><div class="container3"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="Avatar"><h3>'+ n +'</h3></div></a>';
+         
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+ 	
+ 	
+    </script>
+    
+     <script>
+     
+     function getValue(idval)
+{
+
+sessionStorage.setItem("IdPatient",idval);
+
+console.log('IdPatient: '+sessionStorage.getItem("IdPatient"));
+
+window.location = 'DocteurDiscussionAvecPatient.html';
+
+}
+     
+      </script>
+    
 </body>
 
 </html>
