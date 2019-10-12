@@ -149,6 +149,16 @@ function login(){
 <!-- Head -->
 
 <head>
+
+<meta charset='utf-8' />
+<title>Display a map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+
 	<title>Sanatorium a Medical Category Bootstrap responsive Website Template | Home :: w3layouts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -198,6 +208,9 @@ function login(){
     
   
 }
+
+
+
 </script>	
 </head>
 <!-- Head -->
@@ -296,13 +309,8 @@ function login(){
 		<div class="container">
 			<h2>appointment</h2>
 			<div class="about-grids">
-				<div class="col-md-3 col-sm-3 col-xs-3 abt-lt-grid text-center">
-					<h4>Cabinet Dr Mohamed</h4>
-					<p>Monday-Saturday</p>
-					<p>7am-10pm</p>
-					<p>Sunday(no appointment)</p>
-					<p class="ma-p"><i class="fa fa-phone" aria-hidden="true"></i>24211538</p>
-
+				<div class="col-md-3 col-sm-3 col-xs-3 abt-lt-grid text-center" id="appointment-patient">
+					
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
 					<div class="w3ls-grid-head text-center">
@@ -314,18 +322,13 @@ function login(){
 							
 							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
 								<div class="w3ls-pr">
-									<input type="date" name="date" required="required">
+									<input type="date" name="date" required="required" id="daterdv">
 									
 								</div>
 							</div>
-							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
-								<div class="w3ls-pr">
-									<input type="time" name="time" required="required">
-									
-								</div>
-							</div>
+							
 							<div class="clearfix"></div>
-							<input type="submit" value="Book Now">
+							<input type="submit" value="Book Now" onclick="book()">
 
 						</form>
 					</div>
@@ -334,27 +337,9 @@ function login(){
 			</div>
 		</div>
 	
+	</section>
 	
-	
-	
-	
-	
-	
-	<script type="text/javascript">
-	console.log('id ceb choisite')
-	console.log('id ceb choisite: '+sessionStorage.getItem("IdCabinetspes"));
-	
-	
-	</script>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -475,6 +460,117 @@ function login(){
 	</script>
 	<!-- //smooth scrolling -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	
+	<script type="text/javascript">
+	console.log('id ceb choisite')
+	console.log('id ceb choisite: '+sessionStorage.getItem("IdCabinetspes"));
+	
+             
+            var idcab = sessionStorage.getItem("IdCabinetspes");
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getinfocab.php?idpt=' + idcab ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            
+            var testJson = JSON.parse(data);
+           
+            
+              var n = testJson[0].Nom_Cabinet;
+              var num = testJson[0].NumTel_Cabinet;
+              var long = testJson[0].longitude;
+              var lat = testJson[0].Latitude;
+          
+         
+           document.getElementById('appointment-patient').innerHTML = document.getElementById('appointment-patient').innerHTML +'<h4>'+n+'</h4><p>Monday-Saturday</p><p>9am-6pm</p><p>Sunday(no appointment)</p><p class="ma-p"><i class="fa fa-phone" aria-hidden="true"></i>'+num+'</p>';
+         
+              
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+
+ </script>
+	
+	
+	<script type="text/javascript">
+	
+	function book()
+{
+
+ var daterdv =  document.getElementById('daterdv').value.trim();  
+ if (daterdv === "" )
+{
+alert("you must choose a date ");
+}
+else
+{
+	var idpt = sessionStorage.getItem("Iduser");
+    var idcs = sessionStorage.getItem("IdCabinetspes");
+        
+
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/insererrendezvous3.php?approuver_Rendezvous=false&FK_Patient_ID='+ idpt +'&date='+ daterdv +'cabinet_ID='+ idcs,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+            
+           alert('Appointment added successfully');
+           
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+        
+}
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
 </body>
 
 </html>
