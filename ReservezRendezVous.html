@@ -212,6 +212,75 @@ function login(){
 
 
 </script>	
+
+	<script src="jquery-3.4.1.min.js"></script>
+	
+	<script>
+	
+	function book()
+{
+
+ var daterdv =  document.getElementById('daterdv').value.trim();  
+ if (daterdv === "" )
+{
+alert("you must choose a date ");
+}
+else
+{
+	 
+ 	var idpt = sessionStorage.getItem("Iduser");
+    var idcs = sessionStorage.getItem("IdCabinetspes");
+        
+
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/insererrendezvous3.php?approuver_Rendezvous=false&FK_Patient_ID='+ idpt +'&date='+ daterdv +'cabinet_ID='+ idcs,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+            
+           alert('Appointment added successfully');
+           
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+	
+        
+}
+
+}
+	
+
+	
+	
+	
+	</script>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <!-- Head -->
 
@@ -498,70 +567,7 @@ function login(){
 
 
  </script>
-	
-	
-	<script type="text/javascript">
-	
-	function book()
-{
 
- var daterdv =  document.getElementById('daterdv').value.trim();  
- if (daterdv === "" )
-{
-alert("you must choose a date ");
-}
-else
-{
-	var idpt = sessionStorage.getItem("Iduser");
-    var idcs = sessionStorage.getItem("IdCabinetspes");
-        
-
-             
- $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/insererrendezvous3.php?approuver_Rendezvous=false&FK_Patient_ID='+ idpt +'&date='+ daterdv +'cabinet_ID='+ idcs,
-            data: "", //ur data to be sent to server
-            contentType: "application/json; charset=utf-8", 
-            type: "GET",
-            success: function (data) {
-            
-           alert('Appointment added successfully');
-           
-            }
-            
-            
-             
-            },
-            error: function (x, y, z) {
-               alert(x.responseText +"  " +x.status);
-            }
-        });
-        
-}
-
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	</script>
-	
 	
 
 	
