@@ -68,11 +68,11 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>anlsDJqNBlM5XaMYXQfVlaC4wt9WT1Ij2ik0+2NrGeU=</DigestValue>
+<DigestValue>Vux7rx82wAzkBCS6Dr7TA3cLXVC3AKQ3BxB7tvTEfVU=</DigestValue>
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+lllLgbWyfnIWcgBIO3uhN+l9zDvki2742yUYrXWxgg=</DigestValue>
+<DigestValue>LZnNqN0ecdJ/IbOuSfIr0aU+iTaZj14SA0EgrG/Pwiw=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1315,9 +1315,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-YFWztm6/nahK0xkqTFAYZkuvoNB5gvjnNxgV41YI5w6p8K5J51/Hyc3ffXPWPFZxX0U2BWHMsFhd
-TbODec4WiTcHVG96Hj+xgCPDa+imsWt9nqoElJ2F+DlzFseo0IMcHJw5rCpUXOrQpxP/g/dSXffl
-nxgps8lm3hDasgVPS8Q=
+HzVJOys9Sgh8u8BGnNZnh1rgkEn1AkNWzjp2sQiUfh4ecbV1XogoN9FYyaC3Yk4YnK8mNcDHdM9L
+1rHpYgfz2+A8hJGF+JR4vI6PS7HTmdzbnMrFS2A1DcPBga3VCNuVdWh346YSilgLkmYl2Zu+HbdY
+cqFbUUPBOdbCkon7WAk=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

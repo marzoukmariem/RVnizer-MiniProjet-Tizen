@@ -150,12 +150,24 @@ function login(){
 
 <head>
 
-<meta charset='utf-8' />
-<title>Display a map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+.coordinates {
+background: rgba(0,0,0,0.5);
+color: #fff;
+position: absolute;
+bottom: 40px;
+left: 10px;
+padding:5px 10px;
+margin: 0;
+font-size: 11px;
+line-height: 18px;
+border-radius: 3px;
+display: none;
+}
+</style>
 
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 
 
 
@@ -230,24 +242,25 @@ else
 	 
  	var idpt = sessionStorage.getItem("Iduser");
     var idcs = sessionStorage.getItem("IdCabinetspes");
-        
-
-             
+    console.log(' url rdv :');
+    
+     
+            
  $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/insererrendezvous3.php?approuver_Rendezvous=false&FK_Patient_ID='+ idpt +'&date='+ daterdv +'cabinet_ID='+ idcs,
+            url: 'http://41.226.11.252:1180/medichelper/insererrendezvous3.php?approuver_Rendezvous=false&FK_Patient_ID='+ idpt +'&date='+ daterdv +'&cabinet_ID='+ idcs,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
-            
+              cosole.log('Appointment added successfully');
            alert('Appointment added successfully');
-           
-            }
-            
+           window.location='AcceuilPatient.html';
+                      
             
              
             },
             error: function (x, y, z) {
+            cosole.log('error rdv');
                alert(x.responseText +"  " +x.status);
             }
         });
@@ -376,8 +389,7 @@ else
 	
 	<section class="about" id="appointment">
 		<div class="container">
-			<h2>appointment</h2>
-			<div class="about-grids">
+						<div class="about-grids">
 				<div class="col-md-3 col-sm-3 col-xs-3 abt-lt-grid text-center" id="appointment-patient">
 					
 				</div>
@@ -410,7 +422,10 @@ else
 	
 
 	
-	
+	<div id='map' style='width: 400px; height: 300px;'></div>
+
+<pre id='coordinates' class='coordinates'></pre>
+
 	
 	
 	
@@ -555,6 +570,28 @@ else
           
          
            document.getElementById('appointment-patient').innerHTML = document.getElementById('appointment-patient').innerHTML +'<h4>'+n+'</h4><p>Monday-Saturday</p><p>9am-6pm</p><p>Sunday(no appointment)</p><p class="ma-p"><i class="fa fa-phone" aria-hidden="true"></i>'+num+'</p>';
+         mapboxgl.accessToken = 'pk.eyJ1IjoibWVkaWNoZWxwZXIiLCJhIjoiY2pwam04ZDh2MDdxcTN2cGZkYWRvZHlzcyJ9.uxJW2VZCgO4KhtdqthKKCw';
+var coordinates = document.getElementById('coordinates');
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [long, lat],
+zoom: 15
+});
+ 
+var marker = new mapboxgl.Marker({
+draggable: true
+})
+.setLngLat([long, lat])
+.addTo(map);
+ 
+function onDragEnd() {
+var lngLat = marker.getLngLat();
+coordinates.style.display = 'block';
+coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+}
+ 
+marker.on('dragend', onDragEnd);
          
               
             },
@@ -562,6 +599,7 @@ else
                alert(x.responseText +"  " +x.status);
             }
         });
+
 
 
 
