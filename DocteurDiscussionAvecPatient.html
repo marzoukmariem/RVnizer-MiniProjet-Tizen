@@ -262,39 +262,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      <section class="grid-gallery" id="grid-gallery">
         <div class="container">
             <h3 class="title text-center">Messages</h3>
-
+			<div id="message">
 				<br>
 
-            <div class="container2">
-                <img src="images/t6.jpg" alt="Avatar">
-                <p>Hello. How are you today?</p>
-                <span class="time-right">11:00</span>
-            </div>
-
-            <div class="container2 darker">
-                <img src="images/t5.jpg" alt="Avatar" class="right">
-                <p>Hey! I'm fine. Thanks for asking!</p>
-                <span class="time-left">11:01</span>
-            </div>
-
-            <div class="container2">
-                <img src="images/t6.jpg" alt="Avatar">
-                <p>Sweet! So, what do you wanna do today?</p>
-                <span class="time-right">11:02</span>
-            </div>
-
-            <div class="container2 darker">
-                <img src="images/t5.jpg" alt="Avatar" class="right">
-                <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                <span class="time-left">11:05</span>
+           
             </div>
 				<br>
             <div class="row comment-box-main p-3 rounded-bottom">
                 <div class="col-md-9 col-sm-9 col-9 pr-0 comment-box">
-                    <input type="text" class="form-control" placeholder="comment ...." />
+                    <input type="text" class="form-control" placeholder="message ...." id="msg"/>
                 </div>
                 <div class="col-md-3 col-sm-2 col-2 pl-0 text-center send-btn">
-                    <button class="btn btn-info">Send</button>
+                    <button class="btn btn-info" onclick="search()">Send</button>
                 </div>
             </div>
         </div>
@@ -439,6 +418,73 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+    
+    
+    <script>
+ 	var idDoc = sessionStorage.getItem("Iduser");
+    var idPatient = sessionStorage.getItem("IdPatient");
+         
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getallMsgsOfDoctorWithHisPatients.php?idDocteur=' + idDoc + '&Userid=' + idPatient ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             
+            var testJson = JSON.parse(data);
+            for (var i = 0; i < testJson.length; i++) {
+            
+              
+              var msg = testJson[i].detail_Msg
+              
+              if(testJson[i].fk_To==idDoc){
+             
+           document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2"><img src="images/t6.jpg" alt="Avatar"><p>'+msg+'</p></div>';
+         window.scrollTo(0,document.body.scrollHeight); 
+         } else{
+          document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/t5.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
+         window.scrollTo(0,document.body.scrollHeight);
+         }
+            }
+            
+             window.scrollTo(0,document.body.scrollHeight);
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+    </script>
+    
+         <script>
+ function search(){
+
+    var idDoc = sessionStorage.getItem("Iduser");
+    var idPatient = sessionStorage.getItem("IdPatient");
+    var msg = document.getElementById('msg').value.trim();
+     
+     if (msg != ''){    
+
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/ajoutermsg.php?detail_Msg=' + msg + '&FK_User_ID='+ idDoc + '&fk_To='+ idPatient ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+           	   document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/t5.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
+        window.scrollTo(0,document.body.scrollHeight);
+        document.getElementById('msg').value=''
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });	
+        
+ 	}
+ 	}
+ </script>
+     
 </body>
 
 </html>
