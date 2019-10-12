@@ -40,7 +40,7 @@
 </Reference>
 <Reference URI="DocteurDiscussionAvecPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CLh+I1KqOCY6o4z6hZjbvXXEbL3E0+yn0KyJYjfw7CU=</DigestValue>
+<DigestValue>m2J2Y01lRy/ZQyW34ZU6kHbmm08RKLxbpy5ORaYPCiM=</DigestValue>
 </Reference>
 <Reference URI="DocteurDiscussionContacts.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -68,11 +68,11 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Vux7rx82wAzkBCS6Dr7TA3cLXVC3AKQ3BxB7tvTEfVU=</DigestValue>
+<DigestValue>0a9O+YDDzib7lQAfOEZ8y2rDSTeUJ2GrX1j/+N2V2Yg=</DigestValue>
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>LZnNqN0ecdJ/IbOuSfIr0aU+iTaZj14SA0EgrG/Pwiw=</DigestValue>
+<DigestValue>S2aIQanZmHSaUANRgV+KbUF+g57lgZgIG90A87hfGC0=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1315,9 +1315,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-HzVJOys9Sgh8u8BGnNZnh1rgkEn1AkNWzjp2sQiUfh4ecbV1XogoN9FYyaC3Yk4YnK8mNcDHdM9L
-1rHpYgfz2+A8hJGF+JR4vI6PS7HTmdzbnMrFS2A1DcPBga3VCNuVdWh346YSilgLkmYl2Zu+HbdY
-cqFbUUPBOdbCkon7WAk=
+iuccu0npwWJutfybcqo7k7sxpAN3b0sVi86sJV+uR/uzUD/CVOBSfZMd4lQcoHCi7xBicJVa1Tiu
+u8rwItHVUXXHVWIZpPKoDkaVnT/SsOBxeJvHX8FGvpd41bbNbbILMN/osJMi0hr/KNidw4a4vEzU
+nHDWWtODJqh4MsEpRCQ=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
