@@ -253,7 +253,14 @@ function login(){
 		<!-- /services -->
 	<div class="agile_secives jarallax" id="services">
 		<div class="container">
-			<h3>Ophthalmologist</h3>
+		<form action="" method="post" onSubmit="return false;" >
+		
+		<input type="text" id="choix">
+			<input type="submit" value="search" id="login-button" onclick="search()">
+		
+		</form>
+		
+			
 			<div class="markets-grids" id="cabinets">
 					<div class="clearfix"> </div>
 					</div>
@@ -393,7 +400,7 @@ function login(){
         var placesansespace = place.split(" ").join("%20");
 	
  $.ajax({
-            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&inf=Ophtalmologue",
+            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&inf=Ophthalmologist",
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",

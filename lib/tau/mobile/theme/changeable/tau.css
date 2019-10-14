@@ -743,7 +743,7 @@ input[type="checkbox"].ui-checkbox.favorite:checked::after {
   opacity: 1;
 }
 input[type="checkbox"].ui-checkbox.favorite::before {
-  background-color: rgba(255, 179, 0, 1);
+  background-color: rgba(23, 112, 201, 1.0);
   -webkit-mask-image: url("images/controls/core_icon_favorite_off_ef.svg");
 }
 input[type="checkbox"].ui-checkbox.favorite:checked:disabled::before {

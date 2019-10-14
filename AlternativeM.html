@@ -200,69 +200,25 @@ function login(){
     
   
 }
+
+
+	
+	function Rservez()
+{
+   window.location = 'ReservezRendezVous.html';
+   var idc = document.getElementById("idcab").value;
+   sessionStorage.setItem("IdcabinetReservez",idc);
+
+}
+	
+
+
 </script>	
 </head>
 <!-- Head -->
 
 <body>
 
-	<!-- popup for sign in form -->
-	<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div id="small-dialog1" class="mfp-hide book-form">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h3>Sign In </h3>
-					<form action="" method="post" onSubmit="return false;" >
-						<input type="email" name="Email" class="email" placeholder="Email" required="" id="add-account-usr" data-clear-btn="true"/>
-						<input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data" data-clear-btn="true"/>
-						<ul>
-							<li>
-								<input type="checkbox" id="brand1" value="">
-								<label for="brand1"><span></span>Remember me</label>
-							</li>
-						</ul>
-						<a href="#">Forgot Password?</a><br>
-						<div class="clearfix"></div>
-						<input type="submit" value="Sign In" id="login-button" onclick="login()">
-					</form>
-					<div class="w3ls-or">
-						<p>Or</p>
-					</div>
-					<div class="top-middle w3ls-sma">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //popup for sign in form -->
-	<!-- popup for sign up form -->
-	<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div id="small-dialog2" class="mfp-hide book-form">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h3>Sign Up</h3>
-					<form action="#" method="post">
-						<input type="text" name="Name" placeholder="Your Name" required="" />
-						<input type="email" name="Email" class="email" placeholder="Email" required="" />
-						<input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
-						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
-						<input type="submit" value="Sign Up">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //popup for sign up form -->
-	<!--banner-section-starts-here-->
 	<section class="banner jarallax">
 		<div class="navigation">
 			<div class="container">
@@ -297,7 +253,14 @@ function login(){
 		<!-- /services -->
 	<div class="agile_secives jarallax" id="services">
 		<div class="container">
-			<h3>General Surgery</h3>
+		<form action="" method="post" onSubmit="return false;" >
+		
+		<input type="text" id="choix">
+			<input type="submit" value="search" id="login-button" onclick="search()">
+		
+		</form>
+		
+			
 			<div class="markets-grids" id="cabinets">
 					<div class="clearfix"> </div>
 					</div>
@@ -437,7 +400,7 @@ function login(){
         var placesansespace = place.split(" ").join("%20");
 	
  $.ajax({
-            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&médecine%20alternative",
+            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&inf=Alternative Medicine",
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
@@ -445,16 +408,36 @@ function login(){
              console.log(data);
             var testJson = JSON.parse(data);
            console.log(testJson.length);
+         var listid = [];
+           if (testJson.length === 0){
+           
+           alert('There is no Ophthalmologist office in this area ');
+           window.location = 'AcceuilPatient.html';
+           }
+           else
+           {
+           var nbform=0;
             for (var i = 0; i < testJson.length; i++) {
-              var n = testJson[i].Nom_Cabinet ;
-              var des = testJson[i].Info_Cabinet
-              var num = testJson[i].NumTel_Cabinet
-               var adresse = testJson[i].Emplacement_Cabinet;
-            
-           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5>' + n + '</h5><p>'+ des +'</p> <h5>'+ num +'</h5><p>'+ adresse +'</p><p><i class="fas fa-code"></i></p></div><div class="clearfix"></div></div></div>';
+             var n = testJson[i].Nom_Cabinet ;
+             var des = testJson[i].Info_Cabinet
+             var num = testJson[i].NumTel_Cabinet
+              var adresse = testJson[i].Emplacement_Cabinet;
+              var idcabinet = testJson[i].Id_Cabinet; 
+               nbform++;       
+           document.getElementById('cabinets').innerHTML = document.getElementById('cabinets').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5><a id="idname" onclick="getValue('+idcabinet+')">'+n+'</a></h5><p>'+ des +'</p> <h5>'+ num +'</h5><p>'+ adresse +'</p></div><div class="clearfix"></div></div></div>';
+          console.log("idcabinet :");
+          console.log(idcabinet);
+           console.log("i :");
+           console.log(i);
+           listid.push(idcabinet);
+           
+           
+           
+ }
  
-         
-          
+       
+                   
+ 
             }
             
             
@@ -469,8 +452,22 @@ function login(){
 
 
  </script>   
-	
-	
+	 <script>
+     
+     function getValue(idval)
+{
+
+sessionStorage.setItem("IdCabinetspes",idval);
+
+
+window.location = 'ReservezRendezVous.html';
+
+}
+     
+      </script>
+      
+    
+
 	<!-- //smooth scrolling -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
