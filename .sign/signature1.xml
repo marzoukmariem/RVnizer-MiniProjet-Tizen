@@ -12,11 +12,11 @@
 </Reference>
 <Reference URI="AcceuilPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>T6nZiBcVuN2k+0dmATbQeSB2CpHrcHtBKX45WTBtX/c=</DigestValue>
+<DigestValue>oSY2vL94ZBe31p1FTJM0mF7aTWUFko6yzj6lFsOQofI=</DigestValue>
 </Reference>
 <Reference URI="AlternativeM.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>AVsPNIX+sFRwddtogBM0QI5guYeHVr030Ndu6zRsZ/k=</DigestValue>
+<DigestValue>REp6kNi/z+g6MGSSkIyOFtHjMuPnHqF4kVfWA4uxpzU=</DigestValue>
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -24,11 +24,11 @@
 </Reference>
 <Reference URI="Dentist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>EWstPOou8i9BLQNblv3IgpT0fna7GjQwSybtxU1JIIg=</DigestValue>
+<DigestValue>i9YCKimq8q7VvOX3ntmFVOCVCvcuCq6rQJyAKDS4j48=</DigestValue>
 </Reference>
 <Reference URI="Dermatologue.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>SnU3Y71sA0FCX/pVm0ps3yCkIQlizbFDHI+hhnTEkSI=</DigestValue>
+<DigestValue>wTYy93dH/7j+g3HWX8AmiKSNpB2Y6KKdAic1CEX3Tgc=</DigestValue>
 </Reference>
 <Reference URI="DocteurConfirmationRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -52,7 +52,7 @@
 </Reference>
 <Reference URI="General.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ufFKArPyXCrfmvLlG9OOsRQOfgCdXlCB3hlx70qLsvk=</DigestValue>
+<DigestValue>0iMZgLU3ckRHs2gFzucqU2wdUJERoyqww1mLHaLO7bM=</DigestValue>
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -60,7 +60,7 @@
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>EM4lY1EMQCdm0RIPU+XEywAnjqZIdRwJB1grn0p0BMQ=</DigestValue>
+<DigestValue>CNbN0jxYBg8UTbgFZgikBsiw1xXnat3YIHpDl4nIDaM=</DigestValue>
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -72,7 +72,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>dn//eX34APREAo7GYNC0twyI/PFIFe2hbUluBAdLhio=</DigestValue>
+<DigestValue>Lrq50gnXo2lcrV/YbvkUWijMU2zMujBUzscUCbjVycw=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1296,15 +1296,15 @@
 </Reference>
 <Reference URI="neurosergery.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>NoJdpRQIjxNdvC7xJ9Wc8DQAdcF5lqd7AL5VALNb1iI=</DigestValue>
+<DigestValue>I0bTj8YySk88l7h1UmhkSQvDn2bpdpfhAGZ5uQNhMkE=</DigestValue>
 </Reference>
 <Reference URI="ophtalmologist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>BryfKkfSLYIJNJwc3o57iPnn5/vTO9zEi/NDREdzE5Q=</DigestValue>
+<DigestValue>/4ueYgfIh9exIEFTd/El+9NQMTVqNwyBpQaSN29fGng=</DigestValue>
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>kTp9B7cMdoDisv9tMOakW06o9lv9bmT2sXVXScMcbM8=</DigestValue>
+<DigestValue>wrVKU3t2jNqpvhJn8rxlazYmwfXBGmv0HSt3pESL6Yc=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -1315,9 +1315,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-mZscrf0zx8dyS60gJXy9NF6CHpodL0Mrmr3uVdVarL9k5FoTh7vikRi9Z3aKp+m1NHRvDWQTHsRf
-kJuynXP5tb4pfeAt2nMMz0RapE9FO7y4k/a/1aONbp7KIPiHHzYnNlpLUQeDuoNH4FWL5v7yVDJc
-z9GgnJlJXRjLsx3alP0=
+SYMm/02aybllVeAljvKQ5uEhApOR7/IT3kHzfbAHdGgmGv+PbrjOYNcqGqdXunTR/l36bX5M0vpP
+Zz62Jydt9LYIyDupTSwoOv/LO2sph/M4TVukZCl6BvT6jzFe7v3SinDCxmWrzj3K89w2A0JhHpCj
+5B6iEH/4RGSBWAR/YS4=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
