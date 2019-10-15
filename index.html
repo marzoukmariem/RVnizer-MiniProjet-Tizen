@@ -229,8 +229,8 @@ function login(){
 			<div class="container">
 				
 				<div class="col-md-4 col-sm-4 col-xs-4 top-right">
-					<a href="#" data-toggle="modal" data-target="#myModal1"><span></span> Sign In</a>
-					<a href="#" data-toggle="modal" data-target="#myModal2"><span></span> Sign Up</a>
+					<a href="#" data-toggle="modal" data-target="#myModal1" style="background-color:#f44336;border: 1px solid #f44336;" ><span style="background-color:#1770C9;"></span> Sign In</a>
+					<a href="#" data-toggle="modal" data-target="#myModal2" style="background-color:#f44336;border: 1px solid #f44336;"><span></span> Sign Up</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -245,8 +245,8 @@ function login(){
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h3>Sign In </h3>
 					<form action="" method="post" onSubmit="return false;" >
-						<input type="email" name="Email" class="email" placeholder="Email" required="" id="add-account-usr" data-clear-btn="true"/>
-						<input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data" data-clear-btn="true"/>
+						<input type="email" name="Email" class="email" placeholder="Email" required="" style="border-bottom: 2px solid red;" id="add-account-usr" data-clear-btn="true"/>
+						<input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data"  style="border-bottom: 2px solid red;" data-clear-btn="true"/>
 						<ul>
 							<li>
 								<input type="checkbox" id="brand1" value="">
@@ -255,19 +255,9 @@ function login(){
 						</ul>
 						<a href="#">Forgot Password?</a><br>
 						<div class="clearfix"></div>
-						<input type="submit" value="Sign In" id="login-button" onclick="login()">
+						<input type="submit" value="Sign In" id="login-button" onclick="login()"  style="background-color:#f44336;border: 1px solid #f44336;">
 										</form>
-					<div class="w3ls-or">
-						<p>Or</p>
-					</div>
-					<div class="top-middle w3ls-sma">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-						</ul>
-					</div>
+				
 
 				</div>
 			</div>
@@ -282,18 +272,18 @@ function login(){
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h3>Sign Up</h3>
 					<form action="#" method="post" onSubmit="return false;">
-						<input type="text" name="First Name" placeholder="First Name" required="" id="firstName" />
-						<input type="text" name="Last Name" placeholder="Last Name" required="" id="lastName"/>
-						<input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="phoneNumber"/>
-						<input type="email" name="Email" class="email" placeholder="Email" required="" />
-						<input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
-						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+						<input type="text" name="First Name" placeholder="First Name" required="" id="firstName" style="border-bottom: 2px solid red;" />
+						<input type="text" name="Last Name" placeholder="Last Name" required="" id="lastName"  style="border-bottom: 2px solid red;"/>
+						<input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="phoneNumber"  style="border-bottom: 2px solid red;"/>
+						<input type="email" name="Email" class="email" placeholder="Email" required=""  style="border-bottom: 2px solid red;" />
+						<input type="password" name="Password" id="password1" class="password" placeholder="Password" required=""   style="border-bottom: 2px solid red;"/>
+						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required=""  style="border-bottom: 2px solid red;" />
 						<select class="sel" required="" id="role">
 							<option value="">Select your Role</option>
 							<option value="patient">Patient</option>
 							<option value="docteur">Doctor</option>
 						</select>
-						<input type="submit" value="Sign Up"  onclick="SignUp()">
+						<input type="submit" value="Sign Up"  onclick="SignUp()"  style="background-color:#f44336;border: 1px solid #f44336;">
 					</form>
 				</div>
 			</div>
@@ -363,8 +353,8 @@ function login(){
                     <span>get to know</span>
                     <h3>RVnizer</h3>
                     <p>Your simple and friendly helper.</p>
-                    <div class="srv-w3ls">
-                        <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Read More</a>
+                    <div class="srv-w3ls" >
+                        <a href="#" style="background-color:#1770C9;border: 1px solid #1770C9;" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Read More</a>
                     </div>
                 </div>
                 
