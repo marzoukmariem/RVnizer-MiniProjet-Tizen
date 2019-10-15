@@ -2268,6 +2268,23 @@ a.w3ls-a:hover {
   color: #999;
 }
 
-
-
 /*--//contacts end--*/
+
+
+
+
+/*--//select start--*/
+.sel {
+    width: 100%;
+    padding: .5em 1em;
+    font-size: 1em;
+    margin-top: 1em;
+    font-weight: 600;
+    outline: none;
+    color: #9b9b9b;
+    border: 1px solid #e4e4e4;
+}
+.sel:hover {
+	border: 1px solid #fa5d07;
+}
+/*--//select end--*/
