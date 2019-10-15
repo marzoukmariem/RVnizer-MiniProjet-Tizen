@@ -56,7 +56,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Lm8aHdHrr/TUdRm6CI1Efnd/xrwA9TQefEDpbfYKpps=</DigestValue>
+<DigestValue>zLghj158yOj7NInNO8oaRgfi+1V+XtEmnCCvLz+kirE=</DigestValue>
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -72,7 +72,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Lrq50gnXo2lcrV/YbvkUWijMU2zMujBUzscUCbjVycw=</DigestValue>
+<DigestValue>dUYS1/Trj6X68rp7h4L8lqzd4EEbY+mnADSv3u+Jtqc=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1306,6 +1306,14 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>wrVKU3t2jNqpvhJn8rxlazYmwfXBGmv0HSt3pESL6Yc=</DigestValue>
 </Reference>
+<Reference URI="scriptclendar.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>33pPTGUo/QJyacnCiCShYc/fHBxpc0eE8GdD+Ba8Dpw=</DigestValue>
+</Reference>
+<Reference URI="stylescriptclendar.css">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>DhmTsKdWkLpwpDc/rteaUvWCgAJli9ASZ8XgL+lo4d4=</DigestValue>
+</Reference>
 <Reference URI="#prop">
 <Transforms>
 <Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"></Transform>
@@ -1315,9 +1323,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-SYMm/02aybllVeAljvKQ5uEhApOR7/IT3kHzfbAHdGgmGv+PbrjOYNcqGqdXunTR/l36bX5M0vpP
-Zz62Jydt9LYIyDupTSwoOv/LO2sph/M4TVukZCl6BvT6jzFe7v3SinDCxmWrzj3K89w2A0JhHpCj
-5B6iEH/4RGSBWAR/YS4=
+aXab1KknYw8DaOK7AbwvrSx2m2e6CwNzzt+YTGKbTdqgWaUBK314ucoaMmb74C/LeJf/gVO+MjbC
+MTz9gY1rg7rgsRfb1ocfZbhow/krnFeSY0Mwm1Qz7GrXyCHh2n5w+WvWM4Zy3u38tdbBQsYPd+JM
+iC3/+5v49dXQ6eSK79k=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
