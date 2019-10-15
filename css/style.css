@@ -131,7 +131,7 @@ a:hover {
 }
 
 .top-right a:hover {
-	color: #f99104;
+	color: #1770c9;
 	background: none;
 }
 
@@ -406,7 +406,7 @@ ul li input[type="checkbox"]:checked+label span:first-child:before {
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-	color: #f99104;
+	color: #1770c9;
 	background-color: transparent;
 }
 
@@ -472,7 +472,7 @@ ul li input[type="checkbox"]:checked+label span:first-child:before {
 	padding: 10px 0;
 	max-width: 0;
 	border: none;
-	color: #f99104;
+	color: #1770c9;
 	content: attr(data-hover);
 	-webkit-transition: max-width 1s;
 	-moz-transition: max-width 1s;
@@ -509,7 +509,7 @@ ul li input[type="checkbox"]:checked+label span:first-child:before {
 }
 
 .logo i.fa.fa-heartbeat {
-	color: #f1073b;
+	color: #1770c9;
 }
 
 .w3ls_banner_info p {
@@ -826,7 +826,7 @@ ul li input[type="checkbox"]:checked+label span:first-child:before {
 }
 
 .agileinfo-social-grids ul li a i.fa.fa-rss:hover {
-	color: #f26522;
+	color: #1770c9;
 }
 
 .agileinfo-social-grids ul li a i.fa.fa-vk {
@@ -945,7 +945,7 @@ p.ma-p {
 	text-transform: capitalize;
 	letter-spacing: 2px;
 	margin: 2em 0 0 0;
-	color: #f99104;
+	color: #1770c9;
 }
 
 .w3ls-grid-head h3 {
@@ -1081,7 +1081,7 @@ p.ma-p {
 }
 
 .social-icons-tm .fa-google-plus:hover {
-	color: #dd4b39;
+	color: #1770c9;
 }
 
 
@@ -1392,7 +1392,7 @@ a.w3ls-a:hover {
 }
 
 .contact-form-w3ls input[type="submit"]:hover {
-	color: #f99104;
+	color: #1770c9;
 	border: solid 2px #f99104;
 	background: none;
 }
@@ -1436,7 +1436,7 @@ a.w3ls-a:hover {
 
 .w3ls-top-ft span {
 	font-size: 1em;
-	color: #f99104;
+	color: #1770c9;
 	letter-spacing: 2px;
 	margin: 0 20em 0 0;
 	text-transform: capitalize;
@@ -1525,7 +1525,7 @@ a.w3ls-a:hover {
 .srv-w3ls a:hover {
 	border: 2px solid #f99104;
 	background: none;
-	color: #f99104;
+	color: #1770c9;
 }
 
 
@@ -1570,7 +1570,7 @@ a.w3ls-a:hover {
 }
 
 .footer-gd a {
-	color: #f99104;
+	color: #1770c9;
 	text-decoration: none;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -1829,10 +1829,10 @@ a.w3ls-a:hover {
 		display: block;
 	}
 	.navbar-default .navbar-toggle {
-		border-color: #f99104;
+		border-color: #1770c9;
 	}
 	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #f99104;
+		background-color: #1770c9;
 	}
 	.w3ls_banner_info {
 		padding: 7em 0 4em;
@@ -1881,10 +1881,10 @@ a.w3ls-a:hover {
 		margin-left: 9px;
 	}
 	.navbar-default .navbar-toggle {
-		border-color: #f99104;
+		border-color: #1770c9;
 	}
 	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #f99104;
+		background-color: #1770c9;
 	}
 	.w3ls_banner_info {
 		padding: 7em 0 4em;
