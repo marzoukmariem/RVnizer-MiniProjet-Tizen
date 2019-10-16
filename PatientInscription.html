@@ -172,44 +172,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <meta charset=utf-8 />
 <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
-
+<style>
+  
+  #map {   width:100%; height:300px }
+</style>
     <!-- new script end -->
     
-    <style>
-			body {
-				background: whiteSmoke;
-				font-family: sans-serif;
-				margin: 30px;
-			}
-			#transcription, #nose {
-				background: white;
-				display: inline-block;
-				border: 1px solid #ddd;
-				margin: 10px;
-				min-height: 100px;
-				flex-grow: 1;
-			}
-			#nose {
-				text-align: center;
-				font-size: 50px;
-				padding: 10px;
-			}
-			#nose img {
-				width: 250px;
-			}
-			#transcription {
-				font-size: 20px;
-				padding: 30px;
-				min-width: 250px;
-				color: gray;
-			}
-			#transcription.done {
-				color: black;
-			}
-			#main {
-				display: flex;
-			}
-		</style>
+    
 
     <script>
         function login(){
@@ -247,49 +216,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Head -->
 
 <body>
-
-
-<script>
-var verified = false;
-</script>
-
-<script src="ocrad.js"></script>
-		<script>
-			function recognize_image(){
-				document.getElementById('transcription').innerText = "(Recognizing...)"
-
-				OCRAD(document.getElementById("pic"), {
-					numeric: true
-				}, function(text){
-					
-				})
-			}
-			function load_file () {
-				var reader = new FileReader();
-				reader.onload = function(){
-					var img = new Image();
-					img.src = reader.result;
-					img.onload = function(){
-						document.getElementById('nose').innerHTML = ''
-						document.getElementById('nose').appendChild(img)
-						OCRAD(img, function(text){
-							document.getElementById('transcription').className = "done"
-							
-							 var value = (text.toLowerCase().indexOf('diplome') > -1) || (text.toLowerCase().indexOf('diplôme ') > -1) || (text.toLowerCase().indexOf('m e d e c i n e') > -1) || (text.toLowerCase().indexOf('m é d e c i n') > -1) || (text.toLowerCase().indexOf('d o c') > -1) || (text.toLowerCase().indexOf('d i p') > -1)|| (text.toLowerCase().indexOf('dip') > -1)|| (text.toLowerCase().indexOf('doc') > -1)
-							
-							if (value == true){
-							verified=true;
-							document.getElementById('transcription').innerText = 'Congrats! your diploma is verified';
-							}
-							else{
-							document.getElementById('transcription').innerText = 'this diploma is not in accordance';
-							}
-						})
-					}
-				}
-				reader.readAsDataURL(document.getElementById('picker').files[0])
-			}
-		</script>
     <!--header-section-starts-here-->
     <!--<header>
 		<div class="top-header" id="home">
@@ -373,27 +299,12 @@ var verified = false;
             <div class="container">
                 <nav class="navbar navbar-default">
                     <div class="navbar-header navbar-left">
-                       
+                        
                     </div>
                     <div class="logo">
                         <h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> RVnizer</a></h1>
                     </div>
-                    <div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
-                        <nav class="link-effect-3 w3ls-navma" id="link-effect-3">
-                            <ul class="nav1 navbar-nav nav nav-wil">
-                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments Overview</a>
-                                </li>
-                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment Requests</a>
-                                </li>
-                                <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Messages</a>
-                                </li>
-                                <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Account parameters</a>
-                                </li>
-                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                  
                 </nav>
             </div>
             <div class="clearfix"></div>
@@ -403,7 +314,7 @@ var verified = false;
     <!--about-section-starts-here-->
     <section class="about" id="appointment">
         <div class="container">
-            <h2>Diploma verification</h2>
+            <h2>Additional info</h2>
             <div class="about-grids" >
                 
                 <div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
@@ -413,16 +324,14 @@ var verified = false;
 
                             <div class="col-sm-4 col-xs-4 w3ls-lt-form">
                                 <div class="w3ls-pr">
-                        <input type="file" onchange="load_file()" id="picker" required="">		
-		<div id="main">
-			<div id="nose">
-				<p style="font-size: 25px">No file loaded</p>
-				<p style="font-size: 15px"> Please attach your diploma </p>
-				
-			</div>
-			<br>
-			<div id="transcription"></div>
-		</div>
+                        <input type="text" name="Address" placeholder="Address" required="" id="address"  required="" />
+						<input type="text" name="Job" placeholder="Job" required="" id="job"  required="" />
+						<input type="date" name="Date" placeholder="Job" required="" id="date"  required="" />
+						<input type="file"  onchange="encodeImageFileAsURL(this)"  id="image-selecter"  required="">
+						<div id="uploading-text" style="display:none;">Uploading...</div>
+						<img id="preview">
+						<br><br>
+						
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -430,8 +339,6 @@ var verified = false;
                         </form>
                         <div class="container">
                             <div class="grid-wrap" id="rdv">
-
-								
 
                                 <div class="clearfix"></div>
                             </div>
@@ -578,13 +485,41 @@ var verified = false;
     </script>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-   
- 
- 
- <script type="text/javascript">
+    
+    <script>
+    var url;
+    </script>
+      
+    
+    <script>
+  
+ function encodeImageFileAsURL(element) {
+  var file = element.files[0];
+  var reader = new FileReader();
+  reader.onloadend = function() {
+    //console.log( reader.result)
+    url = reader.result.slice(23)
+  }
+  reader.readAsDataURL(file);
+}
+ </script>
+    
+   <script>
+   var previewImage = document.getElementById("preview"),	
+	uploadingText = document.getElementById("uploading-text");
+</script>
+  <script type="text/javascript">
 	function uploadImage() {
-	var url = "aa"
-	
+	//console.log(url)
+	var imageSelecter = document.getElementById("image-selecter"),
+		file = imageSelecter.files[0];
+	if (!file) 
+		return ;
+	// clear the previous image
+	previewImage.removeAttribute("src");
+	// show uploading text
+	uploadingText.style.display = "block";
+	// create form data and append the file
 	var formData = new FormData();
 	formData.append("image", url);
 	formData.append("login", sessionStorage.getItem("login"));
@@ -592,63 +527,41 @@ var verified = false;
 	formData.append("numtel", sessionStorage.getItem("phoneNumber"));
 	formData.append("password", sessionStorage.getItem("password"));
 	formData.append("prenom", sessionStorage.getItem("lastName"));
-	formData.append("info", "General");
+	formData.append("adresse", document.getElementById('address').value.trim());
+	formData.append("cin", document.getElementById('job').value.trim());
+	formData.append("datenaiss", document.getElementById('date').value.trim());
 	// do the ajax part
 	var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = function() {
 		if (this.readyState === 4 && this.status === 200) {
-			
 			console.log("succeesful")
 			window.location = 'index.html';
-			
 		}
 		else{
 		console.log("unsucceesful")
 		}
 	}
-	ajax.open("POST", "http://41.226.11.252:1180/medichelper/ajoutermedecinAvecImage.php", true);
+	ajax.open("POST", "http://41.226.11.252:1180/medichelper/uploadTizen.php", true);
 	ajax.send(formData); // send the form data
 }
 </script>
  
-<script>
+       <script>
 function finish(){
-
-if (verified==true){
-
-console.log('http://41.226.11.252:1180/medichelper/ajoutercabinet.php?nom=' + sessionStorage.getItem("officeName") + '&adresse=' + sessionStorage.getItem("location") + '&numtel=' + sessionStorage.getItem("officePhoneNumber") + '&info=' + sessionStorage.getItem("speciality") + '&lat=' + sessionStorage.getItem("lat") + '&log=' + sessionStorage.getItem("lng"))
-
-
-$.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/ajoutercabinet.php?nom=' + sessionStorage.getItem("officeName") + '&adresse=' + sessionStorage.getItem("location") + '&numtel=' + sessionStorage.getItem("officePhoneNumber") + '&info=' + sessionStorage.getItem("speciality") + '&lat=' + sessionStorage.getItem("lat") + '&log=' + sessionStorage.getItem("lng") ,
-            data: "", //ur data to be sent to server
-            contentType: "application/json; charset=utf-8", 
-            type: "GET",
-            success: function (data) {
-             
-             uploadImage();
-             
-             
-            },
-            error: function (x, y, z) {
-               alert(x.responseText +"  " +x.status);
-            }
-        });
-
-
-
+if(document.getElementById('address').value==""){
+	
+	}else if(document.getElementById('job').value==""){
+	
+	}else if(document.getElementById('date').value==""){
+	
+	}else
+	{
+	uploadImage();
+	}
 }
-else
-{
-alert("please verify your diploma first")
-}
-}
- </script>
+</script>
 
 
-
-
- 
  
  
  

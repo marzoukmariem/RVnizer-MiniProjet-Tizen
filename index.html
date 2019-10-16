@@ -275,13 +275,13 @@ function login(){
 						<input type="text" name="First Name" placeholder="First Name" required="" id="firstName" style="border-bottom: 2px solid red;" />
 						<input type="text" name="Last Name" placeholder="Last Name" required="" id="lastName"  style="border-bottom: 2px solid red;"/>
 						<input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="phoneNumber"  style="border-bottom: 2px solid red;"/>
-						<input type="email" name="Email" class="email" placeholder="Email" required=""  style="border-bottom: 2px solid red;" />
+						<input type="text" name="Login" placeholder="Login" required="" id="login" style="border-bottom: 2px solid red;" />
 						<input type="password" name="Password" id="password1" class="password" placeholder="Password" required=""   style="border-bottom: 2px solid red;"/>
 						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required=""  style="border-bottom: 2px solid red;" />
 						<select class="sel" required="" id="role">
 							<option value="">Select your Role</option>
 							<option value="patient">Patient</option>
-							<option value="docteur">Doctor</option>
+							<option value="doctor">Doctor</option>
 						</select>
 						<input type="submit" value="Sign Up"  onclick="SignUp()"  style="background-color:#f44336;border: 1px solid #f44336;">
 					</form>
@@ -519,7 +519,36 @@ function login(){
 	
 	<script>
 	function SignUp(){
+	
+	if(document.getElementById('firstName').value==""){
+	
+	}else if(document.getElementById('lastName').value==""){
+	
+	}else if(document.getElementById('phoneNumber').value.trim()==""){
+	
+	}else if(document.getElementById('login').value.trim()==""){
+	
+	}else if(document.getElementById('password1').value.trim()==""){
+	
+	}else if(document.getElementById('role').value.trim()==""){
+	
+	}else{
+	
+	sessionStorage.setItem("firstName",document.getElementById('firstName').value.trim());
+	sessionStorage.setItem("lastName",document.getElementById('lastName').value.trim());
+	sessionStorage.setItem("phoneNumber",document.getElementById('phoneNumber').value.trim());
+	sessionStorage.setItem("login",document.getElementById('login').value.trim());
+	sessionStorage.setItem("password",document.getElementById('password1').value);
+	sessionStorage.setItem("role",document.getElementById('role').value);
+	
+	var role = document.getElementById('role').value.trim();
+	
+	if (role=='doctor')
 	window.location = 'DocteurInscription.html';
+	else if (role=='patient')
+	window.location = 'PatientInscription.html';
+		
+		}
 }
 
 	
