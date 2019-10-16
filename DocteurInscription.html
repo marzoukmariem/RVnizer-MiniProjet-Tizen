@@ -299,32 +299,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <nav class="navbar navbar-default">
                     <div class="navbar-header navbar-left">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+                        
                     </div>
                     <div class="logo">
                         <h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> RVnizer</a></h1>
                     </div>
-                    <div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
-                        <nav class="link-effect-3 w3ls-navma" id="link-effect-3">
-                            <ul class="nav1 navbar-nav nav nav-wil">
-                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments Overview</a>
-                                </li>
-                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment Requests</a>
-                                </li>
-                                <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Messages</a>
-                                </li>
-                                <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Account parameters</a>
-                                </li>
-                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    
                 </nav>
             </div>
             <div class="clearfix"></div>
@@ -345,18 +325,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="col-sm-4 col-xs-4 w3ls-lt-form">
                                 <div class="w3ls-pr">
                         <input type="text" name="Office Name"  placeholder="Office Name" required="" id="officeName"/>
-						<input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="phoneNumber"/>
+						<input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="officePhoneNumber"/>
 						
 
 						<select class="sel" required="" id="speciality">
 							<option value="">Office Speciality</option>
-							<option value="patient">Patient</option>
-							<option value="docteur">Doctor</option>
+							<option value="Alternative Medicine">Alternative Medicine</option>
+							<option value="Dentist">Dentist</option>
+							<option value="Dermatologist">Dermatologist</option>
+							<option value="General Surgery">General Surgery</option>
+							<option value="Gynecologist">Gynecologist</option>
+							<option value="Neurosurgery">Neurosurgery</option>
+							<option value="Ophthalmologist">Ophthalmologist</option>
+							<option value="Pediatrician">Pediatrician</option>
+							<option value="Psychiatrist">Psychiatrist</option>
 						</select>
 						<select class="sel" required="" id="location">
 							<option value="">Office Location</option>
-							<option value="patient">Patient</option>
-							<option value="docteur">Doctor</option>
+							<option value="Tunis">Tunis</option>
+							<option value="Bizerte">Bizerte</option>
+							<option value="West region">West region</option>
+							<option value="Cap Bon">Cap Bon</option>
+							<option value="East region">East region</option>
+							<option value="South region">South region</option>
 						</select>
 						<br><br>
 						<div id='map'></div>
@@ -538,9 +529,22 @@ marker.addTo(map);
  
        <script>
 function next(){
+if (document.getElementById('officeName').value.trim()==""){
+}else if (document.getElementById('officePhoneNumber').value.trim()==""){
+}else if (document.getElementById('speciality').value.trim()==""){
+}else if (document.getElementById('location').value.trim()==""){
+}else{
+
+sessionStorage.setItem("officeName",document.getElementById('officeName').value);
+sessionStorage.setItem("officePhoneNumber",document.getElementById('officePhoneNumber').value);
+sessionStorage.setItem("speciality",document.getElementById('speciality').value);
+sessionStorage.setItem("location",document.getElementById('location').value);
+sessionStorage.setItem("lat",marker.getLatLng().lat);
+sessionStorage.setItem("lng",marker.getLatLng().lng);
 console.log(marker.getLatLng().lat);
 console.log(marker.getLatLng().lng);
 window.location = 'DocteurVerificationDiplome.html';
+}
 }
 </script>
  
