@@ -64,7 +64,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>zLghj158yOj7NInNO8oaRgfi+1V+XtEmnCCvLz+kirE=</DigestValue>
+<DigestValue>Ej1G5xZseEl7icvKEifNxsD7FZnM/nf3mssOx+pQ640=</DigestValue>
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -80,7 +80,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>KE2hAvUJAo35tnKnEUSFxokbnAqN7HzPNjbzMPbzfF0=</DigestValue>
+<DigestValue>Ja1paLt6x+x3Upc3O7LLB0Z3aKK0qvAlzD0/u/0Rl2s=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1372,7 +1372,7 @@
 </Reference>
 <Reference URI="stylescriptclendar.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CyUIKbJc71rx9Q3w24bgdWNYNan/NL1bXYKLWQSMHRI=</DigestValue>
+<DigestValue>cUzNpzXjbFUQqXXGPc8JsuN3SD6uQAJY2zsJwYlih9k=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -1383,9 +1383,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Y98Et7GN2dnlVl0/kVMz0NDhMRZ103ypZvfsCA2BJ5jo/nK/CZZmzYWelLWPn5Y0AdFiAyOd4sk8
-njf8vHBMecevwGc3e4haqV8AXxBhpznEQyL2XCxuXTEX3gAneUdnTsCa01GGC3uoKf43ZLG7FIBT
-shX/uDNgSwxsiq1StMQ=
+T5jecSP6+mu0EjNQPCt8TX2WeWCYhcjkSB9cHtpoE5IWhlFv3Ocnd7M/pihQEi/PJBDlpo+2BDT5
+2hLfyGBNxGs4yAmPe/E/b6WbD0VNNX8UPb/ximP31EvFgzqook9gqsImFnRniA0/H9iBOGBILw+A
+yegdy5X0alNy2We+VtY=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

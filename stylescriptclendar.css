@@ -1,12 +1,12 @@
 .calendar-day {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
+  width: 50px;
+  min-width: 20px;
+  max-width: 50px;
   height: 80px;
 }
 .calendar-table {
   margin: 0 auto;
-  width: 700px;
+  width: 100px;
 }
 .selected {
   background-color: #eee;
@@ -21,9 +21,9 @@
 .event {
   border-top: 1px solid #b2dba1;
   border-bottom: 1px solid #b2dba1;
-  background-image: linear-gradient(to bottom, #f44336 0px, #FF0000 100%);
+  background-image: linear-gradient(to bottom, #dff0d8 0px, #c8e5bc 100%);
   background-repeat: repeat-x;
-  color: #FFFFFF;
+  color: #3c763d;
   border-width: 1px;
   font-size: 0.75em;
   padding: 0 0.75em;
