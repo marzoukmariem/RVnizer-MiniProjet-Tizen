@@ -255,7 +255,7 @@ function login(){
 		<div class="container">
 		<form action="" method="post" onSubmit="return false;" >
 		
-		<input type="text" id="choix">
+		<input type="text" id="searchv">
 			<input type="submit" value="search" id="login-button" onclick="search()">
 		
 		</form>
@@ -400,7 +400,7 @@ function login(){
         var placesansespace = place.split(" ").join("%20");
 	
  $.ajax({
-            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&inf=General Surgery",
+            url: "http://41.226.11.252:1180/medichelper/allcabinetfiltrer.php?idpt="+ placesansespace +"&inf=General%20Surgery",
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
@@ -466,6 +466,72 @@ window.location = 'ReservezRendezVous.html';
      
       </script>
       
+       <script>
+     
+     function search()
+{
+
+ var place1 = sessionStorage.getItem("place");
+     console.log("*******************");
+             console.log(place);
+        var placesansespace1 = place1.split(" ").join("%20");
+      var sv = document.getElementById('searchv').value.trim();
+        var searchvalue = sv.split(" ").join("%20");
+	
+ $.ajax({
+            url: "http://41.226.11.252:1180/medichelper/searchcab.php?num="+ placesansespace1 +"&searchInput="+searchvalue+"&inf=General%20Surgery",
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            var testJson = JSON.parse(data);
+           console.log(testJson.length);
+         var listid = [];
+           if (testJson.length === 0){
+           
+           alert('There is no  office in this area with this name');
+           
+           }
+           else
+           {
+           var nbform=0;
+            for (var i = 0; i < testJson.length; i++) {
+             var n = testJson[i].Nom_Cabinet ;
+             var des = testJson[i].Info_Cabinet
+             var num = testJson[i].NumTel_Cabinet
+              var adresse = testJson[i].Emplacement_Cabinet;
+              var idcabinet = testJson[i].Id_Cabinet; 
+               nbform++;       
+           document.getElementById('cabinets').innerHTML = '<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-medkit" aria-hidden="true"></i></div><div class="icon-right"><a class="navber-brand" href="ReservezRendezVous.html"><h5><a id="idname" onclick="getValue('+idcabinet+')">'+n+'</a></h5><p>'+ des +'</p> <h5>'+ num +'</h5><p>'+ adresse +'</p></div><div class="clearfix"></div></div></div>';
+          console.log("idcabinet :");
+          console.log(idcabinet);
+           console.log("i :");
+           console.log(i);
+           listid.push(idcabinet);
+           
+           
+           
+ }
+ 
+       
+                   
+ 
+            }
+            
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+}
+     
+      </script>    
     
 
 	<!-- //smooth scrolling -->
