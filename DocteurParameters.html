@@ -154,6 +154,8 @@ function login(){
     <meta charset="utf-8">
     <meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 
+
+
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <!-- default-css-files -->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -169,8 +171,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     <!-- new script -->
-
+    <meta charset=utf-8 />
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
+    <style>
+        #map {   width:100%; height:300px }
+    </style>
     <!-- new script end -->
+
+
 
     <script>
         function login(){
@@ -222,9 +231,73 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</header>-->
     <!--//header-section-end-here-->
+    <!-- popup for sign in form -->
+    <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="small-dialog1" class="mfp-hide book-form">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Sign In </h3>
+                    <form action="" method="post" onSubmit="return false;">
+                        <input type="email" name="Email" class="email" placeholder="Email" required="" id="add-account-usr" data-clear-btn="true" />
+                        <input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data" data-clear-btn="true" />
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="brand1" value="">
+                                <label for="brand1"><span></span>Remember me</label>
+                            </li>
+                        </ul>
+                        <a href="#">Forgot Password?</a>
+                        <br>
+                        <div class="clearfix"></div>
+                        <input type="submit" value="Sign In" id="login-button" onclick="login()">
+                    </form>
+                    <div class="w3ls-or">
+                        <p>Or</p>
+                    </div>
+                    <div class="top-middle w3ls-sma">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-vimeo"></i></a>
+                            </li>
+                        </ul>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup for sign in form -->
+    <!-- popup for sign up form -->
+    <div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="small-dialog2" class="mfp-hide book-form">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Sign Up</h3>
+                    <form action="#" method="post">
+                        <input type="text" name="Name" placeholder="Your Name" required="" />
+                        <input type="email" name="Email" class="email" placeholder="Email" required="" />
+                        <input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
+                        <input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+                        <input type="submit" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup for sign up form -->
+    <!--banner-section-starts-here-->
+   
 
-    <section class="banner jarallax">
+ <section class="banner jarallax">
         <div class="navigation">
             <div class="container">
                 <nav class="navbar navbar-default">
@@ -237,15 +310,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </button>
                     </div>
                     <div class="logo">
-
                         <h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> RVnizer</a></h1>
                     </div>
                     <div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
                         <nav class="link-effect-3 w3ls-navma" id="link-effect-3">
                             <ul class="nav1 navbar-nav nav nav-wil">
-                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments overview</a>
+                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments Overview</a>
                                 </li>
-                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment requests</a>
+                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment Requests</a>
                                 </li>
                                 <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Messages</a>
                                 </li>
@@ -263,34 +335,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </section>
 
-    <!-- /services -->
-    <!--footer-section-end-here-->
-    <section class="footer-top jarallax">
-        <div class="container">
-
-            <div class="agile-team-grids">
-                <div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
-                    <div class="team-grid text-center" id="img">
-                        
-
-                    </div>
-                </div>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="footer-grids">
-                <div class="w3ls-top-ft text-center" id="infoRdv">
-                    
-                </div>
-            </div>
-
-        </div>
     </section>
-
+    <!--about-section-starts-here-->
     <section class="about" id="appointment">
         <div class="container">
-            <h2>Confirm Appointment time</h2>
+            <h2>Office Info</h2>
             <div class="about-grids">
 
                 <div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
@@ -300,17 +349,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                             <div class="col-sm-4 col-xs-4 w3ls-lt-form">
                                 <div class="w3ls-pr">
-                                    <input type="date" name="date" required="required" id="date">
-                                    <input type="time" name="time" required="required" id="time">
+                                    <input type="text" name="Office Name" placeholder="Office Name" required="" id="officeName" />
+                                    <input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="officePhoneNumber" />
+
+
+                                    <select class="sel" required="" id="speciality">
+                                        <option value="">Office Speciality</option>
+                                        <option value="Alternative Medicine">Alternative Medicine</option>
+                                        <option value="Dentist">Dentist</option>
+                                        <option value="Dermatologist">Dermatologist</option>
+                                        <option value="General Surgery">General Surgery</option>
+                                        <option value="Gynecologist">Gynecologist</option>
+                                        <option value="Neurosurgery">Neurosurgery</option>
+                                        <option value="Ophthalmologist">Ophthalmologist</option>
+                                        <option value="Pediatrician">Pediatrician</option>
+                                        <option value="Psychiatrist">Psychiatrist</option>
+                                    </select>
+                                    <select class="sel" required="" id="location">
+                                        <option value="">Office Location</option>
+                                        <option value="Tunis">Tunis</option>
+                                        <option value="Bizerte">Bizerte</option>
+                                        <option value="West region">West region</option>
+                                        <option value="Cap Bon">Cap Bon</option>
+                                        <option value="East region">East region</option>
+                                        <option value="South region">South region</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <div id='map'></div>
+                                    <br>
+                                    <input type="text" name="First Name" placeholder="First Name" required="" id="firstName" />
+                                    <input type="text" name="Last Name" placeholder="Last Name" required="" id="lastName" />
+                                    <input type="text" name="Phone Number" class="number" placeholder="Additional Info" required="" id="Info" />
+                                    <input type="text" name="Login" placeholder="Login" required="" id="login" />
+                                    <input type="text" name="Password" id="password11" placeholder="Password" required="" />
+
                                 </div>
                             </div>
-
                             <div class="clearfix"></div>
-                            <input type="submit" value="Confirm Time" onclick="search()">
-
+                            <input type="submit" value="Save" id="login-button" onclick="save()">
                         </form>
+                        <div class="container">
+                            <div class="grid-wrap" id="rdv">
 
+                                <div class="clearfix"></div>
+                            </div>
 
+                        </div>
 
                     </div>
                 </div>
@@ -320,10 +405,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         </div>
     </section>
-    <!-- //services -->
 
 
-
+    <!--//footer-section-end-here-->
     <!-- Default-JavaScript-File -->
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <!-- password-script -->
@@ -453,60 +537,89 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-    
+
+
     <script>
-             
-            
-             
+        var lng ;
+        var lat ;
+    </script>
+
+    <script>
+        var idUser = sessionStorage.getItem("Iduser");
+                 
+     $.ajax({
+                url: 'http://41.226.11.252:1180/medichelper/getelmentdoctoupdate.php?iduser=' + idUser ,
+                data: "", //ur data to be sent to server
+                contentType: "application/json; charset=utf-8", 
+                type: "GET",
+                success: function (data) {
+                 console.log(data);
+                
+                var testJson = JSON.parse(data);
+               
+                
+                  document.getElementById('officePhoneNumber').value = testJson[0].NumTel_Cabinet;
+                  document.getElementById('location').value = testJson[0].Emplacement_Cabinet
+                  document.getElementById('speciality').value = testJson[0].Info_Cabinet
+                  document.getElementById('officeName').value = testJson[0].Nom_Cabinet
+                  
+                  document.getElementById('lastName').value = testJson[0].Nom_User
+                  document.getElementById('firstName').value = testJson[0].Prenom_User
+                  document.getElementById('Info').value = testJson[0].Info_Medecin
+                  document.getElementById('login').value = testJson[0].Login_User
+                  document.getElementById('password11').value = testJson[0].Password_User
+                  
+                  lng = testJson[0].longitude
+                  lat = testJson[0].Latitude
+               
+               L.mapbox.accessToken = 'pk.eyJ1IjoieHBlZWRodW50ZXIiLCJhIjoiY2p1ZzAyYWl5MGd0eTQzczBiMjR5cXVhNiJ9.FDe2N1Dxzt9kf4qoSgsyiA';
+    var map = L.mapbox.map('map')
+        .setView([lat, lng],4)
+        .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));;
+    
+    var marker = L.marker(new L.LatLng(lat, lng), {
+        icon: L.mapbox.marker.icon({
+            'marker-color': 'ff8888'
+        }),
+        draggable: true
+    });
+    
+    console.log(marker.getLatLng().lat);
+    console.log(marker.getLatLng().lng);
+    marker.bindPopup('This marker is draggable! Move it around.');
+    marker.addTo(map);
+               
+               
+                },
+                error: function (x, y, z) {
+                   alert(x.responseText +"  " +x.status);
+                }
+            });
+    </script>
+
+
+
+
+
+
+
+<script>
+ function save(){
+ 
+      var idCab = sessionStorage.getItem("Idcabinet")
+      var officeName = document.getElementById('officeName').value
+      var Idusr = sessionStorage.getItem("Iduser")
+      var firstName = document.getElementById('firstName').value
+      var lastName = document.getElementById('lastName').value
+      var officePhoneNumber = document.getElementById('officePhoneNumber').value
+      
  $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/fichepatient.php?idCabinet=' +sessionStorage.getItem("IdRdv") ,
+            url: 'http://41.226.11.252:1180/medichelper/updatedoc.php?idCabinet=' + idCab + '&nomcabinet='+ officeName + '&iddoc='+ Idusr + '&logitude='+ lng + '&latitude='+ lat + '&nom='+ firstName + '&prenom='+ lastName + '&numtel='+ officePhoneNumber + '&emplacment='+ document.getElementById('location').value + '&login='+ document.getElementById('login').value + '&pw='+ document.getElementById('password11').value + '&info='+ document.getElementById('Info').value ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
-             console.log(data);
-            
-            var testJson = JSON.parse(data);
-           
-            
-              var n = testJson[0].Nom_User + " " + testJson[0].Prenom_User;
-              var c = testJson[0].Cin_Patient
-              var d = testJson[0].dateRendezvous
-              var im = testJson[0].UrlImage_Patient
-           //document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div>';
-         
-         
-           document.getElementById('infoRdv').innerHTML = document.getElementById('infoRdv').innerHTML +'<span>Patient Name</span><h5>'+n+'</h5><br><span>Chosen Time</span><h5>'+d.substring(0, 10)+'</h5><h5>'+d.substring(11, 16)+'</h5>';
-         
-            document.getElementById('img').innerHTML = document.getElementById('img').innerHTML +'<img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive" />'
-             
-            },
-            error: function (x, y, z) {
-               alert(x.responseText +"  " +x.status);
-            }
-        });
-
-
-
-
- </script>
- 
-     <script>
- function search(){
- 
-var id = sessionStorage.getItem("IdRdv");
-         
-var date = document.getElementById('date').value.trim();	
-var time = document.getElementById('time').value.trim(); 
-var dateAndTime = date + '%20' + time + ':00';       
-     console.log('http://41.226.11.252:1180/medichelper/updatetimesec.php?idrdv=' + id + '&daterdv='+ dateAndTime)  
- $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/updatetimesec.php?idrdv=' + id + '&daterdv='+ dateAndTime ,
-            data: "", //ur data to be sent to server
-            contentType: "application/json; charset=utf-8", 
-            type: "GET",
-            success: function (data) {
-           	   alert("Updated");
+           	   alert("Updated successfully");
             },
             error: function (x, y, z) {
                alert(x.responseText +"  " +x.status);
@@ -518,7 +631,7 @@ var dateAndTime = date + '%20' + time + ':00';
  	
  	}
  </script>
-    
+
 </body>
 
 </html>
