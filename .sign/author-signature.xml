@@ -16,11 +16,15 @@
 </Reference>
 <Reference URI="AlternativeM.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>REp6kNi/z+g6MGSSkIyOFtHjMuPnHqF4kVfWA4uxpzU=</DigestValue>
+<DigestValue>YaaFtL3+kqtKA4FmxXYqBhx+Fv/uFfCF12dWvI9wMiM=</DigestValue>
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>ro7x6xJAUCYv1tf3yzxDvXql+SO8opuMksqehUTREMY=</DigestValue>
+</Reference>
+<Reference URI="ContactPatientDoc.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>2IUaIJRTxg5OLAvLiRyGyjdiMqBOfvQwDk9oASGhZGo=</DigestValue>
 </Reference>
 <Reference URI="Dentist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -48,11 +52,11 @@
 </Reference>
 <Reference URI="DocteurInscription.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>a2Rm4CseDQckau/GLh9ntTtamReXhVaJg60i9TNIp6A=</DigestValue>
+<DigestValue>9GNWdSigLBW29qwd0xmzgk1PhnvTX4MXMpifXf8fK5o=</DigestValue>
 </Reference>
 <Reference URI="DocteurVerificationDiplome.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>oXMeivHMs322WXqdtzARbraNsqCodDWlcaz7hiwnlSw=</DigestValue>
+<DigestValue>twjqbObu48Hb9rjZyNyS5UJOlSOr/G6BDJYsUPE8yzA=</DigestValue>
 </Reference>
 <Reference URI="Genecologue.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -64,7 +68,11 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>zLghj158yOj7NInNO8oaRgfi+1V+XtEmnCCvLz+kirE=</DigestValue>
+<DigestValue>Ej1G5xZseEl7icvKEifNxsD7FZnM/nf3mssOx+pQ640=</DigestValue>
+</Reference>
+<Reference URI="PatientInscription.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>dXDffExW6i484QKzV0Ar4/d2xtkJ4q+ZU6szpUL+oRU=</DigestValue>
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -76,7 +84,7 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>7ZOa9+CXRGzto7CUwGAriwh/jJvwZ8IJXnbp4Lc0p60=</DigestValue>
+<DigestValue>gefscHcYaeOBMqWrOJ75LdrwTyTC6zYf2xRMXG0I5eA=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -500,7 +508,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ogy3xLY3K8YIAGmNU6h68LIGXoFFC1sV47I6kW2yEbU=</DigestValue>
+<DigestValue>OFDWi6yFUu3he34I0p3BQ+Ux1Q3ywfE+gDq2T5xgNrg=</DigestValue>
 </Reference>
 <Reference URI="js%2FSmoothScroll.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1356,7 +1364,7 @@
 </Reference>
 <Reference URI="ophtalmologist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/4ueYgfIh9exIEFTd/El+9NQMTVqNwyBpQaSN29fGng=</DigestValue>
+<DigestValue>YLjhDb0DfWOcgRa5+aGXcpu7PWkm48H+q8jwnB/TfWM=</DigestValue>
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1368,7 +1376,7 @@
 </Reference>
 <Reference URI="stylescriptclendar.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CyUIKbJc71rx9Q3w24bgdWNYNan/NL1bXYKLWQSMHRI=</DigestValue>
+<DigestValue>cUzNpzXjbFUQqXXGPc8JsuN3SD6uQAJY2zsJwYlih9k=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -1379,9 +1387,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-ctUlU8iu4ngASPXfqgsIW1ZbwptWycLKTUvR1VwzJJJ5v+zYCjbKVF5XN32F+MO2ydT35XGplexI
-vHRPjN8VDgg8bLkeT5uJOOpYXk+gMI0grH9QT5yCgJt16kSL3z5Jz09NH7/G4cJngYVt1GQq6L0I
-1euhNpbQV68avIWU2ls=
+bXoEr3S7n+ZDoZwGfD132lAtD0d2k0ZA5eSld9EsKucS54WAnZ7/9t3tmsIDUovKSx2iQRPSJtSm
+Ta9gYz7UPU13peDYl4vpXIuXzZpcf6gbgBMjzM8QkIpaGfeL68iCf1CYZJxBrMh2IbWmG40JQaqY
+ZmYkAGxYBI6/AjXuOxE=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
