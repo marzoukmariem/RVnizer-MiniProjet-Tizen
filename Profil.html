@@ -1,447 +1,171 @@
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Tizen Mobile Web Basic Template" />
-    <title>RVnizer</title>
-	<link rel="stylesheet" href="lib/tau/mobile/theme/default/tau.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="./js/config.js"></script>
-
-<script>
-
-function login(){
-	
-	var usr = document.getElementById('add-account-usr').value.trim();
-            data = document.getElementById('add-account-data')
-                .value.trim();
-	
-	console.log(usr);
-	
-	var obj;
-   
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        		console.log("Récuperation");
-    if (this.readyState === 4 ) {
-    	obj =  JSON.parse(xhttp.responseText);
-    	if (obj.length !== 0){
-    		alert('Bienvenue '+obj[0].Role_User);
-    		
-    	}
-    	
-    	else if (obj.length == 0) {
-    		alert("Vérifiez vos coordonnées.");
-    	}
-     }
-     };
-    xhttp.open("GET", "http://41.226.11.252:1180/medichelper/login2.php?login="+usr+"&password="+data);
-    xhttp.send();
-    
-  
-}
-
-
-
-
-/*
-	function SoapCall(){
-	
-	        var usr = document.getElementById('add-account-usr').value.trim(),
-            data = document.getElementById('add-account-data')
-                .value.trim(),
-	
-		var xhr = createXHR();
-		
-		xhr.open("POST", "http://41.226.11.252:1180/medichelper/login2.php", true)
-		
-		xhr.onreadystatechange = function()
-		{
-			if (xhr.readyState === 4 )
-			{
-				var xmlDoc = xhr.responseXML;
-				var d = xmlDoc.getElementsByTagName("double")[0].childNodes[0].nodeValue;
-				alert(d);
-			}
-			
-		};
-		xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-		var postData = "login="+usr+"&password="+data;
-		xhr.send(postData);
-	}
-	
-	function createXHR()
-	{
-		var xhr;
-		if (window.XMLHttpRequest)
-		{
-			xhr = new XMLHttpRequest();
-			alert("not IE!");
-		}
-		else if (window.ActivateXObject)
-		{
-		xhr = new ActiveXObject('Microsoft.XMLHTTP');
-		alert("it's an IE");
-		}
-		else
-		{
-		throw new Error("Could not create XMLHttpRequest Object.");
-		}
-	return xhr;
-	}
-*/
-</script>
-
-</head>
-
-<body>
-     <section class="ui-page" id="add-account-view">
-        <div class="ui-header">
-            <h1 class="ui-title">RVnizer</h1>
-            
-        </div>
-        <div class="ui-content">
-            <div class="textinput-box">
-                <label for="add-account-usr">Login:</label>
-                <input type="text" id="add-account-usr" data-clear-btn="true"/>
-                
-            </div>
-            <div class="textinput-box">
-                <label for="add-account-data">Password:</label>
-                <input type="text" id="add-account-data" data-clear-btn="true"/>
-            </div>
-            
-            <div class="passOubliee">
-            	<label class="ui-label">Vou n'avez pas de compte ?</label><br>
-            	<label class="ui-label">inscrivez-vous</label>
-        	</div>
-            
-       </div>
-       
-       
-           
-        
-       
-       <div class="ui-footer">
-           <button class="ui-btn" data-tau-name="Button" id="login-button" onclick="login()">Login</button>
-       </div>
-    </section>
-    
-        <script src="lib/tau/mobile/js/tau.js"></script>
-        <script src="js/app.ui.js"></script>
-    	<script src="js/app.model.js"></script>
-    	<script src="js/app.js"></script>
-</body>
-
-</html>
--->
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
-
 <head>
-	<title>Sanatorium a Medical Category Bootstrap responsive Website Template | Home :: w3layouts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<!-- default-css-files -->
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
-	<!-- default-css-files -->
-	<!-- Online fonts -->
-	<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
-	<!-- //Online fonts -->
-	<!-- style.css-file -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<!-- //style.css-file -->
-	
-	<script>
+<title>Flat Profile App A Mobile App Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Flat Profile App Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android  Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+       <!--font-awsome-css-->
+<link rel="stylesheet" href="profilcss/css/font-awesome.min.css"> 
+		<!--bootstrap-->
+<link href="profilcss/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!--custom css-->
+<link href="profilcss/css/style.css" rel="stylesheet" type="text/css"/>
+<!--component-css-->
+<script src="profilcss/js/jquery-2.1.4.min.js"></script>
+<script src="profilcss/js/bootstrap.min.js"></script>
+			 <!--script-->
+<script src="profilcss/js/bigSlide.js"></script>
+    <script>
+		$(document).ready(function() {
+		$('.menu-link').bigSlide();
+	});
+    </script>
+            <!--script-->
+<script src="profilcss/js/responsiveslides.min.js"></script>
+	 <script>
+		$(function () {
+		  $("#slider").responsiveSlides({
+			auto: true,
+			nav: true,
+			speed: 500,
+			namespace: "callbacks",
+			pager: true,
+		  });
+		});
+	  </script>
+		<!--script-->
+		<script src="profilcss/js/pie-chart.js" type="text/javascript"></script>
+ <script type="text/javascript">
 
-function login(){
-	
-	var usr = document.getElementById('add-account-usr').value.trim();
-            data = document.getElementById('add-account-data')
-                .value.trim();
-	
-	console.log(usr);
-	
-	var obj;
-   
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        		console.log("Récuperation");
-    if (this.readyState === 4 ) {
-    	obj =  JSON.parse(xhttp.responseText);
-    	if (obj.length !== 0){
-    		alert('Bienvenue '+obj[0].Role_User);
-    		
-    	}
-    	
-    	else if (obj.length == 0) {
-    		alert("Vérifiez vos coordonnées.");
-    	}
-     }
-     };
-    xhttp.open("GET", "http://41.226.11.252:1180/medichelper/login2.php?login="+usr+"&password="+data);
-    xhttp.send();
-    
-  
-}
-</script>	
+        $(document).ready(function () {
+           
+			 $('#demo-pie-1').pieChart({
+                barColor: '#68b828',
+                trackColor: '#E4E2E2',
+                lineCap: 'butt',
+                lineWidth: 10,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+
+            $('#demo-pie-2').pieChart({
+                barColor: '#5bc0de',
+                trackColor: '#E4E2E2',
+                lineCap: 'butt',
+                lineWidth: 10,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+
+            $('#demo-pie-3').pieChart({
+                barColor: '#d9534f',
+                trackColor: '#E4E2E2',
+                lineCap: 'square',
+                lineWidth: 10,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+
+           
+        });
+
+    </script>
+<link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,700italic,700,600italic,400italic,600,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
 </head>
-<!-- Head -->
-
 <body>
-
-	<!-- popup for sign in form -->
-	<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div id="small-dialog1" class="mfp-hide book-form">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h3>Sign In </h3>
-					<form action="" method="post" onSubmit="return false;" >
-						<input type="email" name="Email" class="email" placeholder="Email" required="" id="add-account-usr" data-clear-btn="true"/>
-						<input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data" data-clear-btn="true"/>
-						<ul>
-							<li>
-								<input type="checkbox" id="brand1" value="">
-								<label for="brand1"><span></span>Remember me</label>
-							</li>
-						</ul>
-						<a href="#">Forgot Password?</a><br>
-						<div class="clearfix"></div>
-						<input type="submit" value="Sign In" id="login-button" onclick="login()">
-					</form>
-					<div class="w3ls-or">
-						<p>Or</p>
-					</div>
-					<div class="top-middle w3ls-sma">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //popup for sign in form -->
-	<!-- popup for sign up form -->
-	<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div id="small-dialog2" class="mfp-hide book-form">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h3>Sign Up</h3>
-					<form action="#" method="post">
-						<input type="text" name="Name" placeholder="Your Name" required="" />
-						<input type="email" name="Email" class="email" placeholder="Email" required="" />
-						<input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
-						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
-						<input type="submit" value="Sign Up">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //popup for sign up form -->
-	<!--banner-section-starts-here-->
-	<section class="banner jarallax">
-		<div class="navigation">
-			<div class="container">
-				<nav class="navbar navbar-default">
-					<div class="navbar-header navbar-left">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					</div>
-					<div class="logo">
-						<h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> RVnizer</a></h1>
-					</div>
-					<div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
-						<nav class="link-effect-3 w3ls-navma" id="link-effect-3">
-							<ul class="nav1 navbar-nav nav nav-wil">
-								<li class="active"><a data-hover="Home" href="file:///AcceuilPatient.html">Home</a></li>
-								<li><a data-hover="appointment" href="file:///MesRendezvous.html" class="scroll">appointments</a></li>
-								<li><a data-hover="Services" href="file:///Profil.html" class="scroll">Profil</a></li>
-								<li><a  href="file:///index.html" class="scroll">Log out</a></li>
-								
+	<div class="body-back"  >
+		<div class="masthead pdng-stn1">
+			<div id="menu" class="panel" role="navigation">
+				<div class="wrap-content" >
+					<div class="search">
+						<form>
+							<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+							<input type="submit" value=" ">
+						</form>
+					</div> 
+					<div class="profile-menu text-center" style="background-color:lightblue;">
+						<img class="img-circle border-effect" src="profilcss/images/pic3.png" alt=" ">
+							<h3>Robb Hatman</h3>
+								<h4><a href="#">Admin</a></h4>
+							<div class="social-icon">
+							<ul>
+								<li><a href="#" class="facebook"><i class="fa fa-facebook"></i> facebook</a></li>
+								<li><a href="#" class="twitter"><i class="fa fa-twitter"></i> twitter</a></li>
+								<li><a href="#" class="google"><i class="fa fa-google"></i> google</a></li>
 							</ul>
-						</nav>
+							</div>
 					</div>
-				</nav>
+				</div>
 			</div>
-
-	</section>
-	
-	
-    <!-- /services -->
-    <!--footer-section-end-here-->
-    <section class="footer-top jarallax">
-        <div class="container">
-          
-          <h3 style="color:white;position:center;">Profil</h3>
-          <br>
-            <div class="agile-team-grids">
-                <div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
-                    <div class="team-grid text-center">
-                        <img src="images/maryem.jpg" alt="image" class="img-circle" width="250" height="200" />
-
-                    </div>
-                </div>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="footer-grids">
-                <div class="w3ls-top-ft text-center">
-                  
-                    <h5>Marzouk Mariem</h5>
-                   
-                    <h5>24211538</h5>
-                    <h5>La Marsa </h5>
-                    <h5>15-11-1995</h5>
-                    <br>
-                     
-                 <input type="submit" value="Modifier Profil">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    
-
-	<!--//footer-section-end-here-->
-	<!-- Default-JavaScript-File -->
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<!-- password-script -->
-	<script type="text/javascript">
-		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		}
-
-		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<!-- //password-script -->
-
-
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		// You can also use "$(window).load(function() {"
-		$(function () {
-			// Slideshow 4
-			$("#slider4").responsiveSlides({
-				auto: true,
-				pager: true,
-				nav: false,
-				speed: 500,
-				namespace: "callbacks",
-				before: function () {
-					$('.events').append("<li>before event fired.</li>");
-				},
-				after: function () {
-					$('.events').append("<li>after event fired.</li>");
-				}
-			});
-
-		});
-	</script>
-	<!--banner Slider starts Here-->
-	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
-	<!-- //Default-JavaScript-File -->
-	<!-- gallery-pop-up -->
-	<script src="js/jquery.chocolat.js"></script>
-	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
-	<!--light-box-files -->
-	<script type="text/javascript">
-		$(function () {
-			$('.agileinfo_portfolio_grid a').Chocolat();
-		});
-	</script>
-	<!-- //gallery-pop-up -->
-
-	<!-- FlexSlider -->
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-		$(function () {});
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function (slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- FlexSlider -->
-	<!-- start-smoth-scrolling-nav -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	
-	<!-- start-smoth-scrolling -->
-	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
-	
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
-	<!-- //Slide-To-Top JavaScript -->
-	<!-- jarallax scrolling -->
-	<script src="js/jarallax.js"></script>
-	<script src="js/SmoothScroll.min.js"></script>
-	<script type="text/javascript">
-		/* init Jarallax */
-		$('.jarallax').jarallax({
-			speed: 0.5,
-			imgWidth: 1366,
-			imgHeight: 768
-		})
-	</script>
-	<!-- //jarallax scrolling -->
-	<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-		});
-	</script>
-	<!-- //smooth scrolling -->
-	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-</body>
-
-</html>
-
+			<div class="phone-box wrap push" style="background-color:lightblue;">
+				<div class="menu-notify" style="background-color:lightblue;">
+					<div class="profile-left" style="background-color:lightblue;">
+						<a href="#menu" class="menu-link"><i class="fa fa-chevron-left"></i></a>
+					</div>
+					<div class="Profile-mid" style="background-color:lightblue;">
+						<h5 class="pro-link">Profile</h5>
+					</div>
+					<div class="Profile-right">
+							
+								<script type="text/javascript">
+															function DropDown(el) {
+																this.dd = el;
+																this.initEvents();
+															}
+															DropDown.prototype = {
+																initEvents : function() {
+																	var obj = this;
+												
+																	obj.dd.on('click', function(event){
+																		$(this).toggleClass('active');
+																		event.stopPropagation();
+																	});	
+																}
+															}
+															$(function() {
+												
+																var dd = new DropDown( $('#dd1') );
+												
+																$(document).click(function() {
+																	// all dropdowns
+																	$('.wrapper-dropdown-1').removeClass('active');
+																});
+												
+															});
+								</script>
+						</div>
+					</div>
+					<div class="clearfix"  ></div>
+				</div>
+				<div class="detalis-grids">			
+					<div class="details-grid">
+					</div>
+					<div class="details-shade">
+						<div class="details-img">
+							<img class="img-circle border-effect1" src="profilcss/images/pic3.png" alt=" " />
+						</div>
+						<h3>jhon doc</h3>
+						<span>06-586 478 4581</span>
+						<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur Lorem Ipsum is that it has a more-or-less normal distribution of letters
+						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur Lorem Ipsum is that it has a
+						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur Lorem Ipsum is that it has a
+						</p>
+					</div>
+					<div class="follow">
+						
+						<a href="#" class="button hvr-sweep-to-bottom">Edit</a>
+					</div>
+				</div>
+				
