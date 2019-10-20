@@ -84,7 +84,7 @@
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>diBgkxMTo0NmFXQWX5wAZ5llQcX8f0k6g7tgCmSAbb8=</DigestValue>
+<DigestValue>1zvgGaOp68wFsy/lMFvDiVVDB4E7t6J7gRk4A2uu+Eo=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -257,10 +257,6 @@
 <Reference URI="images%2Fblack-widow.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>iblVoFVN6rUCmunA6RQR2GpMNGgW/fgMchCgi0CH93Y=</DigestValue>
-</Reference>
-<Reference URI="images%2Fcabinet.jpeg">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>9TM3PkZxWpc9wbnB53PoZ+JElnxsnIrONnRX/diIkz4=</DigestValue>
 </Reference>
 <Reference URI="images%2Fcamera.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1382,6 +1378,10 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU=</DigestValue>
 </Reference>
+<Reference URI="profilcss%2Fcss%2Fpic2.jpg">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>SoasbmWbbAtby0ZaoqnQFrFzvS2fnNugmvS+S2ObOqA=</DigestValue>
+</Reference>
 <Reference URI="profilcss%2Fcss%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>IDbRNp6kRDM+oiA/r/p8+ANcRlt5yzZ5IdY3kh/RGLA=</DigestValue>
@@ -1496,7 +1496,7 @@
 </Reference>
 <Reference URI="profilcss%2Fimages%2Fpic2.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>SoasbmWbbAtby0ZaoqnQFrFzvS2fnNugmvS+S2ObOqA=</DigestValue>
+<DigestValue>9TM3PkZxWpc9wbnB53PoZ+JElnxsnIrONnRX/diIkz4=</DigestValue>
 </Reference>
 <Reference URI="profilcss%2Fimages%2Fpic3.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1571,9 +1571,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-QNpb3G5PNPE4VVV+bRmvPeUCPglDSkI2lQHpsUVxHIsFK1frlKHHDso0hZs/+/RpPY+OH7ishL5A
-N9nOsnA/LZSSA0yFz8JKi1JpylQbzmjIkeAvDAF+tkXfJvV9fL8ZdJw9ilzq3CoS9SF9+QrdCu6t
-zV0enk4CMZZmY37Bz1I=
+ErjXFKaQ8TswyOV+PKy5DtIxoj9GK0iWMokjdqf1eyHNjd98MDUcoEO5/Y8E+0YdOfChm9J4KzuP
+DVg7ge+o2S/nvL6jZbM5YoHhZIMocBTm3beyDrx0VLF/7NMVcpUnF8Oj8EPP7Oem1NHmqdzDxPdf
+KQOnmZIr6fCAM0VK3Bs=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -84,7 +84,7 @@
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>diBgkxMTo0NmFXQWX5wAZ5llQcX8f0k6g7tgCmSAbb8=</DigestValue>
+<DigestValue>1zvgGaOp68wFsy/lMFvDiVVDB4E7t6J7gRk4A2uu+Eo=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -92,7 +92,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>GPrW4Qbt09xpdGh/QSSLPSTfuPMTFM6yzJTbB4o9AnM=</DigestValue>
+<DigestValue>uguLcM5Hl0wLci1c05onZ7C3NHx7+ywHLNJlwO18tYQ=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -261,10 +261,6 @@
 <Reference URI="images%2Fblack-widow.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>iblVoFVN6rUCmunA6RQR2GpMNGgW/fgMchCgi0CH93Y=</DigestValue>
-</Reference>
-<Reference URI="images%2Fcabinet.jpeg">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>9TM3PkZxWpc9wbnB53PoZ+JElnxsnIrONnRX/diIkz4=</DigestValue>
 </Reference>
 <Reference URI="images%2Fcamera.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1386,6 +1382,10 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU=</DigestValue>
 </Reference>
+<Reference URI="profilcss%2Fcss%2Fpic2.jpg">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>SoasbmWbbAtby0ZaoqnQFrFzvS2fnNugmvS+S2ObOqA=</DigestValue>
+</Reference>
 <Reference URI="profilcss%2Fcss%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>IDbRNp6kRDM+oiA/r/p8+ANcRlt5yzZ5IdY3kh/RGLA=</DigestValue>
@@ -1500,7 +1500,7 @@
 </Reference>
 <Reference URI="profilcss%2Fimages%2Fpic2.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>SoasbmWbbAtby0ZaoqnQFrFzvS2fnNugmvS+S2ObOqA=</DigestValue>
+<DigestValue>9TM3PkZxWpc9wbnB53PoZ+JElnxsnIrONnRX/diIkz4=</DigestValue>
 </Reference>
 <Reference URI="profilcss%2Fimages%2Fpic3.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1575,9 +1575,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-rfNnUyIYTYTU2pycpGLKts7uklzon2i7EPOw1xQ3fsQRa3QBjWHrjfqfWbIDMfLstELxnKaukFV9
-TYGVkvYl+1zLkx2NkpEpHnjkiqYQ5PtomWYkIcAv4FfE364h6e9+DqO3XDKEHsSwl46UOwQJvEho
-hqXXILqJzp++IF+jkzE=
+FKB+rgVU4DswARc12ubkTEGtY++t8G1uPtT/xAUzfJwpWF9LtxDE2ofjjAyPmefymFrmd5ckqSQ9
+m5vo9BkZFEIRjXLhM01/Adv6pN4vJbBpeoRzMeY0hKxDKcGMCQNLKslI06LpBQHNEl7NO9KZNPwa
+gxmL1HMuMkhQTNTCqc0=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
