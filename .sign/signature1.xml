@@ -84,7 +84,7 @@
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>1zvgGaOp68wFsy/lMFvDiVVDB4E7t6J7gRk4A2uu+Eo=</DigestValue>
+<DigestValue>Ns0CFgDnxxhx9COYwFEIecJ3Bed+QBPdJMbPyak2gSA=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -92,7 +92,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>uguLcM5Hl0wLci1c05onZ7C3NHx7+ywHLNJlwO18tYQ=</DigestValue>
+<DigestValue>gMAfqKnSAGtwct8u35Y5fRGNpJzreBofeH+rnZeMJco=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1575,9 +1575,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-FKB+rgVU4DswARc12ubkTEGtY++t8G1uPtT/xAUzfJwpWF9LtxDE2ofjjAyPmefymFrmd5ckqSQ9
-m5vo9BkZFEIRjXLhM01/Adv6pN4vJbBpeoRzMeY0hKxDKcGMCQNLKslI06LpBQHNEl7NO9KZNPwa
-gxmL1HMuMkhQTNTCqc0=
+rq4mxjFnJu6AfxgnmfGkeEp/O3TFncIt2L94/UXdjCogq6nrEdrAOJKdmBJntK5CJ+GzjOfmEgnE
+BoUGpSgRgOyM9p3cJQkCYd/53RP6vB7VJ+im8hORI5ec2uFv8bWft8U1JfSxh2I95AhbgFcIv300
+BkyCmRoGafZ071DbOwI=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
