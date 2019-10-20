@@ -95,17 +95,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<input type="submit" value=" ">
 						</form>
 					</div> 
-					<div class="profile-menu text-center" style="background-color:lightblue;">
-						<img class="img-circle border-effect" src="profilcss/images/pic3.png" alt=" ">
-							<h3>Robb Hatman</h3>
-								<h4><a href="#">Admin</a></h4>
-							<div class="social-icon">
-							<ul>
-								<li><a href="#" class="facebook"><i class="fa fa-facebook"></i> facebook</a></li>
-								<li><a href="#" class="twitter"><i class="fa fa-twitter"></i> twitter</a></li>
-								<li><a href="#" class="google"><i class="fa fa-google"></i> google</a></li>
-							</ul>
-							</div>
+					<div class="profile-menu text-center" id="profil-id-user" >
+						
 					</div>
 				</div>
 			</div>
@@ -152,20 +143,50 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="detalis-grids">			
 					<div class="details-grid">
 					</div>
-					<div class="details-shade">
-						<div class="details-img">
-							<img class="img-circle border-effect1" src="profilcss/images/pic3.png" alt=" " />
-						</div>
-						<h3>jhon doc</h3>
-						<span>06-586 478 4581</span>
-						<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur Lorem Ipsum is that it has a more-or-less normal distribution of letters
-						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur Lorem Ipsum is that it has a
-						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur Lorem Ipsum is that it has a
-						</p>
+					<div class="details-shade" id="user-detail">
+						
+						
 					</div>
 					<div class="follow">
 						
 						<a href="#" class="button hvr-sweep-to-bottom">Edit</a>
 					</div>
 				</div>
+				
+				<script type="text/javascript">
+				
+				
+				var seesionvar = sessionStorage.getItem("Iduser");
+				             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getInnfopatient.php?idpt=' +seesionvar ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+          
+             var testJson = JSON.parse(data);
+             var num = testJson[0].NumTel_User;
+             var prenom   = testJson[0].Prenom_User;
+             var nom = testJson[0].Nom_User;
+             var daten = testJson[0].DateNaissance_User;
+             var imguser = testJson[0].UrlImage_Patient;
+             var im = 'http://41.226.11.252:1180/medichelper/'+imguser ;
+             document.getElementById('user-detail').innerHTML = document.getElementById('user-detail').innerHTML +'<div class="details-img" ><img style="width: 200px;height:200px;" class="img-circle border-effect1" src="'+im+'" alt=" "   /></div><h3>' + nom +' '+prenom + '</h3><p>'+num+'</p><p>'+daten+'</p>';
+         
+              document.getElementById('profil-id-user').innerHTML = document.getElementById('user-detail').innerHTML +'<img class="img-circle border-effect" src="'+im+'" alt=" "><h3>'+nom+' '+prenom+'</h3><h4><a href="#">Admin</a></h4><div class="social-icon"><ul><li><a href="#" class="facebook"><i class="fa fa-facebook"></i> facebook</a></li><li><a href="#" class="twitter"><i class="fa fa-twitter"></i> twitter</a></li>	<li><a href="#" class="google"><i class="fa fa-google"></i> google</a></li>	</ul></div>';       
+              
+              
+              
+             
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+				
+				
+				</script>
 				
