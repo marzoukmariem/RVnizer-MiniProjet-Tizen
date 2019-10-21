@@ -72,7 +72,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Ej1G5xZseEl7icvKEifNxsD7FZnM/nf3mssOx+pQ640=</DigestValue>
+<DigestValue>F644f4PucaKgkAlmoQ9Mh9LTaiEGOqvT4Lv93fJ4P7s=</DigestValue>
 </Reference>
 <Reference URI="PatientInscription.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1571,9 +1571,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-BixmLMtFJf0bUCThNiuRgM1hg52mLdPwmZ2a8i3p5v+ncmYZIcqD8CIr3X7akZpnIdNUySxeQkdr
-LsjEJKualZnz0cJ4qOXjPHKjZduGbOeqBWtw7YfPyfc14x3+sabNEvsbHVsEbZcYDTdKD1K+twmZ
-I2zzkY++HdWWe0ip+2U=
+C6UzR77Hb6C4Dtlu0mEAIynO89D9LHQayX7jMJSEGtH0fvZlhukRMNVZhO3oPq74NFjUftWuGPAu
+cLZy7QzhfO9JOmOdBd2qMbyvcQ3VZP0c702QOKC+tAr8iNhv8qq8YiR4+O8+/wsyjLSqp2NEZDWw
+AhsIGTzjQ4trfAqxFpA=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

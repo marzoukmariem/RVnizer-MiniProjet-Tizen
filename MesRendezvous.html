@@ -149,12 +149,6 @@ function login(){
 <!-- Head -->
 
 <head>
-
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
-<link rel="stylesheet" href="./stylescriptclendar.css">
-
-
 	<title>Sanatorium a Medical Category Bootstrap responsive Website Template | Home :: w3layouts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -172,41 +166,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<!-- //style.css-file -->
 	
-	<script>
-
-function login(){
 	
-	var usr = document.getElementById('add-account-usr').value.trim();
-            data = document.getElementById('add-account-data')
-                .value.trim();
-	
-	console.log(usr);
-	
-	var obj;
-   
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        		console.log("Récuperation");
-    if (this.readyState === 4 ) {
-    	obj =  JSON.parse(xhttp.responseText);
-    	if (obj.length !== 0){
-    		alert('Bienvenue '+obj[0].Role_User);
-    		
-    	}
-    	
-    	else if (obj.length == 0) {
-    		alert("Vérifiez vos coordonnées.");
-    	}
-     }
-     };
-    xhttp.open("GET", "http://41.226.11.252:1180/medichelper/login2.php?login="+usr+"&password="+data);
-    xhttp.send();
-    
-  
-}
-</script>	
 </head>
 <!-- Head -->
+
 
 <body>
 
@@ -299,200 +262,32 @@ function login(){
 	</section>
 	
 
-  
-
-<body>
-<!-- partial:index.partial.html -->
-<div class="container theme-showcase"  >
-  <h1>Calendar</h1>
-<div id="holder" class="row" style="width:100 px;height:130 px;" ></div>
-</div>
-
-
-<script type="text/tmpl" id="tmpl">
-  {{ 
-  var date = date || new Date(),
-      month = date.getMonth(), 
-      year = date.getFullYear(), 
-      first = new Date(year, month, 1), 
-      last = new Date(year, month + 1, 0),
-      startingDay = first.getDay(), 
-      thedate = new Date(year, month, 1 - startingDay),
-      dayclass = lastmonthcss,
-      today = new Date(),
-      i, j; 
-  if (mode === 'week') {
-    thedate = new Date(date);
-    thedate.setDate(date.getDate() - date.getDay());
-    first = new Date(thedate);
-    last = new Date(thedate);
-    last.setDate(last.getDate()+6);
-  } else if (mode === 'day') {
-    thedate = new Date(date);
-    first = new Date(thedate);
-    last = new Date(thedate);
-    last.setDate(thedate.getDate() + 1);
-  }
-  
-  }}
-  <table class="calendar-table table table-condensed table-tight">
-    <thead>
-      <tr>
-        <td colspan="7" style="text-align: center">
-          <table style="white-space: nowrap; width: 100%">
-            <tr>
-              <td style="text-align: left;">
-                <span class="btn-group">
-                  <button class="js-cal-prev btn btn-default">&lt;</button>
-                  <button class="js-cal-next btn btn-default">&gt;</button>
-                </span>
-                <button class="js-cal-option btn btn-default {{: first.toDateInt() <= today.toDateInt() && today.toDateInt() <= last.toDateInt() ? 'active':'' }}" data-date="{{: today.toISOString()}}" data-mode="month">{{: todayname }}</button>
-              </td>
-              <td>
-                <span class="btn-group btn-group-lg">
-                  {{ if (mode !== 'day') { }}
-                    {{ if (mode === 'month') { }}<button class="js-cal-option btn btn-link" data-mode="year">{{: months[month] }}</button>{{ } }}
-                    {{ if (mode ==='week') { }}
-                      <button class="btn btn-link disabled">{{: shortMonths[first.getMonth()] }} {{: first.getDate() }} - {{: shortMonths[last.getMonth()] }} {{: last.getDate() }}</button>
-                    {{ } }}
-                    <button class="js-cal-years btn btn-link">{{: year}}</button> 
-                  {{ } else { }}
-                    <button class="btn btn-link disabled">{{: date.toDateString() }}</button> 
-                  {{ } }}
-                </span>
-              </td>
-              <td style="text-align: right">
-                <span class="btn-group">
-                 
-                  <button class="js-cal-option btn btn-default {{: mode==='month'? 'active':'' }}" data-mode="month">Month</button>
-                 
-                  <button class="js-cal-option btn btn-default {{: mode==='day'? 'active':'' }}" data-mode="day">Day</button>
-                </span>
-              </td>
-            </tr>
-          </table>
-          
-        </td>
-      </tr>
-    </thead>
-    {{ if (mode ==='year') {
-      month = 0;
-    }}
-    <tbody>
-      {{ for (j = 0; j < 3; j++) { }}
-      <tr>
-        {{ for (i = 0; i < 4; i++) { }}
-        <td class="calendar-month month-{{:month}} js-cal-option" data-date="{{: new Date(year, month, 1).toISOString() }}" data-mode="month">
-          {{: months[month] }}
-          {{ month++;}}
-        </td>
-        {{ } }}
-      </tr>
-      {{ } }}
-    </tbody>
-    {{ } }}
-    {{ if (mode ==='month' || mode ==='week') { }}
-    <thead>
-      <tr class="c-weeks">
-        {{ for (i = 0; i < 7; i++) { }}
-          <th class="c-name">
-            {{: days[i] }}
-          </th>
-        {{ } }}
-      </tr>
-    </thead>
-    <tbody>
-      {{ for (j = 0; j < 6 && (j < 1 || mode === 'month'); j++) { }}
-      <tr>
-        {{ for (i = 0; i < 7; i++) { }}
-        {{ if (thedate > last) { dayclass = nextmonthcss; } else if (thedate >= first) { dayclass = thismonthcss; } }}
-        <td class="calendar-day {{: dayclass }} {{: thedate.toDateCssClass() }} {{: date.toDateCssClass() === thedate.toDateCssClass() ? 'selected':'' }} {{: daycss[i] }} js-cal-option" data-date="{{: thedate.toISOString() }}">
-          <div class="date">{{: thedate.getDate() }}</div>
-          {{ thedate.setDate(thedate.getDate() + 1);}}
-        </td>
-        {{ } }}
-      </tr>
-      {{ } }}
-    </tbody>
-    {{ } }}
-    {{ if (mode ==='day') { }}
-    <tbody>
-      <tr>
-        <td colspan="7">
-          <table class="table table-striped table-condensed table-tight-vert" >
-            <thead>
-              <tr>
-                <th>&nbsp;</th>
-                <th style="text-align: center; width: 100%">{{: days[date.getDay()] }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="timetitle" >All Day</th>
-                <td class="{{: date.toDateCssClass() }}">  </td>
-              </tr>
-              <tr>
-                <th class="timetitle" >Before 6 AM</th>
-                <td class="time-0-0"> </td>
-              </tr>
-              {{for (i = 6; i < 22; i++) { }}
-              <tr>
-                <th class="timetitle" >{{: i <= 12 ? i : i - 12 }} {{: i < 12 ? "AM" : "PM"}}</th>
-                <td class="time-{{: i}}-0"> </td>
-              </tr>
-              <tr>
-                <th class="timetitle" >{{: i <= 12 ? i : i - 12 }}:30 {{: i < 12 ? "AM" : "PM"}}</th>
-                <td class="time-{{: i}}-30"> </td>
-              </tr>
-              {{ } }}
-              <tr>
-                <th class="timetitle" >After 10 PM</th>
-                <td class="time-22-0"> </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-    {{ } }}
-  </table>
-</script>
+ <!-- /services -->
+    <div class="agile_secives jarallax" id="services">
+        <div class="container">
+            <h3>My Appointments</h3>
+            <div class="markets-grids" id="AppointmentDemands">
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- //services -->
 
 
 
-<
-<!-- partial -->
-  <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-<script  src="./scriptclendar.js"></script>
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
 
 	<!--//footer-section-end-here-->
 	<!-- Default-JavaScript-File -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<!-- password-script -->
 	<script type="text/javascript">
+	
 		window.onload = function () {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
@@ -566,7 +361,16 @@ function login(){
 	
 	<!-- start-smoth-scrolling -->
 	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
-	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 100,
+				easingType: 'linear'
+			};
+		});
+	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
 	<!-- //Slide-To-Top JavaScript -->
 	<!-- jarallax scrolling -->
@@ -599,6 +403,88 @@ function login(){
 	</script>
 	<!-- //smooth scrolling -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	  <script>
+ var seesionvar = sessionStorage.getItem("Iduser");
+           
+             
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getrdvuser.php?idUser=' + seesionvar ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+            
+            var testJson = JSON.parse(data);
+ 
+             for (var i = 0; i < testJson.length; i++) {
+              var n = testJson[i].Nom_Cabinet;
+              var d = testJson[i].dateRendezvous;
+              var id = testJson[i].Id_Rendezvous;
+           document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-clock-o" aria-hidden="true"></i></div><div class="icon-right"><h5>'+n+'</h5><h6>'+d.substring(0, 10)+'</h6><h6>'+d.substring(11, 16)+'</h6></div> <a id="idname" onclick="getValue('+id+')" style="text-align:center;">Cancel Appoitement</a><div class="clearfix"></div></div></div>';
+         }
+           document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="clearfix"></div>';
+         
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+
+
+
+
+ </script>   
+    
+     <script>
+     
+     function getValue(idval)
+{
+
+sessionStorage.setItem("IdRdv",idval);
+
+console.log('idRdv: '+sessionStorage.getItem("IdRdv"));
+
+alert('rdv supprimer');
+
+}
+     
+      </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 
 </html>
