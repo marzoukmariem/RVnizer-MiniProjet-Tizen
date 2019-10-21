@@ -421,7 +421,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               var n = testJson[i].Nom_Cabinet;
               var d = testJson[i].dateRendezvous;
               var id = testJson[i].Id_Rendezvous;
-           document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-clock-o" aria-hidden="true"></i></div><div class="icon-right"><h5>'+n+'</h5><h6>'+d.substring(0, 10)+'</h6><h6>'+d.substring(11, 16)+'</h6></div> <a id="idname" onclick="getValue('+id+')" style="text-align:center;">Cancel Appoitement</a><div class="clearfix"></div></div></div>';
+           document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-clock-o" aria-hidden="true"></i></div><div class="icon-right"><h5>'+n+'</h5><h6>'+d.substring(0, 10)+'</h6><h6>'+d.substring(11, 16)+'</h6></div> <a id="idname" onclick="getValue('+id+')" style="text-align:center;">Cancel </a><div class="clearfix"></div></div></div>';
          }
            document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="clearfix"></div>';
          
@@ -443,11 +443,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      function getValue(idval)
 {
 
-sessionStorage.setItem("IdRdv",idval);
 
-console.log('idRdv: '+sessionStorage.getItem("IdRdv"));
+ $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/deleterdv.php?idpt=' + idval ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+             console.log('deleted with success'); 
+          
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
 
-alert('rdv supprimer');
+
+alert('Your appointment is canceled');
+window.location='MesRendezvous.html';
 
 }
      
