@@ -153,7 +153,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				
 				<script type="text/javascript">
-				
+window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+              alert('back');
+          
+    }
+	});
 				
 				var seesionvar = sessionStorage.getItem("Iduser");
 				             

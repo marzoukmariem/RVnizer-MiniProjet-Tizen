@@ -84,15 +84,15 @@
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Ns0CFgDnxxhx9COYwFEIecJ3Bed+QBPdJMbPyak2gSA=</DigestValue>
+<DigestValue>QPoY95vIS2qrP6Zx+DKgqtLitb7MqK65ecFBhGyVTzs=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>gefscHcYaeOBMqWrOJ75LdrwTyTC6zYf2xRMXG0I5eA=</DigestValue>
+<DigestValue>sG7i2PTcoN2vQnPu9CJoVeP+Hc5pm2RDF5+iVprLwH8=</DigestValue>
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>69VEVBygsYu64JY6jF/JAeqKMXeWyDXqv1ItlsvFqp8=</DigestValue>
+<DigestValue>763c8w9QlZUb4ggWwI9UXpABzVdG5fI5tRNFgj843oE=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1556,7 +1556,7 @@
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>E6mGQYXpcnD/1xArrkkznPs8MDSD5C3GV/gAd65iEag=</DigestValue>
+<DigestValue>d0nGN/SlaNGrhKAKiw6Zs/KgQElLDe1T83y/Bz8WAcA=</DigestValue>
 </Reference>
 <Reference URI="scriptclendar.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1575,9 +1575,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-TPxGcZfcCdQpJkxoiwCsoU5tQmdQdHUV9gPPsbNKyK+bvHWDyKCgFby0LF32lsivCu4UY3oqNZ1f
-fr8dsU9n8BC74qGf3mHk9KDpH+vU7TSHFxDerpRFUYNac5N4lYVhSRXaZjhXb0Pjm7MYNO1llXEw
-lJRftzjLgQXzOm6n92U=
+BQKqdo7PYpHc4A+dEgRx4kSOxDjY14rAlJ2ZQtzPHof2RqKkN3kYQgfa1Gr619ysyxfbMO1QSgA1
+KhwV5uOaIM7a2Hqi5VzOjEzWU9GoovPskRgnYCvwcoTCbqgWbuAr5P2ba4j4stb3Ww1KEJwi+GdG
+fh/cVoQdga1ueD14GTA=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
