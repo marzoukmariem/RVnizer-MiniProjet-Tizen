@@ -579,7 +579,22 @@ var verified = false;
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
    
- 
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_YDTeIXKPoxRYFsRQjCUEW");
+   })();
+</script>
+
+
+   
+ <script> 
+ function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+ </script>
  
  <script type="text/javascript">
 	function uploadImage() {
@@ -593,13 +608,31 @@ var verified = false;
 	formData.append("password", sessionStorage.getItem("password"));
 	formData.append("prenom", sessionStorage.getItem("lastName"));
 	formData.append("info", "General");
+	var code = randomIntFromInterval(1000,9999);
+	formData.append("code", code);
 	// do the ajax part
 	var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = function() {
 		if (this.readyState === 4 && this.status === 200) {
 			
 			console.log("succeesful")
-			window.location = 'index.html';
+			
+			
+			var templateParams = {
+    to_name: sessionStorage.getItem("firstName"),
+    from_name: 'RVnizer',
+    message_html: 'Your verification code is '+ code+' !'
+};
+ 
+emailjs.send('gmail', 'template_Khn4aXyD', templateParams)
+    .then(function(response) {
+    window.location = 'index.html';
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log(error);
+       window.location = 'index.html';
+    });
+			
 			
 		}
 		else{
