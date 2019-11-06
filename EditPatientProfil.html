@@ -144,8 +144,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 					</div>
 					<div class="follow" style="background-color:white;">
-						
-						<a href="file:///EditPatientProfil.html" class="button hvr-sweep-to-bottom">Edit</a>
+						First name: <input type="text" name="fname">
+						First name: <input type="text" name="fname">
+						First name: <input type="text" name="fname">
+						First name: <input type="text" name="fname">
 						<br>
 						<br>
 						<br>
@@ -162,7 +164,8 @@ window.addEventListener('tizenhwkey', function(e) {
 	});
 				
 				var seesionvar = sessionStorage.getItem("Iduser");
-				             
+	
+					             
  $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/getInnfopatient.php?idpt=' +seesionvar ,
             data: "", //ur data to be sent to server
@@ -179,7 +182,7 @@ window.addEventListener('tizenhwkey', function(e) {
              var im = 'http://41.226.11.252:1180/medichelper/'+imguser ;
              document.getElementById('user-detail').innerHTML = document.getElementById('user-detail').innerHTML +'<div class="details-img" ><img style="width: 150px;height:150px;" class="img-circle" src="'+im+'" alt=" "   /></div><br><br><br><h3>' + nom +' '+prenom + '</h3><p>'+num+'</p><p>'+daten+'</p>';
          
-              document.getElementById('profil-id-user').innerHTML = document.getElementById('profil-id-user').innerHTML +'<img class="img-circle " src="'+im+'" alt=" "><h3>'+nom+' '+prenom+'</h3><div class="social-icon"><ul><li><a href="file:///AcceuilPatient.html" class="facebook" style="text-align: center;"> Home</a></li><li><a href="file:///MesRendezvous.html" class="twitter" style="text-align: center;"> Appoitments</a></li>	<li><a href="file:///index.html" class="google" style="text-align: center;"> Log out</a></li>	</ul></div>';       
+              document.getElementById('profil-id-user').innerHTML = document.getElementById('profil-id-user').innerHTML +'<img class="img-circle " src="'+im+'" alt=" ">';       
               
               
               
@@ -191,7 +194,7 @@ window.addEventListener('tizenhwkey', function(e) {
                alert(x.responseText +"  " +x.status);
             }
         });
-				
+			
 				
 				</script>
 				

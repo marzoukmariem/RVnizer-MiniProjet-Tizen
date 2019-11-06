@@ -62,6 +62,10 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>twjqbObu48Hb9rjZyNyS5UJOlSOr/G6BDJYsUPE8yzA=</DigestValue>
 </Reference>
+<Reference URI="EditPatientProfil.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>CQo358hCKPrvwQBbxdHW3gH3dmu6XF6i5kvq9QbLCY0=</DigestValue>
+</Reference>
 <Reference URI="Genecologue.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>0roYbmAnhHt8KVa3WsVgWQQZ90xDJkJ51aW3zHujSmU=</DigestValue>
@@ -84,7 +88,7 @@
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>iQoooVKLTsCJO1s166LqgGwstiBApnrcHIRve1CvHe0=</DigestValue>
+<DigestValue>A4q0QS/iGYPkd37yA64ytJClY8laV3820xfo5iLq938=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -92,11 +96,11 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>1EE+QhUB/5gi8TAGDrZ2nh/wxx3ogettKKehpOuPOTk=</DigestValue>
+<DigestValue>7ibKVgjqKwjpc0Q45BF/hOQWeRqHFMKBAlrVHRC9T/M=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CIs/N3fS5FOANb6Y+VIAULcvgDmDa+joHHPFffXU6lI=</DigestValue>
+<DigestValue>YN8vH59zvD4oJ7EZNUKeLrbfSWXXVd56/bs/pCizFok=</DigestValue>
 </Reference>
 <Reference URI="css%2FJcrop.gif">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1575,9 +1579,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Uw4nOrvICEYHPJR+VI5JPCdAhggcI8b9dyk5eKzISbX1thlM7x25KohUQwo2Xa7hi9xHoCahDFcg
-G+FEjXkKhPh9ZYinZWXrJHfXU3l2jndPExR3SPo7BUUcg9ycwBC07u8lwGsKwp6kmFWctnPw8Ij7
-/1l95oD2jJ28pk7/ALk=
+C56ZxpLXxDX6mNre6Bw6m+NTnaZI5etk0re0q1XVA/rlG6aPvmGbEP93CzswxtlITPfPpauop9fh
+hEnekMvbNyJxjCY+IxdM7tWNQoRijAIb9Hbn13iEoHuVa91AY5k6yJa7IYi39uQGEcDg27IVO1pd
+kaG3WFI0SnVPEBCR2XA=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

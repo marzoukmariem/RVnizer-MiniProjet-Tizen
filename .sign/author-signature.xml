@@ -62,6 +62,10 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>twjqbObu48Hb9rjZyNyS5UJOlSOr/G6BDJYsUPE8yzA=</DigestValue>
 </Reference>
+<Reference URI="EditPatientProfil.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>CQo358hCKPrvwQBbxdHW3gH3dmu6XF6i5kvq9QbLCY0=</DigestValue>
+</Reference>
 <Reference URI="Genecologue.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>0roYbmAnhHt8KVa3WsVgWQQZ90xDJkJ51aW3zHujSmU=</DigestValue>
@@ -84,7 +88,7 @@
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>iQoooVKLTsCJO1s166LqgGwstiBApnrcHIRve1CvHe0=</DigestValue>
+<DigestValue>A4q0QS/iGYPkd37yA64ytJClY8laV3820xfo5iLq938=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -92,7 +96,7 @@
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CIs/N3fS5FOANb6Y+VIAULcvgDmDa+joHHPFffXU6lI=</DigestValue>
+<DigestValue>YN8vH59zvD4oJ7EZNUKeLrbfSWXXVd56/bs/pCizFok=</DigestValue>
 </Reference>
 <Reference URI="css%2FJcrop.gif">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1571,9 +1575,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-cdrWpc0pMeixSA90XmB6Jz20h27YTOFBHjKoSgOM/G2OS0KXfFjc7WPFh+H/YLGvgsdzJV1kpEJf
-6HJRPbA7n/nAD/xYpZ2dLNhmUVx+x7pu7vppcW4h1Dd1LqPeQK9xSURa4Lt1w7kf90xbOXuI89br
-dHAGL9ZZp2pvAX4zcTQ=
+ZJpze2sCp70AK098jUVW5h5HP0dxbCc/lflPAQSUnuaXAtEjfVAKBG7Ei9GSOHtRcK0sX9u3KFMN
+rpaoE9C6tVcJbIiRNOdtHeGNyDhZj4xns6dQaEd4otMAccxcJq7fGsaM+oyNpniEhHl13HQQbGRJ
+oO+yUWsZRxmWLGx0x1Y=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
