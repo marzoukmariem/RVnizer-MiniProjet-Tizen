@@ -10,9 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/main.js"></script>
     <script type="text/javascript" src="./js/config.js"></script>
-
 <script>
-
 function login(){
 	
 	var usr = document.getElementById('add-account-usr').value.trim();
@@ -43,10 +41,6 @@ function login(){
     
   
 }
-
-
-
-
 /*
 	function SoapCall(){
 	
@@ -94,9 +88,7 @@ function login(){
 	}
 */
 </script>
-
 </head>
-
 <body>
      <section class="ui-page" id="add-account-view">
         <div class="ui-header">
@@ -135,7 +127,6 @@ function login(){
     	<script src="js/app.model.js"></script>
     	<script src="js/app.js"></script>
 </body>
-
 </html>
 -->
 <!--
@@ -153,7 +144,6 @@ function login(){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <!-- default-css-files -->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -511,20 +501,16 @@ L.mapbox.accessToken = 'pk.eyJ1IjoieHBlZWRodW50ZXIiLCJhIjoiY2p1ZzAyYWl5MGd0eTQzc
 var map = L.mapbox.map('map')
     .setView([36, 10],4)
     .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));;
-
 var marker = L.marker(new L.LatLng(36.9, 10), {
     icon: L.mapbox.marker.icon({
         'marker-color': 'ff8888'
     }),
     draggable: true
 });
-
 console.log(marker.getLatLng().lat);
 console.log(marker.getLatLng().lng);
 marker.bindPopup('This marker is draggable! Move it around.');
 marker.addTo(map);
-
-
 </script>  
  
        <script>
@@ -534,7 +520,6 @@ if (document.getElementById('officeName').value.trim()==""){
 }else if (document.getElementById('speciality').value.trim()==""){
 }else if (document.getElementById('location').value.trim()==""){
 }else{
-
 sessionStorage.setItem("officeName",document.getElementById('officeName').value);
 sessionStorage.setItem("officePhoneNumber",document.getElementById('officePhoneNumber').value);
 sessionStorage.setItem("speciality",document.getElementById('speciality').value);
@@ -553,4 +538,3 @@ window.location = 'DocteurVerificationDiplome.html';
  
 </body>
 </html>
-
