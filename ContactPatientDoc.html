@@ -415,6 +415,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     
     
     <script>
+    
+      window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+           window.location='ReservezRendezVous.html';
+          
+    }
+	});
+	  
+    
+    
+    
+    
+    
  	var idDoc = sessionStorage.getItem("IdCabinetspes");
     var idPatient = sessionStorage.getItem("Iduser");
     console.log(sessionStorage.getItem("Iduser"));

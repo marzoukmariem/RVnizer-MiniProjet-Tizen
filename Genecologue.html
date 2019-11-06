@@ -392,6 +392,17 @@ function login(){
 	
 	
 	<script>
+	  window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+           window.location='AcceuilPatient.html';
+          
+    }
+	});
+	  
+	
+	
+	
 	 console.log('*******************');
 	 console.log('place');
 	 var place = sessionStorage.getItem("place");

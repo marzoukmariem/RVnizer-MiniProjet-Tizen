@@ -562,6 +562,19 @@ else
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 	
 	<script type="text/javascript">
+	
+	  window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+           window.location='AcceuilPatient.html';
+          
+    }
+	});
+	  
+	
+	
+	
+	
 	console.log('id ceb choisite')
 	console.log('id ceb choisite: '+sessionStorage.getItem("IdCabinetspes"));
 	
