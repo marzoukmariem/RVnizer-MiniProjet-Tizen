@@ -218,7 +218,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <li class="active"><a data-hover="Services" href="DocteurParameters.html">Account parameters</a>
                                 </li>
-                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
+                                <li class="active"><a data-hover="Services" onclick="signOut()">Sign out</a>
                                 </li>
                             </ul>
                         </nav>
@@ -417,6 +417,15 @@ window.location = 'DocteurDiscussionAvecPatient.html';
 
 }
      
+      </script>
+    
+    <script>
+      
+      function signOut(){
+      localStorage.setItem("rememberMe","false")
+      window.location = 'index.html'
+      }
+      
       </script>
     
 </body>

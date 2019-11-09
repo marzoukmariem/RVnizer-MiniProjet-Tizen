@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul>
                             <li>
 
-                                <label for="brand1"><span></span>please introduce the code sent by Email</label>
+                                <label ><span></span>please introduce the code sent by Email</label>
                             </li>
                         </ul>
 
@@ -360,6 +360,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 
+	
+
    <script>
         function login(){
         	
@@ -386,6 +388,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             	sessionStorage.setItem("Idcabinet",idcabinet);
             	sessionStorage.setItem("code",code);
             	sessionStorage.setItem("role",role);
+            	localStorage.setItem("localEmail",usr);
+            	localStorage.setItem("localPassword",data);
+            	localStorage.setItem("rememberMe",document.getElementById("brand1").checked);
             	if(obj[0].Role_User === 'patient')
             	{
             	if (verif=='0'){
@@ -484,6 +489,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 
 
+	<script>
+	
+	
+	document.getElementById("brand1").checked = JSON.parse(localStorage.getItem("rememberMe"))
+	console.log(localStorage.getItem("rememberMe"))
+	if (localStorage.getItem("rememberMe")=="true")
+		{
+		console.log(localStorage.getItem("localEmail"))
+		document.getElementById('add-account-usr').value = localStorage.getItem("localEmail");
+		document.getElementById('add-account-data').value = localStorage.getItem("localPassword")
+		login()
+		}
+	
+	</script>
 
 </body>
 
