@@ -531,9 +531,15 @@ console.log(date);
             type: "GET",
             success: function (data) {
              console.log(data);
-            
+             
             var testJson = JSON.parse(data);
            console.log(testJson.length);
+          if (testJson.length === 0){
+           
+           alert('You don\'t have approved appointments for today yet');
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'You don\'t have approved appointments for today yet';
+         
+           }
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
               var c = testJson[i].Cin_Patient
@@ -622,6 +628,12 @@ var date = document.getElementById('date').value.trim();
             
             var testJson = JSON.parse(data);
            console.log(testJson.length);
+           if (testJson.length === 0){
+           
+           alert('You don\'t have approved appointments for that day');
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'You don\'t have approved appointments for that day';
+         
+           }
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
               var c = testJson[i].Cin_Patient

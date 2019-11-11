@@ -381,6 +381,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             success: function (data) {
              
             var testJson = JSON.parse(data);
+            if (testJson.length === 0){
+             alert('you don\'t have any message yet');
+ 			 document.getElementById('contacts').innerHTML = document.getElementById('contacts').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-right"><h5>you don\'t have any message</h5></div><div class="clearfix"></div></div></div>';
+ 		      }
            console.log(testJson.length);
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
