@@ -90,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <input type="text" name="First Name" placeholder="First Name" required="" id="firstName" style="border-bottom: 2px solid red;" />
                         <input type="text" name="Last Name" placeholder="Last Name" required="" id="lastName" style="border-bottom: 2px solid red;" />
                         <input type="text" name="Phone Number" class="number" placeholder="Phone Number" required="" id="phoneNumber" style="border-bottom: 2px solid red;" />
-                        <input type="text" name="Login" placeholder="Login" required="" id="login" style="border-bottom: 2px solid red;" />
+                        <input type="text" name="Login" placeholder="Email" required="" id="login" style="border-bottom: 2px solid red;" />
                         <input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" style="border-bottom: 2px solid red;" />
                         <input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" style="border-bottom: 2px solid red;" />
                         <select class="sel" required="" id="role">
@@ -468,8 +468,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         	
         	}else if(document.getElementById('role').value.trim()==""){
         	
-        	}else{
         	
+        	
+        	}else if(document.getElementById('firstName').value.trim().includes(" ")){
+        		document.getElementById("firstName").setCustomValidity("this case must not include white spaces");
+        	}else if(document.getElementById('lastName').value.trim().includes(" ")){
+        		document.getElementById("firstName").setCustomValidity("");
+        		document.getElementById("lastName").setCustomValidity("this case must not include white spaces");
+        	}else if(document.getElementById('login').value.trim().includes(" ")){
+        	    document.getElementById("lastName").setCustomValidity("");
+        		document.getElementById("login").setCustomValidity("this case must not include white spaces");
+        	}else if(document.getElementById('password1').value.trim().includes(" ")){
+        	    document.getElementById("login").setCustomValidity("");
+        		document.getElementById("password1").setCustomValidity("this case must not include white spaces");
+        	}else{
+        	     document.getElementById("password1").setCustomValidity("");
         	sessionStorage.setItem("firstName",document.getElementById('firstName').value.trim());
         	sessionStorage.setItem("lastName",document.getElementById('lastName').value.trim());
         	sessionStorage.setItem("phoneNumber",document.getElementById('phoneNumber').value.trim());
