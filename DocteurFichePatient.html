@@ -621,6 +621,7 @@ function save(){
             type: "GET",
             success: function (data) {
            	   alert("Updated successfully");
+           	   window.location = 'DocteurFichePatient.html'
             },
             error: function (x, y, z) {
                alert(x.responseText +"  " +x.status);
