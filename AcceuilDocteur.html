@@ -546,7 +546,8 @@ console.log(date);
               var d = testJson[i].dateRendezvous
               var im = testJson[i].UrlImage_Patient
               var idr = testJson[i].Id_Rendezvous
-           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<a id="idname" onclick="getValue('+idr+')"><div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div></a>';
+              var idUserOfidr = testJson[i].Id_User
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<a id="idname" onclick="getValue('+idr+','+idUserOfidr+')"><div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div></a>';
          
            console.log(c);
             console.log('"http://41.226.11.252:1180/medichelper/images/' + im + '"');

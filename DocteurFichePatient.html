@@ -586,9 +586,14 @@ var id = sessionStorage.getItem("Idcabinet");
 </script>
 
 <script>
+var selected='false'
+</script>
+
+<script>
      
      function choixDate(note1,note2,idval)
 {
+selected='true'
 sessionStorage.setItem("IdRdv",idval);
 document.getElementById('note1').value = note1;
 document.getElementById('note2').value = note2;
@@ -599,7 +604,7 @@ document.getElementById('note2').value = note2;
 <script>
 
 function save(){
- 
+     if(selected == 'true'){
       var idRdv = sessionStorage.getItem("IdRdv")
       
       var note1 = document.getElementById('note1').value
@@ -623,6 +628,9 @@ function save(){
         });
 
  	}
+   }else{
+   alert('select a date before'); 
+   }
    }
  	</script>
  	
