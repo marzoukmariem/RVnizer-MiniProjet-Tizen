@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://esprit.tn/RVnizer" version="1.0.0" viewmodes="maximized">
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://esprit.tn/RVnizer" version="1.0.1" viewmodes="maximized">
     <access origin="*" subdomains="true"></access>
     <tizen:application id="SXVpuBe2Hr.WebService" package="SXVpuBe2Hr" required_version="2.4"/>
     <content src="index.html"/>
