@@ -473,10 +473,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               var c = testJson[0].Cin_Patient
               var d = testJson[0].dateRendezvous
               var im = testJson[0].UrlImage_Patient
+              sessionStorage.setItem("emailU",testJson[0].Login_User)
+              console.log('here1 ',localStorage.getItem("emailU"))
+               
            //document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div>';
          
+         document.getElementById('date').value = d.substring(0, 10);
          
-           document.getElementById('infoRdv').innerHTML = document.getElementById('infoRdv').innerHTML +'<span>Patient Name</span><h5>'+n+'</h5><br><span>Chosen Time</span><h5>'+d.substring(0, 10)+'</h5><h5>'+d.substring(11, 16)+'</h5>';
+           document.getElementById('infoRdv').innerHTML = document.getElementById('infoRdv').innerHTML +'<span>Patient Name</span><h5>'+n+'</h5><br><span>Chosen Date</span><h5>'+d.substring(0, 10)+'</h5>';
          
             document.getElementById('img').innerHTML = document.getElementById('img').innerHTML +'<img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive" />'
              
@@ -500,20 +504,35 @@ var date = document.getElementById('date').value.trim();
 var time = document.getElementById('time').value.trim(); 
 var dateAndTime = date + '%20' + time + ':00';       
      console.log('http://41.226.11.252:1180/medichelper/updatetimesec.php?idrdv=' + id + '&daterdv='+ dateAndTime)  
+     console.log('here1 ',sessionStorage.getItem("emailU"))
+     if (time !== ''){
+     
  $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/updatetimesec.php?idrdv=' + id + '&daterdv='+ dateAndTime ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
+           	   $.ajax({
+            url: 'http://yassinemoslah.com/api/tizen/sendEmail.php?from=rvnizer@gmail.com&to='+sessionStorage.getItem("emailU")+'&subject=Your Rendez Vous Is Approved&body=your rdv have been approved! please open the app for more details' ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
            	   alert("Updated");
+           	   
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
             },
             error: function (x, y, z) {
                alert(x.responseText +"  " +x.status);
             }
         });
 
-
+}
 
  	
  	}

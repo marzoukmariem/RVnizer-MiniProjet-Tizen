@@ -182,7 +182,7 @@ window.addEventListener('tizenhwkey', function(e) {
              var im = 'http://41.226.11.252:1180/medichelper/'+imguser ;
                           document.getElementById('user-detail').innerHTML = document.getElementById('user-detail').innerHTML +'<div class="details-img" ><img style="width: 150px;height:150px;" class="img-circle" src="'+im+'" alt=" "   /></div><br><br><br><br><br><p><label>Phone Number: </label> '+num+'</p><p><label>Birth Date:</label> '+daten.substring(0, 10)+'</p><p><label>Adress:</label> '+adress+'</p><p><label>Job:</label> '+cin+'</p><p><label>Email:</label> '+login+'</p>';
          
-              document.getElementById('profil-id-user').innerHTML = document.getElementById('profil-id-user').innerHTML +'<img class="img-circle " src="'+im+'" alt=" "><h3>'+nom+' '+prenom+'</h3><div class="social-icon"><ul><li><a href="file:///AcceuilPatient.html" class="facebook" style="text-align: center;"> Home</a></li><li><a href="file:///MesRendezvous.html" class="twitter" style="text-align: center;"> Appoitments</a></li>	<li><a href="file:///index.html" class="google" style="text-align: center;"> Log out</a></li>	</ul></div>';       
+              document.getElementById('profil-id-user').innerHTML = document.getElementById('profil-id-user').innerHTML +'<img class="img-circle " src="'+im+'" alt=" "><h3>'+nom+' '+prenom+'</h3><div class="social-icon"><ul><li><a href="file:///AcceuilPatient.html" class="facebook" style="text-align: center;"> Home</a></li><li><a href="file:///MesRendezvous.html" class="twitter" style="text-align: center;"> Appoitments</a></li>	<li><a onclick="signOut()" class="google" style="text-align: center;"> Log out</a></li>	</ul></div>';       
               
               
               
@@ -197,4 +197,13 @@ window.addEventListener('tizenhwkey', function(e) {
 				
 				
 				</script>
+				
+				<script>
+      
+      function signOut(){
+      localStorage.setItem("rememberMe","false")
+      window.location = 'index.html'
+      }
+      
+      </script>
 				
