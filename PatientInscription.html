@@ -10,9 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/main.js"></script>
     <script type="text/javascript" src="./js/config.js"></script>
-
 <script>
-
 function login(){
 	
 	var usr = document.getElementById('add-account-usr').value.trim();
@@ -43,10 +41,6 @@ function login(){
     
   
 }
-
-
-
-
 /*
 	function SoapCall(){
 	
@@ -94,9 +88,7 @@ function login(){
 	}
 */
 </script>
-
 </head>
-
 <body>
      <section class="ui-page" id="add-account-view">
         <div class="ui-header">
@@ -135,7 +127,6 @@ function login(){
     	<script src="js/app.model.js"></script>
     	<script src="js/app.js"></script>
 </body>
-
 </html>
 -->
 <!--
@@ -153,7 +144,6 @@ function login(){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <!-- default-css-files -->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -551,21 +541,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	ajax.onreadystatechange = function() {
 		if (this.readyState === 4 && this.status === 200) {
 			console.log("succeesful")
-					var templateParams = {
-    to_name: sessionStorage.getItem("firstName"),
-    from_name: 'RVnizer',
-    message_html: 'Your verification code is '+ code+' !'
-};
+			
  
-emailjs.send('gmail', 'marzouk', templateParams)
-    .then(function(response) {
-    alert("registered successfully");
-    window.location = 'index.html';
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log(error);
-       window.location = 'index.html';
-    });
+			$.ajax({
+            url: 'http://yassinemoslah.com/api/tizen/sendEmail.php?from=rvnizer@gmail.com&to='+sessionStorage.getItem("login")+'&subject=Confirmation Code&body=Your verification code is '+ code+' !' ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+           	   alert("registered successfully");
+           	   window.location = 'index.html'
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
 		}
 		else{
 		console.log("unsucceesful")
@@ -610,4 +600,3 @@ if(document.getElementById('address').value==""){
  
 </body>
 </html>
-
