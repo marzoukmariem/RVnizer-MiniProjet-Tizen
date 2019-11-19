@@ -546,7 +546,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <script>
         var idUser = sessionStorage.getItem("Iduser");
-                 
+        var defaultEmail;         
      $.ajax({
                 url: 'http://41.226.11.252:1180/medichelper/getelmentdoctoupdate.php?iduser=' + idUser ,
                 data: "", //ur data to be sent to server
@@ -567,6 +567,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   document.getElementById('firstName').value = testJson[0].Prenom_User
                   document.getElementById('Info').value = testJson[0].Info_Medecin
                   document.getElementById('login').value = testJson[0].Login_User
+                  defaultEmail = testJson[0].Login_User;	
                   document.getElementById('password11').value = testJson[0].Password_User
                   
                   lng = testJson[0].longitude
@@ -612,7 +613,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       var firstName = document.getElementById('firstName').value
       var lastName = document.getElementById('lastName').value
       var officePhoneNumber = document.getElementById('officePhoneNumber').value
-      
+      if (document.getElementById('officeName').value.trim()==""){
+}else if (document.getElementById('officePhoneNumber').value.trim()==""){
+}else if (document.getElementById('speciality').value.trim()==""){
+}else if (document.getElementById('location').value.trim()==""){
+}else if (document.getElementById('firstName').value.trim()==""){
+}else if (document.getElementById('lastName').value.trim()==""){
+}else if (document.getElementById('Info').value.trim()==""){
+}else if (document.getElementById('login').value.trim()==""){
+}else if (document.getElementById('password11').value.trim()==""){
+
+    }else{
+   
+     $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/login3.php?login=' + document.getElementById('login').value.trim() ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+            var testJson = JSON.parse(data);
+            console.log(testJson.length)
+              if(testJson.length>0&&document.getElementById('login').value.trim()!==defaultEmail){
+              document.getElementById("login").setCustomValidity("Email is already in use");
+              }else{
+              ////////////////////////////////////////////////////////////////////////////////
+        	document.getElementById("login").setCustomValidity("");
+        	
  $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/updatedoc.php?idCabinet=' + idCab + '&nomcabinet='+ officeName + '&iddoc='+ Idusr + '&logitude='+ lng + '&latitude='+ lat + '&nom='+ firstName + '&prenom='+ lastName + '&numtel='+ officePhoneNumber + '&emplacment='+ document.getElementById('location').value + '&login='+ document.getElementById('login').value + '&pw='+ document.getElementById('password11').value + '&info='+ document.getElementById('Info').value ,
             data: "", //ur data to be sent to server
@@ -626,8 +652,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         });
 
+/////////////////////////////////////////////////////////////////////////////////
+        	
+              }
+           
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
 
-
+}
  	
  	}
  </script>

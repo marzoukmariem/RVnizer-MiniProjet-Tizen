@@ -482,7 +482,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         	    document.getElementById("login").setCustomValidity("");
         		document.getElementById("password1").setCustomValidity("this case must not include white spaces");
         	}else{
-        	     document.getElementById("password1").setCustomValidity("");
+        	
+        	
+        	 $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/login3.php?login=' + document.getElementById('login').value.trim() ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+            var testJson = JSON.parse(data);
+            console.log(testJson.length)
+              if(testJson.length>0){
+              document.getElementById("login").setCustomValidity("Email is already in use");
+              }else{
+              ////////////////////////////////////////////////////////////////////////////////
+        	document.getElementById("login").setCustomValidity("");
         	sessionStorage.setItem("firstName",document.getElementById('firstName').value.trim());
         	sessionStorage.setItem("lastName",document.getElementById('lastName').value.trim());
         	sessionStorage.setItem("phoneNumber",document.getElementById('phoneNumber').value.trim());
@@ -496,6 +510,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         	window.location = 'DocteurInscription.html';
         	else if (role=='patient')
         	window.location = 'PatientInscription.html';
+        	
+        	////////////////////////////////////////////////////////////////////////////////
+        	
+              }
+           
+            
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+        	
+        	
         		
         		}
         }
