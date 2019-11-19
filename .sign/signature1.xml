@@ -88,7 +88,7 @@
 </Reference>
 <Reference URI="PatientInscription.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>NEPrdFkF/6fnBMGJ22eF+T/aH+ACVjBY71mkNtcc9iY=</DigestValue>
+<DigestValue>z22WqiyU54Cypu55zFZ6c7+LFVvwTKTzRS5Mwso3SfY=</DigestValue>
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -100,11 +100,11 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>LXjnv8fT24pCCvO/0LMP5T//C6UENdurFfWlH31GhEI=</DigestValue>
+<DigestValue>DyaDvwu7oLeonn9hrQ+Ncw4aB1D+kEnKSk6VXSRF0YA=</DigestValue>
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>qQ3zw+KAUa4Nam8Ywzcpxnaex8iCkyHH7nmbjZtYQnI=</DigestValue>
+<DigestValue>xYmqt9SnzLQHAyGXskrLvfRU4DgKp719C5LFPp0GkWs=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1576,7 +1576,7 @@
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Pff6MBNQss7J3CsxarokeHqUQC26zR34Z0O6BHma2+M=</DigestValue>
+<DigestValue>ESl7dJgUQk3bxxl/1GfDl0rgvXictuy7hekQL/8WRa0=</DigestValue>
 </Reference>
 <Reference URI="scriptclendar.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1595,9 +1595,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-mERtXOrb9zNxORl7QdEZvdTGW2YgZ4B6dg3MHkqKj+cooJcd4zppi9FDhUeiB7VzMhG+008+tmmx
-34WEOzESUqyVX9aLM4pf65boCjIAFnD7Qp9nbYIg6Qammj0IKG6IpvBNybiFPphGPrQcIOQp4uDv
-vd9jgARQoQzNFFk+azw=
+WM6IYgR6tIbQOM+IiV+sgRKf6ZNgJjaW+9TIZFTVsf5VcQSsyOcZAv17owJNv9R1vs1XFATI8BFp
+LLJvpwFzdIARcgWS+vBC1N2FANoKorxrXaPjyqxZACjd3AC8PcdUtTxbThUl0e8YTl/0SoNKsSHK
+E3dCqfXEsbT2Rcwke/w=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

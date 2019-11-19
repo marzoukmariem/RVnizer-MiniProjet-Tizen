@@ -88,7 +88,7 @@
 </Reference>
 <Reference URI="PatientInscription.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>NEPrdFkF/6fnBMGJ22eF+T/aH+ACVjBY71mkNtcc9iY=</DigestValue>
+<DigestValue>z22WqiyU54Cypu55zFZ6c7+LFVvwTKTzRS5Mwso3SfY=</DigestValue>
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -100,7 +100,7 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>LXjnv8fT24pCCvO/0LMP5T//C6UENdurFfWlH31GhEI=</DigestValue>
+<DigestValue>DyaDvwu7oLeonn9hrQ+Ncw4aB1D+kEnKSk6VXSRF0YA=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1572,7 +1572,7 @@
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Pff6MBNQss7J3CsxarokeHqUQC26zR34Z0O6BHma2+M=</DigestValue>
+<DigestValue>ESl7dJgUQk3bxxl/1GfDl0rgvXictuy7hekQL/8WRa0=</DigestValue>
 </Reference>
 <Reference URI="scriptclendar.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1591,9 +1591,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-WOJ+9GvIs0fUOPM9F6xgHVSPvdkIGwqWzn5+NQP8jOl+2lfbcXc/6OUo/EOfKfcQaZL8Il2Ia1eE
-75e+PmWICnMxQ9U0MSamWp4C7Rdfq50UmXK4L54Aej7KN23MykXroWDyyJI+1GDvXaWIonInQPk/
-4QYkPKZv0V8J5p7Jwlc=
+FObqGgUViWwMBMuT0WFWC6iCvNPYFHEziY/lRIoJK7EXbfgye/zINVWkRQvhZz8vaMt2yF5ixjsO
+FGp++AtR5gLIvCfbuFXkYpYqshTBHN0l59ABDHdfWGxkqAyVDDXDCubQKM4wB9PZahd9xjSIH98J
+diD7bg0LnPk/2w8b4ag=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
