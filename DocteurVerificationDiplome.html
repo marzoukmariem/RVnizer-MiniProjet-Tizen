@@ -624,14 +624,19 @@ var verified = false;
     message_html: 'Your verification code is '+ code+' !'
 };
  
-emailjs.send('gmail', 'template_Khn4aXyD', templateParams)
-    .then(function(response) {
-    window.location = 'index.html';
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log(error);
-       window.location = 'index.html';
-    });
+	$.ajax({
+            url: 'http://yassinemoslah.com/api/tizen/sendEmail.php?from=rvnizer@gmail.com&to='+sessionStorage.getItem("login")+'&subject=Confirmation Code&body=Your verification code is '+ code+' !' ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+           	   alert("registered successfully");
+           	   window.location = 'index.html'
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
 			
 			
 		}
