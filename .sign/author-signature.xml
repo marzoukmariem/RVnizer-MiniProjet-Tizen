@@ -84,7 +84,7 @@
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>2XD2ErIKkh/imIA3POFRXYOYGk0XoPrcyaQQV2I1Qb0=</DigestValue>
+<DigestValue>Fw01I+w5A3ORd06hJRts5U33v/j/e1N8eZ0ClRLcprU=</DigestValue>
 </Reference>
 <Reference URI="PatientInscription.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -100,7 +100,7 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>DyaDvwu7oLeonn9hrQ+Ncw4aB1D+kEnKSk6VXSRF0YA=</DigestValue>
+<DigestValue>UDNgnVtC03Z7Yx9P0RyaXNiq760nHfAI8BCk4PqVv2E=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1591,9 +1591,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-RysC/6jovoMD/+EVP6Kc+zJZUxlzBtxEw2sACbYuvxn9DX6c0K8ucJ3I22mFbBOby3n3kPVH1mCz
-ldlA8c08y5tAZ4O3BsV8WHh6rJiWRSFhcvh0rMptEYn5x4NdwqkjZdLGDCvxoA0xfxXJWDkca8cL
-F0MEongMPJAKrMQrl1Y=
+I9izzNbGf03p1nKVxOvCMXUP2Yrjz3GCY2jL2wx4T6a7xsjSniAFv7ODyJYK13WMKwuL2zxAbsJj
+PYFWHkDWwZ6y84FctguhTxoQNLvk2MvSevG0qaYm8AGF2j4kyyzr1pM87ZL9XtUwUe9YmpSokxFx
+XReRTCdycT3V483t2Q8=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

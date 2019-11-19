@@ -435,6 +435,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               var n = testJson[i].Nom_Cabinet;
               var d = testJson[i].dateRendezvous;
               var id = testJson[i].Id_Rendezvous;
+             
+             
               console.log(id);
            document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-clock-o" aria-hidden="true"></i></div><div class="icon-right"><h5>'+n+'</h5><h6>'+d.substring(0, 10)+'</h6><h6>'+d.substring(11, 16)+'</h6></div> <a id="idname" onclick="getValue('+id+')" style="text-align:center;">Cancel </a><div class="clearfix"></div></div></div>';
          }
@@ -457,9 +459,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      
      function getValue(idval)
 {
-
-console.log('http://41.226.11.252:1180/medichelper/deleterdv.php?idpt=' + idval)
+            
  $.ajax({
+            url: 'http://41.226.11.252:1180/medichelper/getinfordv.php?idrdv=' + idval ,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+            console.log(data);
+            
+             var testJson = JSON.parse(data);
+             console.log(testJson.nom);
+			 
+              var n = testJson.nom;
+              var p = testJson.prenom;
+              var log = testJson.login;
+              var date =testJson.daterdv;
+ 
+ $.ajax({
+            url: 'http://yassinemoslah.com/api/tizen/sendEmail.php?from=rvnizer@gmail.com&to='+log+'&subject=Cancel%20Appoittment&body=Your%20patient%20'+ n +' '+ p +'%20canceled%20his%20appoittment%20which%20is%20planned%20on%20'+ date,
+            data: "", //ur data to be sent to server
+            contentType: "application/json; charset=utf-8", 
+            type: "GET",
+            success: function (data) {
+             console.log(data);
+             console.log('deleted with success'); 
+           $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/deleterdv.php?idpt=' + idval ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
@@ -476,10 +501,23 @@ console.log('http://41.226.11.252:1180/medichelper/deleterdv.php?idpt=' + idval)
                alert(x.responseText +"  " +x.status);
             }
         });
-
-
-
-}
+			
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+            
+            
+          
+             
+            },
+            error: function (x, y, z) {
+               alert(x.responseText +"  " +x.status);
+            }
+        });
+        }
      
       </script>
 	
