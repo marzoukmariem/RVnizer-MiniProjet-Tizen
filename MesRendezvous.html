@@ -426,11 +426,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              console.log(data);
             
             var testJson = JSON.parse(data);
- 
+            
+			 if (testJson.length === 0){
+             alert('you don\'t have any approved appointmentes yet');
+ 			 document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-right"><h5>you don\'t have any approved appointmentes yet</h5></div><div class="clearfix"></div></div></div>';
+ 		      }
              for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_Cabinet;
               var d = testJson[i].dateRendezvous;
               var id = testJson[i].Id_Rendezvous;
+              console.log(id);
            document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-left"><i class="fa fa-clock-o" aria-hidden="true"></i></div><div class="icon-right"><h5>'+n+'</h5><h6>'+d.substring(0, 10)+'</h6><h6>'+d.substring(11, 16)+'</h6></div> <a id="idname" onclick="getValue('+id+')" style="text-align:center;">Cancel </a><div class="clearfix"></div></div></div>';
          }
            document.getElementById('AppointmentDemands').innerHTML = document.getElementById('AppointmentDemands').innerHTML +'<div class="clearfix"></div>';
@@ -453,7 +458,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      function getValue(idval)
 {
 
-
+console.log('http://41.226.11.252:1180/medichelper/deleterdv.php?idpt=' + idval)
  $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/deleterdv.php?idpt=' + idval ,
             data: "", //ur data to be sent to server
@@ -463,6 +468,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              console.log(data);
              console.log('deleted with success'); 
           
+			alert('Your appointment is canceled');
+			window.location='MesRendezvous.html';
              
             },
             error: function (x, y, z) {
@@ -471,8 +478,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
 
-alert('Your appointment is canceled');
-window.location='MesRendezvous.html';
 
 }
      

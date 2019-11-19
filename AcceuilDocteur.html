@@ -315,7 +315,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <li class="active"><a data-hover="Services" href="DocteurParameters.html">Account parameters</a>
                                 </li>
-                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
+                                <li class="active"><a data-hover="Services" onclick="signOut()">Sign out</a>
                                 </li>
                             </ul>
                         </nav>
@@ -531,15 +531,23 @@ console.log(date);
             type: "GET",
             success: function (data) {
              console.log(data);
-            
+             
             var testJson = JSON.parse(data);
            console.log(testJson.length);
+          if (testJson.length === 0){
+           
+           alert('You don\'t have approved appointments for today yet');
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'You don\'t have approved appointments for today yet';
+         
+           }
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
               var c = testJson[i].Cin_Patient
               var d = testJson[i].dateRendezvous
               var im = testJson[i].UrlImage_Patient
-           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div>';
+              var idr = testJson[i].Id_Rendezvous
+              var idUserOfidr = testJson[i].Id_User
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<a id="idname" onclick="getValue('+idr+','+idUserOfidr+')"><div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div></a>';
          
            console.log(c);
             console.log('"http://41.226.11.252:1180/medichelper/images/' + im + '"');
@@ -621,12 +629,20 @@ var date = document.getElementById('date').value.trim();
             
             var testJson = JSON.parse(data);
            console.log(testJson.length);
+           if (testJson.length === 0){
+           
+           alert('You don\'t have approved appointments for that day');
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'You don\'t have approved appointments for that day';
+         
+           }
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
               var c = testJson[i].Cin_Patient
               var d = testJson[i].dateRendezvous
               var im = testJson[i].UrlImage_Patient
-           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d + '</h6></div></div>';
+              var idr = testJson[i].Id_Rendezvous
+              var idUserOfidr = testJson[i].Id_User
+           document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<a id="idname" onclick="getValue('+idr+','+idUserOfidr+')"><div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d + '</h6></div></div></a>';
          
            
             }
@@ -645,7 +661,30 @@ var date = document.getElementById('date').value.trim();
  	}
  </script>
  
- 
+ <script>
+     
+     function getValue(idval,id2val)
+{
+
+sessionStorage.setItem("IdRdv",idval);
+sessionStorage.setItem("IdUserOfRdv",id2val);
+console.log('idRdv: '+sessionStorage.getItem("IdRdv"));
+console.log('IdUserOfRdv: '+sessionStorage.getItem("IdUserOfRdv"));
+window.location = 'DocteurFichePatient.html';
+
+
+}
+     
+      </script>
+      
+      <script>
+      
+      function signOut(){
+      localStorage.setItem("rememberMe","false")
+      window.location = 'index.html'
+      }
+      
+      </script>
 </body>
 </html>
 

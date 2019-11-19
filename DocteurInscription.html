@@ -519,7 +519,12 @@ if (document.getElementById('officeName').value.trim()==""){
 }else if (document.getElementById('officePhoneNumber').value.trim()==""){
 }else if (document.getElementById('speciality').value.trim()==""){
 }else if (document.getElementById('location').value.trim()==""){
-}else{
+
+}else if(document.getElementById('officeName').value.trim().includes(" ")){
+    document.getElementById("officeName").setCustomValidity("this case must not include white spaces");
+    }else{
+    document.getElementById("officeName").setCustomValidity("");
+    
 sessionStorage.setItem("officeName",document.getElementById('officeName').value);
 sessionStorage.setItem("officePhoneNumber",document.getElementById('officePhoneNumber').value);
 sessionStorage.setItem("speciality",document.getElementById('speciality').value);
@@ -533,7 +538,15 @@ window.location = 'DocteurVerificationDiplome.html';
 }
 </script>
  
- 
+   <script>
+    window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+           window.location='index.html';
+          
+    }
+	});
+       </script>
  
  
 </body>

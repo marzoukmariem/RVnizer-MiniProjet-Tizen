@@ -249,7 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <li class="active"><a data-hover="Services" href="DocteurParameters.html">Account parameters</a>
                                 </li>
-                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
+                                <li class="active"><a data-hover="Services" onclick="signOut()">Sign out</a>
                                 </li>
                             </ul>
                         </nav>
@@ -439,10 +439,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               
               if(testJson[i].fk_To==idDoc){
              
-           document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2"><img src="images/t6.jpg" alt="Avatar"><p>'+msg+'</p></div>';
+           document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2"><img src="images/userIcon.png" alt="Avatar"><p>'+msg+'</p></div>';
          window.scrollTo(0,document.body.scrollHeight); 
          } else{
-          document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/t5.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
+          document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/doctorIcon.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
          window.scrollTo(0,document.body.scrollHeight);
          }
             }
@@ -472,7 +472,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
-           	   document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/t5.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
+           	   document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/doctorIcon.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
         window.scrollTo(0,document.body.scrollHeight);
         document.getElementById('msg').value=''
             },
@@ -484,6 +484,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  	}
  	}
  </script>
+     
+     <script>
+      
+      function signOut(){
+      localStorage.setItem("rememberMe","false")
+      window.location = 'index.html'
+      }
+      
+      </script>
+     
+       <script>
+    window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+           window.location='DocteurDiscussionContacts.html';
+          
+    }
+	});
+       </script> 
      
 </body>
 

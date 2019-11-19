@@ -218,7 +218,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <li class="active"><a data-hover="Services" href="DocteurParameters.html">Account parameters</a>
                                 </li>
-                                <li class="active"><a data-hover="Services" href="index.html">Sign out</a>
+                                <li class="active"><a data-hover="Services" onclick="signOut()">Sign out</a>
                                 </li>
                             </ul>
                         </nav>
@@ -381,6 +381,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             success: function (data) {
              
             var testJson = JSON.parse(data);
+            if (testJson.length === 0){
+             alert('you don\'t have any message yet');
+ 			 document.getElementById('contacts').innerHTML = document.getElementById('contacts').innerHTML +'<div class="col-md-4 w3ls-markets-grid"><div class="agileits-icon-grid"><div class="icon-right"><h5>you don\'t have any message</h5></div><div class="clearfix"></div></div></div>';
+ 		      }
            console.log(testJson.length);
             for (var i = 0; i < testJson.length; i++) {
               var n = testJson[i].Nom_User + " " + testJson[i].Prenom_User;
@@ -419,6 +423,24 @@ window.location = 'DocteurDiscussionAvecPatient.html';
      
       </script>
     
+    <script>
+      
+      function signOut(){
+      localStorage.setItem("rememberMe","false")
+      window.location = 'index.html'
+      }
+      
+      </script>
+    
+      <script>
+    window.addEventListener('tizenhwkey', function(e) {
+    if ( e.keyName == "back" ) {
+        
+           window.location='AcceuilDocteur.html';
+          
+    }
+	});
+       </script>
 </body>
 
 </html>

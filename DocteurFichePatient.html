@@ -154,6 +154,8 @@ function login(){
     <meta charset="utf-8">
     <meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 
+
+
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <!-- default-css-files -->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -168,9 +170,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //style.css-file -->
 
 
-    <!-- new script -->
+  
 
-    <!-- new script end -->
+
 
     <script>
         function login(){
@@ -204,6 +206,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           
         }
     </script>
+    
+    
+    <style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+</style>
+    
 </head>
 <!-- Head -->
 
@@ -222,9 +246,73 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</header>-->
     <!--//header-section-end-here-->
+    <!-- popup for sign in form -->
+    <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="small-dialog1" class="mfp-hide book-form">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Sign In </h3>
+                    <form action="" method="post" onSubmit="return false;">
+                        <input type="email" name="Email" class="email" placeholder="Email" required="" id="add-account-usr" data-clear-btn="true" />
+                        <input type="password" name="Password" class="password" placeholder="Password" required="" id="add-account-data" data-clear-btn="true" />
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="brand1" value="">
+                                <label for="brand1"><span></span>Remember me</label>
+                            </li>
+                        </ul>
+                        <a href="#">Forgot Password?</a>
+                        <br>
+                        <div class="clearfix"></div>
+                        <input type="submit" value="Sign In" id="login-button" onclick="login()">
+                    </form>
+                    <div class="w3ls-or">
+                        <p>Or</p>
+                    </div>
+                    <div class="top-middle w3ls-sma">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-vimeo"></i></a>
+                            </li>
+                        </ul>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup for sign in form -->
+    <!-- popup for sign up form -->
+    <div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="small-dialog2" class="mfp-hide book-form">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Sign Up</h3>
+                    <form action="#" method="post">
+                        <input type="text" name="Name" placeholder="Your Name" required="" />
+                        <input type="email" name="Email" class="email" placeholder="Email" required="" />
+                        <input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
+                        <input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+                        <input type="submit" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //popup for sign up form -->
+    <!--banner-section-starts-here-->
+   
 
-    <section class="banner jarallax">
+ <section class="banner jarallax">
         <div class="navigation">
             <div class="container">
                 <nav class="navbar navbar-default">
@@ -237,15 +325,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </button>
                     </div>
                     <div class="logo">
-
                         <h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> RVnizer</a></h1>
                     </div>
                     <div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
                         <nav class="link-effect-3 w3ls-navma" id="link-effect-3">
                             <ul class="nav1 navbar-nav nav nav-wil">
-                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments overview</a>
+                                <li class="active"><a data-hover="Home" href="AcceuilDocteur.html">Appointments Overview</a>
                                 </li>
-                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment requests</a>
+                                <li class="active"><a data-hover="Home" href="DocteurDemandesRendezVous.html">Appointment Requests</a>
                                 </li>
                                 <li class="active"><a data-hover="Services" href="DocteurDiscussionContacts.html">Messages</a>
                                 </li>
@@ -263,54 +350,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </section>
 
-    <!-- /services -->
-    <!--footer-section-end-here-->
-    <section class="footer-top jarallax">
-        <div class="container">
-
-            <div class="agile-team-grids">
-                <div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
-                    <div class="team-grid text-center" id="img">
-                        
-
-                    </div>
-                </div>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="footer-grids">
-                <div class="w3ls-top-ft text-center" id="infoRdv">
-                    
-                </div>
-            </div>
-
-        </div>
     </section>
-
+    <!--about-section-starts-here-->
     <section class="about" id="appointment">
         <div class="container">
-            <h2>Confirm Appointment time</h2>
+           <!--   <h2>Anouar Ben Othman</h2>-->
             <div class="about-grids">
 
                 <div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
-                    <br>
+                    
                     <div class="abt-form text-center">
+                    
+                                
+                    
+            <div class="scrollmenu" id="scrollmenu">
+				  
+					</div>
+                                    
+                                    <br>
+                    
                         <form action="#" method="post" onSubmit="return false;">
 
-                            <div class="col-sm-4 col-xs-4 w3ls-lt-form">
-                                <div class="w3ls-pr">
-                                    <input type="date" name="date" required="required" id="date">
-                                    <input type="time" name="time" required="required" id="time">
-                                </div>
-                            </div>
-
-                            <div class="clearfix"></div>
-                            <input type="submit" value="Confirm Time" onclick="search()">
+                      
+					<h2>note1</h2>
+					<br>
+					<textarea rows="4" cols="30" id="note1" onchange="setSaveButtonActive()">Select one RV to see details </textarea>
+					<br>
+					<h2>note2</h2>
+					<br>
+					<textarea rows="4" cols="30" id="note2" onchange="setSaveButtonActive()">Select one RV to see details</textarea>
+					
+					<input type="submit" value="Save" id="save-button" onclick="save()" >
 
                         </form>
+                        <div class="container">
+                            <div class="grid-wrap" id="rdv">
 
+                                <div class="clearfix"></div>
+                            </div>
 
+                        </div>
 
                     </div>
                 </div>
@@ -320,10 +399,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         </div>
     </section>
-    <!-- //services -->
 
 
-
+    <!--//footer-section-end-here-->
     <!-- Default-JavaScript-File -->
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <!-- password-script -->
@@ -453,32 +531,51 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!-- //smooth scrolling -->
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-    
-    <script>
-             
-            
+
+
+
+
+
+<script>
+     
+     function setSaveButtonActive()
+{
+
+document.getElementById('save-button').disabled = false; 
+
+
+}
+</script>
+
+<script>
+
+var id = sessionStorage.getItem("Idcabinet");
+         
              
  $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/fichepatient.php?idCabinet=' +sessionStorage.getItem("IdRdv") ,
+            url: 'http://41.226.11.252:1180/medichelper/getallrendezoususer.php?idCabinet=' + sessionStorage.getItem("Idcabinet") + '&idUser=' + sessionStorage.getItem("IdUserOfRdv") ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
-             console.log(data);
+             document.getElementById('rdv').innerHTML = ''
             
             var testJson = JSON.parse(data);
+           console.log(testJson.length);
+            for (var i = 0; i < testJson.length; i++) {
+              
+              
+              var d = testJson[i].dateRendezvous
+              var det1 = testJson[i].detail_Consultation
+              var det2 = testJson[i].Titre_Consultation
+              var idr = testJson[i].Id_Rendezvous
+                                                                                                                     
+           document.getElementById('scrollmenu').innerHTML = document.getElementById('scrollmenu').innerHTML +'<a onclick="choixDate(\''+det1+'\',\''+det2+'\','+idr+')">' +d.substring(0, 16) + '</a>';
+         
            
+            }
             
-              var n = testJson[0].Nom_User + " " + testJson[0].Prenom_User;
-              var c = testJson[0].Cin_Patient
-              var d = testJson[0].dateRendezvous
-              var im = testJson[0].UrlImage_Patient
-           //document.getElementById('rdv').innerHTML = document.getElementById('rdv').innerHTML +'<div class="col-md-3 agileinfo_portfolio_grid" ><div class="team-grid text-center"><img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive"/><h5>' + n + '</h5><h6>' + c + '</h6><h6>' + d.substring(0, 16) + '</h6></div></div>';
-         
-         
-           document.getElementById('infoRdv').innerHTML = document.getElementById('infoRdv').innerHTML +'<span>Patient Name</span><h5>'+n+'</h5><br><span>Chosen Time</span><h5>'+d.substring(0, 10)+'</h5><h5>'+d.substring(11, 16)+'</h5>';
-         
-            document.getElementById('img').innerHTML = document.getElementById('img').innerHTML +'<img src="http://41.226.11.252:1180/medichelper/'+im+'" alt="image" class="img-responsive" />'
+            
              
             },
             error: function (x, y, z) {
@@ -486,57 +583,76 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         });
 
+</script>
 
+<script>
+var selected='false'
+</script>
 
+<script>
+     
+     function choixDate(note1,note2,idval)
+{
+selected='true'
+sessionStorage.setItem("IdRdv",idval);
+document.getElementById('note1').value = note1;
+document.getElementById('note2').value = note2;
 
- </script>
- 
-     <script>
- function search(){
- 
-var id = sessionStorage.getItem("IdRdv");
-         
-var date = document.getElementById('date').value.trim();	
-var time = document.getElementById('time').value.trim(); 
-var dateAndTime = date + '%20' + time + ':00';       
-     console.log('http://41.226.11.252:1180/medichelper/updatetimesec.php?idrdv=' + id + '&daterdv='+ dateAndTime)  
+}
+</script>
+
+<script>
+
+function save(){
+     if(selected == 'true'){
+      var idRdv = sessionStorage.getItem("IdRdv")
+      
+      var note1 = document.getElementById('note1').value
+      var note2 = document.getElementById('note2').value
+      
+ if(note1=="" || note2==""){
+ alert("please fill the notes");
+    }else{
+      
  $.ajax({
-            url: 'http://41.226.11.252:1180/medichelper/updatetimesec.php?idrdv=' + id + '&daterdv='+ dateAndTime ,
+            url: 'http://41.226.11.252:1180/medichelper/editconsultaion.php?idrdv=' + idRdv + '&titrerdv='+ note2 + '&detrdv='+ note1  ,
             data: "", //ur data to be sent to server
             contentType: "application/json; charset=utf-8", 
             type: "GET",
             success: function (data) {
-           	   alert("Updated");
+           	   alert("Updated successfully");
+           	   window.location = 'DocteurFichePatient.html'
             },
             error: function (x, y, z) {
                alert(x.responseText +"  " +x.status);
             }
         });
 
-
-
- 	
  	}
- </script>
-   
-   <script>
+   }else{
+   alert('select a date before'); 
+   }
+   }
+ 	</script>
+ 	
+ 	 <script>
       
       function signOut(){
       localStorage.setItem("rememberMe","false")
       window.location = 'index.html'
       }
       
-      </script> 
-      
-      <script>
+      </script>
+ 	
+ 	  <script>
     window.addEventListener('tizenhwkey', function(e) {
     if ( e.keyName == "back" ) {
         
-           window.location='DocteurDemandesRendezVous.html';
+           window.location='AcceuilDocteur.html';
           
     }
 	});
-       </script> 
+       </script>
 </body>
 
 </html>
