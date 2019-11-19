@@ -230,13 +230,22 @@ function login(){
 {
 
  var daterdv =  document.getElementById('daterdv').value.trim();  
+        var a = new Date();
+   		var dater = new Date(daterdv);
  if (daterdv === "" )
 {
 alert("you must choose a date ");
 }
-else
-{
-	 
+
+else if (dater.getDate()  < a.getDate())
+{       
+	
+	alert("you must choose a date later than today ");
+	
+}
+
+else{ 
+    
  	var idpt = sessionStorage.getItem("Iduser");
     var idcs = sessionStorage.getItem("IdCabinetspes");
     console.log(' url rdv :');
@@ -250,7 +259,7 @@ else
             type: "GET",
             success: function (data) {
               console.log('Appointment added successfully');
-           alert('Appointment added successfully');
+           alert('Appointment added successfully ' + dater.getDate());
            window.location='AcceuilPatient.html';
                       
             

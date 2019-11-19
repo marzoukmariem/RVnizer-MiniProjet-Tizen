@@ -100,7 +100,7 @@
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>8bWI37+p2b+aV3oj2rF1kJg56RyyFge+dLllAlPOpig=</DigestValue>
+<DigestValue>LXjnv8fT24pCCvO/0LMP5T//C6UENdurFfWlH31GhEI=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1591,9 +1591,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-bCeeYRBjXDDg0ue8LHKU6wvkLNoxTbIPXDqUjhOGzKwan2BRon8Zww1xwc2aiV0ocJU2DZlLyfFI
-+vfM6cywdwpwaF6q0lF7xwDlx7iz1QyMcRCFh9ImBTiuzldCPUG6JEp1Vfh/c2u78CuLyjKg7uGG
-/YgXmoubQ/lQ+bpMM0E=
+WOJ+9GvIs0fUOPM9F6xgHVSPvdkIGwqWzn5+NQP8jOl+2lfbcXc/6OUo/EOfKfcQaZL8Il2Ia1eE
+75e+PmWICnMxQ9U0MSamWp4C7Rdfq50UmXK4L54Aej7KN23MykXroWDyyJI+1GDvXaWIonInQPk/
+4QYkPKZv0V8J5p7Jwlc=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
