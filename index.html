@@ -384,10 +384,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             	var code = obj[0].code;
             	var verif = obj[0].varifie
             	var role = obj[0].Role_User
+            	var userNameL = obj[0].Nom_User + ' ' + obj[0].Prenom_User
             	sessionStorage.setItem("Iduser",iduser);
             	sessionStorage.setItem("Idcabinet",idcabinet);
             	sessionStorage.setItem("code",code);
             	sessionStorage.setItem("role",role);
+            	sessionStorage.setItem("localName", userNameL );
             	localStorage.setItem("localEmail",usr);
             	localStorage.setItem("localPassword",data);
             	localStorage.setItem("rememberMe",document.getElementById("brand1").checked);
