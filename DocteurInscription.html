@@ -521,9 +521,12 @@ if (document.getElementById('officeName').value.trim()==""){
 }else if (document.getElementById('location').value.trim()==""){
 
 }else if(document.getElementById('officeName').value.trim().includes(" ")){
-    document.getElementById("officeName").setCustomValidity("this case must not include white spaces");
-    }else{
-    document.getElementById("officeName").setCustomValidity("");
+document.getElementById("officeName").setCustomValidity("this case must not include white spaces");
+}else if(parseInt(document.getElementById('officePhoneNumber').value)!=document.getElementById('officePhoneNumber').value){
+document.getElementById("officeName").setCustomValidity("");
+document.getElementById("officePhoneNumber").setCustomValidity("this must not include letters");
+}else{
+    document.getElementById("officePhoneNumber").setCustomValidity("");
     
 sessionStorage.setItem("officeName",document.getElementById('officeName').value);
 sessionStorage.setItem("officePhoneNumber",document.getElementById('officePhoneNumber').value);
