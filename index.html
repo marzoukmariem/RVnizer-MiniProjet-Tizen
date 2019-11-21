@@ -384,12 +384,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             	var code = obj[0].code;
             	var verif = obj[0].varifie
             	var role = obj[0].Role_User
-            	var userNameL = obj[0].Nom_User + ' ' + obj[0].Prenom_User
             	sessionStorage.setItem("Iduser",iduser);
             	sessionStorage.setItem("Idcabinet",idcabinet);
             	sessionStorage.setItem("code",code);
             	sessionStorage.setItem("role",role);
-            	sessionStorage.setItem("localName", userNameL );
             	localStorage.setItem("localEmail",usr);
             	localStorage.setItem("localPassword",data);
             	localStorage.setItem("rememberMe",document.getElementById("brand1").checked);
@@ -481,21 +479,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         	    document.getElementById("lastName").setCustomValidity("");
         		document.getElementById("login").setCustomValidity("this case must not include white spaces");
         	}else if(document.getElementById('password1').value.trim().includes(" ")){
-        	    document.getElementById("phoneNumber").setCustomValidity("");
-        		document.getElementById("password1").setCustomValidity("this case must not include white spaces");
-        	}else if(!validateEmail(document.getElementById('login').value)){
-        	    document.getElementById("lastName").setCustomValidity("");
-        		document.getElementById("login").setCustomValidity("plz enter a valid email");
-        	}else if(parseInt(document.getElementById('phoneNumber').value)!=document.getElementById('phoneNumber').value){
         	    document.getElementById("login").setCustomValidity("");
-        		document.getElementById("phoneNumber").setCustomValidity("this must not include letters");
-        	}else if(document.getElementById('password1').value.trim()!=document.getElementById('password2').value.trim()){
-        	    
-        	    document.getElementById("password1").setCustomValidity("");
-        		document.getElementById("password2").setCustomValidity("this password should mutch");
+        		document.getElementById("password1").setCustomValidity("this case must not include white spaces");
         	}else{
         	
-        	document.getElementById("password2").setCustomValidity("");
+        	
         	 $.ajax({
             url: 'http://41.226.11.252:1180/medichelper/login3.php?login=' + document.getElementById('login').value.trim() ,
             data: "", //ur data to be sent to server
@@ -554,14 +542,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		document.getElementById('add-account-data').value = localStorage.getItem("localPassword")
 		login()
 		}
-	
-	</script>
-	<script>
-	function validateEmail(email) 
-{
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
-}
 	
 	</script>
 

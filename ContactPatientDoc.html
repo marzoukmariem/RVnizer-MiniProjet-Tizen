@@ -484,40 +484,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            	   document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 "><img src="images/userIcon.png" alt="Avatar" class="right"><p>'+msg+'</p></div>';
         window.scrollTo(0,document.body.scrollHeight);
         document.getElementById('msg').value=''
-        
-        //////////////////////////////////////////////////////////////////
-        console.log('http://41.226.11.252:1180/medichelper/getInnfopatient.php?idpt=' +idDoc)
-         $.ajax({
-                    url: 'http://41.226.11.252:1180/medichelper/getInnfopatient.php?idpt=' +sessionStorage.getItem("idDocMail") ,
-                    data: "", //ur data to be sent to server
-                    contentType: "application/json; charset=utf-8", 
-                    type: "GET",
-                    success: function (data) {
-                  	 
-                     var testJson = JSON.parse(data);
-                     var mailUser = testJson[0].Login_User;
-                     var nomP = sessionStorage.getItem("localName")
-					
-                    $.ajax({
-            url: 'http://yassinemoslah.com/api/tizen/sendEmail.php?from=rvnizer@gmail.com&to='+mailUser+'&subject=New Message&body=You have a new message from the patient '+ nomP+' ! Open RVnizer app for more info' ,
-            data: "", //ur data to be sent to server
-            contentType: "application/json; charset=utf-8", 
-            type: "GET",
-            success: function (data) {
-           	   
-            },
-            error: function (x, y, z) {
-               alert(x.responseText +"  " +x.status);
-            }
-        });
-                     
-                    },
-                    error: function (x, y, z) {
-                       alert(x.responseText +"  " +x.status);
-                    }
-                });
-        //////////////////////////////////////////////////////////////////
-        
             },
             error: function (x, y, z) {
                alert(x.responseText +"  " +x.status);

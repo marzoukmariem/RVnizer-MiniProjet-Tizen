@@ -475,37 +475,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            	   document.getElementById('message').innerHTML = document.getElementById('message').innerHTML +'<div class="container2 darker"><img src="images/doctorIcon.jpg" alt="Avatar" class="right"><p>'+msg+'</p></div>';
         window.scrollTo(0,document.body.scrollHeight);
         document.getElementById('msg').value=''
-        //////////////////////////////////////////////////////////////////
-         $.ajax({
-                    url: 'http://41.226.11.252:1180/medichelper/getInnfopatient.php?idpt=' +idPatient ,
-                    data: "", //ur data to be sent to server
-                    contentType: "application/json; charset=utf-8", 
-                    type: "GET",
-                    success: function (data) {
-                  	 
-                     var testJson = JSON.parse(data);
-                     var mailUser = testJson[0].Login_User;
-                     var nomDoc = sessionStorage.getItem("localName")
-					
-                    $.ajax({
-            url: 'http://yassinemoslah.com/api/tizen/sendEmail.php?from=rvnizer@gmail.com&to='+mailUser+'&subject=New Message&body=You have a new message from DR.'+ nomDoc+' ! Open RVnizer app for more info' ,
-            data: "", //ur data to be sent to server
-            contentType: "application/json; charset=utf-8", 
-            type: "GET",
-            success: function (data) {
-           	   
-            },
-            error: function (x, y, z) {
-               alert(x.responseText +"  " +x.status);
-            }
-        });
-                     
-                    },
-                    error: function (x, y, z) {
-                       alert(x.responseText +"  " +x.status);
-                    }
-                });
-        //////////////////////////////////////////////////////////////////
             },
             error: function (x, y, z) {
                alert(x.responseText +"  " +x.status);
