@@ -505,6 +505,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             var testJson = JSON.parse(data);
             console.log(testJson.length)
               if(testJson.length>0){
+            	  document.getElementById("phoneNumber").setCustomValidity("");
               document.getElementById("login").setCustomValidity("Email is already in use");
               }else{
               ////////////////////////////////////////////////////////////////////////////////
