@@ -12,11 +12,11 @@
 </Reference>
 <Reference URI="AcceuilPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>WhmJie5pNi5tTGceZiz+JcWhEM8XchtMLpvwXlQkAxU=</DigestValue>
+<DigestValue>BbH2Q/RqZsPRRCzYELjj3amPyhD+40G1vBEnjpMbvyc=</DigestValue>
 </Reference>
 <Reference URI="AlternativeM.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>BGZkKoI8bEGyBqjYLYEF9qMekzohICzUgYXkjwF1liw=</DigestValue>
+<DigestValue>VU4LNh61oTnC+dkySB4ZVjPnEThTEYhSzzsICcFAsAw=</DigestValue>
 </Reference>
 <Reference URI="AppIcon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -24,27 +24,27 @@
 </Reference>
 <Reference URI="CabinetsParSpecialite.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>HmlbBSeABtto1zuwCqk/UDHPVa8SjT30os+LT2liawI=</DigestValue>
+<DigestValue>ro7x6xJAUCYv1tf3yzxDvXql+SO8opuMksqehUTREMY=</DigestValue>
 </Reference>
 <Reference URI="ContactPatientDoc.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>yrlg57ZMMbYYkgwIPrdsNIXPXqxbzKsKb6Pvc5FHkgQ=</DigestValue>
+<DigestValue>u5fQqUpUnfJJhiI6lo0vfGLHHJD+Jrfb3acyL5BtDXk=</DigestValue>
 </Reference>
 <Reference URI="Dentist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>0IUZ/LDY2o2kp348CBpQmvKSrPglghbNkdZkCetn958=</DigestValue>
+<DigestValue>BQjT/ScG0dg2R9OmyNxt7Z90s7Qge0dADKplCfehm94=</DigestValue>
 </Reference>
 <Reference URI="Dermatologue.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/vZfUfsBh01OUVOyjcn/c5GsYEf6Qlhw5UbXPiHQ6eg=</DigestValue>
+<DigestValue>ze0iwXchSZ9vLgUmsGf1xe5VbKmjpcw65DRySNtX77A=</DigestValue>
 </Reference>
 <Reference URI="DocteurConfirmationRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>rSRdWhMAvGZGgOfGMHGPu7NQOPYI2EUvE3VS65GS2u0=</DigestValue>
+<DigestValue>taL3FFU43VNDxd4bchXvo+4r0Lrcj2sMMOETvwPFgZE=</DigestValue>
 </Reference>
 <Reference URI="DocteurDemandesRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>m/cSe4FxoGsSs0LCZtJ7Zn27qWASj4jEBbJLq7uFAlU=</DigestValue>
+<DigestValue>nJRYy56jNC79BlmuXDcKNU4TLInJJpek4A3xLQfWW+U=</DigestValue>
 </Reference>
 <Reference URI="DocteurDiscussionAvecPatient.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -68,7 +68,7 @@
 </Reference>
 <Reference URI="DocteurVerificationDiplome.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>VJbVvWik/jDE8LwFTYEbfG00MjAKDfgdUrG7IURDQd0=</DigestValue>
+<DigestValue>8TcbX/3OibbcmDVo76VUFzN27XYHBrmoPiBBGVtxAyQ=</DigestValue>
 </Reference>
 <Reference URI="EditPatientProfil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -76,15 +76,15 @@
 </Reference>
 <Reference URI="Genecologue.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>95TJreLntaLB+UJdUH7ppqPgyto8YFqyqa3munasV3o=</DigestValue>
+<DigestValue>XAWI2WhiXfp38ksQmPIrc2OsVl5SHotNrp0wzykY+WI=</DigestValue>
 </Reference>
 <Reference URI="General.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>uSuBCeTgcnpvbwxJlzFPGRp2EKRj7EUH219x7RECAxk=</DigestValue>
+<DigestValue>Ye9eOSWA4j6shTvjySlNlUGNwG8JtTiowjwIpkyHY7w=</DigestValue>
 </Reference>
 <Reference URI="MesRendezvous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>kXRPIlDRS3qA0g4+zLgHpeQ1VIOkIBQSLi++KpHO1XA=</DigestValue>
+<DigestValue>Fw01I+w5A3ORd06hJRts5U33v/j/e1N8eZ0ClRLcprU=</DigestValue>
 </Reference>
 <Reference URI="PatientInscription.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -92,15 +92,15 @@
 </Reference>
 <Reference URI="Pediater.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Xqhc57aVqO9jqeyY04mO0J9wM0TV9q3Jkt7TMyVkd3A=</DigestValue>
+<DigestValue>r0wetlgB7LYs/O00vgm5wQL9pBIUv8oCQDSRT6iIH58=</DigestValue>
 </Reference>
 <Reference URI="Profil.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>gDicF21O6yy0pWcQ7T4pIqMLAFdM1WeOtEEs/5+MkOE=</DigestValue>
+<DigestValue>kIVVpbW6Wi5LQ6Uw00LD3IOoCFZTfGbqDq04FBB8bWA=</DigestValue>
 </Reference>
 <Reference URI="ReservezRendezVous.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>+EbeOlUtpZq6Uq3iCkWuDI/CehP8InQUaFsFCDpErlM=</DigestValue>
+<DigestValue>UDNgnVtC03Z7Yx9P0RyaXNiq760nHfAI8BCk4PqVv2E=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1380,7 +1380,7 @@
 </Reference>
 <Reference URI="neurosergery.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>n4jo+2IpcIPKtY9X0VzHxzbDABbAFa1bLBHS/Gd4p28=</DigestValue>
+<DigestValue>ty4T3pEOD2blVnZx+y4XCCzn8jOnqUYlqVafvjtb9AU=</DigestValue>
 </Reference>
 <Reference URI="ocrad.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1388,7 +1388,7 @@
 </Reference>
 <Reference URI="ophtalmologist.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>DzE4lnIn5d/qfT348R4MBwRFamrgQcTCk+97KHG1iTI=</DigestValue>
+<DigestValue>/hYFn9QsuOn8q8Lb0Y9eRCb5SURbv5+JpZNoHs4AozY=</DigestValue>
 </Reference>
 <Reference URI="profilcss%2Fcss%2Fbootstrap.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1572,7 +1572,7 @@
 </Reference>
 <Reference URI="psyciatre.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>jhZiqqDJ3GItt2gLJ+IBALFl8cpMJZfHgZnJsTyuOps=</DigestValue>
+<DigestValue>ESl7dJgUQk3bxxl/1GfDl0rgvXictuy7hekQL/8WRa0=</DigestValue>
 </Reference>
 <Reference URI="scriptclendar.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1591,9 +1591,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-GsbhJjDjY1KMwPZ2/hp7a66TTAyHDNP1cZ8E1nvg7zN3ssmnbKII5egq6zRKGd26OkUqLzLNKzsX
-B+I6V8HIJK4qC865fKFo95S/7moqKa+vjjbt31eS0bV/aW3oILTv+V0863mSrcrkDKt43qww8d6V
-iciFOxB5FTk377j95ak=
+I9izzNbGf03p1nKVxOvCMXUP2Yrjz3GCY2jL2wx4T6a7xsjSniAFv7ODyJYK13WMKwuL2zxAbsJj
+PYFWHkDWwZ6y84FctguhTxoQNLvk2MvSevG0qaYm8AGF2j4kyyzr1pM87ZL9XtUwUe9YmpSokxFx
+XReRTCdycT3V483t2Q8=
 </SignatureValue>
 <KeyInfo>
 <X509Data>
